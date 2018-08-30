@@ -208,3 +208,10 @@ function query_getAllPosts($query) {
 	}
 }
 add_action( 'pre_get_posts', ns('query_getAllPosts') );
+
+// Use front-page.php if blog is set to static posts
+function front_page_template( $template ) {
+	return is_home() ? '' : $template;
+}
+add_filter( 'frontpage_template',  ns('front_page_template') );
+

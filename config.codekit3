@@ -536,6 +536,13 @@
 		"oAP": "\/footer.php",
 		"oF": 0
 		},
+	"\/frontpage.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/frontpage.php",
+		"oF": 0
+		},
 	"\/functions.php": {
 		"cB": 0,
 		"ft": 8192,
