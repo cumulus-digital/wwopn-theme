@@ -6,7 +6,7 @@ namespace WWOPN_Theme;
 
 <main role="main">
 
-	<section class="row basic-blue">
+	<header class="row basic-blue">
 		<div class="row-container">
 
 			<h1 class="stext st_purple" data-st-src="<?=\get_template_directory_uri()?>/assets/prod/images/stext/left.svg">
@@ -14,7 +14,7 @@ namespace WWOPN_Theme;
 			</h1>
 
 		</div>
-	</section>	
+	</header>	
 	<section class="row category">
 
 		<div class="row-container">

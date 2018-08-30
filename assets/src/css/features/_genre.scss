@@ -1,8 +1,23 @@
+main.genres {
+	header.row {
+		.row-container {
+			padding: .75em 1em;
+			text-align: center;
+		}
+	}
+}
+
 article.genre {
 
 	border-bottom: 1px solid #ddd;
 	margin-bottom: 1em;
 	padding-bottom: 1em;
+
+	@media (max-width: $breakwidth-small) {
+		border-bottom: 0;
+		padding-bottom: 0;
+		margin-bottom: .5em;
+	}
 
 	header {
 		display: flex;
@@ -12,6 +27,17 @@ article.genre {
 		a {
 			color: inherit;
 			text-decoration: none;
+		}
+
+		@media (max-width: $breakwidth-small) {
+			font-size: 0.8em;
+			display: block;
+			padding: 0 .5em;
+			margin-bottom: .25em;
+
+			h2 {
+				display: inline;
+			}
 		}
 
 		.button {
@@ -32,7 +58,9 @@ article.genre {
 				font-weight: bold;
 			}
 
-			&:hover {
+			@media (max-width: $breakwidth-small) {
+				display: inline-block;
+				font-size: 0.7em;
 			}
 		}
 	}
@@ -40,6 +68,7 @@ article.genre {
 	&:last-child {
 		margin-bottom: 0
 	}
+
 }
 
 .wpn-f-genre {
@@ -58,4 +87,10 @@ article.genre {
 			width: 50%;
 		}
 	}
+	@media (max-width: $breakwidth-small) {
+		li:nth-child(5) {
+			display: none;
+		}
+	}
+
 }
