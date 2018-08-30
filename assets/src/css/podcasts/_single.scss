@@ -149,12 +149,6 @@
 				h2 {
 					color: $colors-purple;
 					font-size: .9em;
-
-					@media (max-width: $breakwidth-small) {
-						span {
-							display: none;
-						}
-					}
 				}
 			}
 		}

@@ -70,7 +70,6 @@ namespace WWOPN_Theme;
 								<?php if (\get_post_meta(get_the_ID(), '_wpn_podcast_meta_subTitle', true)): ?>
 										<?=\get_post_meta(get_the_ID(), '_wpn_podcast_meta_subTitle', true) ?>
 								<?php else: ?>
-									<span>&nbsp;</span>
 								<?php endif; ?>
 								</h2>
 							</div>
