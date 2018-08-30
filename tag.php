@@ -19,7 +19,7 @@ namespace WWOPN_Theme;
 
 		<div class="row-container">
 
-			<?php get_template_part('template-parts/loop'); ?>
+			<?php get_template_part('template-parts/loop-cards'); ?>
 
 			<?php get_template_part('template-parts/pagination'); ?>
 
