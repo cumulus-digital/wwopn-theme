@@ -27,7 +27,7 @@ article.genre {
 			padding: 0;
 
 			&:before {
-				content: '\27A1  ';
+				content: '❯ ';
 				color: lighten($colors-purple, 20%);
 				font-weight: bold;
 			}
