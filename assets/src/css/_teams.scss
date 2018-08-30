@@ -13,15 +13,17 @@
 
 	.members {
 		font-size: 0.4rem;
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-betewen;
 	}
 
 	.card {
+
+		.content {
+			padding-top: .75em;
+		}
+
 		h3 {
 			text-align: center;
-			margin-bottom: .05em;
+			margin: 0 0 .05em;
 			padding: 0;
 		}
 
