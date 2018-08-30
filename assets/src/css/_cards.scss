@@ -107,6 +107,12 @@ article.card {
 		&:hover .listen {
 			display: block;
 		}
+		@media (hover: none) {
+			pointer-events: none;
+			a {
+				pointer-events: auto;
+			}
+		}
 
 	.post-edit-link {
 		color: #fff;
