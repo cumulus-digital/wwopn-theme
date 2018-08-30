@@ -17,7 +17,7 @@ namespace WWOPN_Theme;
 	</section>
 	<section class="row">
 
-		<div class="row-container members">
+		<div class="row-container members cards">
 
 			<?php get_template_part('template-parts/loop-cards'); ?>
 

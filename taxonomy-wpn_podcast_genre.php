@@ -21,7 +21,7 @@ namespace WWOPN_Theme;
 	</header>	
 	<section class="row podcasts">
 
-		<div class="row-container">
+		<div class="row-container cards">
 
 			<?php get_template_part('template-parts/loop-cards'); ?>
 
