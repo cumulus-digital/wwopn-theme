@@ -20,6 +20,17 @@
 		@media(max-width: $breakwidth-small) {
 			padding: .5em;
 		}
+
+		@media(max-width: $breakwidth-medium) {
+			flex-direction: column;
+
+			padding-top: 0;
+
+			a.button {
+				border-radius: 0 0 2px 2px;
+				margin-bottom: .5em;
+			}
+		}
 	}
 
 	.podcasts .row-container {
