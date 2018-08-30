@@ -19,6 +19,8 @@ namespace WWOPN_Theme;
 
 		<div class="row-container">
 
+			echo 'tags?';
+
 			<?php get_template_part('template-parts/loop-cards'); ?>
 
 			<?php get_template_part('template-parts/pagination'); ?>

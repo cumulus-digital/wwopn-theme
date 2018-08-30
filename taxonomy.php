@@ -17,9 +17,9 @@ namespace WWOPN_Theme;
 	</section>	
 	<section class="row taxonomy podcasts">
 
-		<div class="row-container">
+		<div class="row-container cards">
 
-			<?php get_template_part('template-parts/loop-podcasts'); ?>
+			<?php get_template_part('template-parts/loop-cards'); ?>
 
 			<?php get_template_part('template-parts/pagination'); ?>
 
