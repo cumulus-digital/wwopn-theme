@@ -26,7 +26,7 @@
 		transition-delay: 0;
 
 		@at-root .masthead input:checked ~ ul {
-			max-height: 100%;
+			max-height: 100vh;
 			transition-delay: 0.2s
 		}
 
