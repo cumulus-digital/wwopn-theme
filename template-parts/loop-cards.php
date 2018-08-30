@@ -30,7 +30,6 @@ namespace WWOPN_Theme;
 						<?php get_template_part('template-parts/loop-cards-' . \get_post_type()); ?>
 
 						
-						<?php \edit_post_link() ?>
 					</div>
 				</div>
 
@@ -38,6 +37,7 @@ namespace WWOPN_Theme;
 			</a>
 			<?php endif ?>
 
+			<?php \edit_post_link() ?>
 		</article>
 
 	<?php endwhile ?>
