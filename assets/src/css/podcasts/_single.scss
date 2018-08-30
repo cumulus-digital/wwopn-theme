@@ -56,6 +56,7 @@
 				flex-direction: column;
 				align-items: center;
 				top: 1em;
+				text-align: center;
 			}
 
 			figure, .title {
@@ -91,10 +92,6 @@
 				display: block;
 				margin-bottom: .25em;
 				font-size: 0.75em;
-
-				@media (max-width: $breakwidth-medium) {
-					text-align: center;
-				}
 			}
 
 			.genres {
