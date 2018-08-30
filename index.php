@@ -67,7 +67,7 @@
 					Reach key demographics across the country.
 				</h3>
 				<div class="buttons">
-					<a href="<?=\get_permalink(\get_page_by_path('/advertisers'))?>" class="button">Find Your Audience</a>
+					<a href="<?=\get_permalink(\get_page_by_path('/advertising'))?>" class="button">Find Your Audience</a>
 				</div>
 			</div>
 		</div>
