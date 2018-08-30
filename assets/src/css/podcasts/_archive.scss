@@ -1,0 +1,95 @@
+.archive .podcasts {
+
+	header .row-container {
+		display: flex;
+		justify-content: space-between;
+		align-content: center;
+		align-items: center;
+		flex-wrap: nowrap;
+
+		padding: .5em 0;
+		text-align: right;
+
+		a.button {
+			white-space: nowrap;
+			&:before {
+				content: '❮ ';
+			}
+		}
+
+		@media(max-width: $breakwidth-small) {
+			padding: .5em;
+		}
+	}
+
+	.podcasts .row-container {
+		display: flex;
+		justify-content: flex-start;
+		align-content: flex-start;
+		align-items: flex-start;
+		flex-wrap: wrap;
+
+		padding: .5em 0;
+
+		@media (max-width: $breakwidth-small) {
+			padding: .5em;
+		}
+
+		article.wpn_podcast {
+			background: #fff;
+
+			font-size: 0.4rem;
+
+			display: flex;
+			flex-direction: column;
+			flex: 0 1 300px;
+			position: relative;
+
+			margin: .5em;
+
+			box-shadow: 0 .25em 1em rgba(0,0,0,0.2);
+
+			@media (max-width: $breakwidth-small) {
+				flex-basis: calc( 50% - 1em );
+			}
+
+			a {
+				display: block;
+				color: inherit;
+				text-decoration: inherit;
+			}
+
+			figure {
+				margin: 0;
+			}
+			img {
+				display: block;
+				max-width: 100%;
+				height: auto;
+			}
+
+			header {
+				display: none;
+			}
+
+			.content {
+				padding: 1em;
+			}
+
+			.excerpt {
+				p:last-child {
+					margin-bottom: 0
+				}
+			}
+
+			.post-edit-link {
+				color: #fff;
+				font-size: 0.8em;
+				position: absolute;
+				right: 1em;
+				bottom: -1em;
+			}
+
+		}
+	}
+}

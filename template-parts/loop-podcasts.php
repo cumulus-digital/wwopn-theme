@@ -19,14 +19,6 @@ namespace WWOPN_Theme;
 
 					<div class="content">
 
-						<header>
-							<a href="<?php \the_permalink(); ?>" title="<?php \the_title(); ?>">
-								<h2>
-									<?php \the_title() ?>
-								</h2>
-							</a>
-						</header>
-
 						<div class="excerpt">
 							<?php \the_excerpt() ?>
 						</div>

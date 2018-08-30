@@ -4,18 +4,22 @@ namespace WWOPN_Theme;
 \get_header();
 ?>
 
-<main role="main">
+<main role="main" class="taxonomy podcasts">
 
-	<section class="row basic-blue">
+	<header class="row basic-blue">
 		<div class="row-container">
+
+			<a href="/pods" class="button">
+				Back to the Pods
+			</a>
 
 			<h1 class="stext st_purple" data-st-src="<?=\get_template_directory_uri()?>/assets/prod/images/stext/left.svg">
 				<?=\esc_html(single_tag_title())?>
 			</h1>
 
 		</div>
-	</section>	
-	<section class="row taxonomy podcasts">
+	</header>	
+	<section class="row podcasts">
 
 		<div class="row-container">
 

@@ -181,3 +181,8 @@ function output_copyright_field() {
 	echo '<input type="text" id="copyright_info" name="copyright_info" value="' . $value . '" class="regular-text" />';
 }
 \add_filter('admin_init' , ns('register_copyright_field'));
+
+// determine if podcast plugin is installed
+function hasPodcastPlugin() {
+	return class_exists('WWOPN_Podcast/CPT');
+}

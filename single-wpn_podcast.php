@@ -6,22 +6,23 @@ namespace WWOPN_Theme;
 
 <main role="main">
 	<div class="row">
+
 	<?php if (\have_posts()): ?>
 		<?php while (\have_posts()) : \the_post(); ?>
 
 			<article id="podcast-<?php the_ID() ?>" <?php \post_class(array('podcast')) ?>>
 
-				<?php $header_id = \get_post_meta(\get_the_ID(), '_wpn_podcast_meta_headerimage', true) ?>
-				<?php if ($header_id): ?>
-					<?php $header_img = \get_post($header_id) ?>
-				<?php endif ?>
+				<?php 
+					$header_id = \get_post_meta(\get_the_ID(), '_wpn_podcast_meta_headerimage', true);
+					if ($header_id) {
+						$header_img = \get_post($header_id);
+					}
+				?>
 
-				<header <?php
-					if ($header_id && $header_img):
-				?>class="has_header"<?php endif ?>>
+				<header class="<?=!($header_id && $header_img) ?: 'has_header'?>">
 
 					<div class="header-bg-container">
-						<?php if($header_id && header_img): ?>
+						<?php if($header_id && $header_img): ?>
 
 							<img src="<?=\wp_get_attachment_image_src($header_img->ID, 'full')[0]; ?>">
 
@@ -29,7 +30,7 @@ namespace WWOPN_Theme;
 					</div>
 
 					<div class="row-container">
-						<div class="meta">
+						<div class="info">
 							<?php if (\has_post_thumbnail()): ?>
 							<figure>
 								<a href="<?php \the_permalink() ?>" title="<?php \the_title() ?>">
@@ -38,20 +39,38 @@ namespace WWOPN_Theme;
 							</figure>
 							<?php endif ?>
 							<div class="title">
-								<div class="genres">
-								<?php 
-									\the_terms(
-										\get_the_ID(),
-										'wpn_podcast_genre',
-										'',
-										', ',
-										''
-									)
-								?>
+								<div class="meta">
+									<div class="genres">
+									<?php 
+										\the_terms(
+											\get_the_ID(),
+											'wpn_podcast_genre',
+											'',
+											', ',
+											''
+										)
+									?>
+									</div>
+									<aside class="tags">
+										<?php
+											\the_terms(
+												\get_the_ID(),
+												'wpn_podcast_tag',
+												'',
+												'',
+												''
+											)
+										?>
+									</aside>
 								</div>
 								<h1 class="stext st_blue" data-st-src="<?=\get_template_directory_uri()?>/assets/prod/images/stext/right.svg">
 									<?php \the_title() ?>
 								</h1>
+								<?php if (\get_post_meta(get_the_ID(), '_wpn_podcast_meta_subTitle', true)): ?>
+									<h2>
+										<?=\get_post_meta(get_the_ID(), '_wpn_podcast_meta_subTitle', true) ?>
+									</h2>
+								<?php endif; ?>
 							</div>
 						</div>
 					</div>
@@ -62,28 +81,16 @@ namespace WWOPN_Theme;
 					
 					<div class="content">
 
-						<aside class="tags">
-							<?php
-								\the_terms(
-									\get_the_ID(),
-									'wpn_podcast_tag',
-									'',
-									'',
-									''
-								)
-							?>
-						</aside>
-
 						<div class="description">
 							<div class="body">
 								<?php \the_content() ?>
 							</div>
 						</div>
 
-					</div>
+						<div class="player_embed">
+							<?=\get_post_meta(get_the_ID(), '_wpn_podcast_meta_playerembed', true) ?>
+						</div>
 
-					<div class="player_embed">
-						<?=\get_post_meta(get_the_ID(), '_wpn_podcast_meta_playerembed', true) ?>
 					</div>
 
 				</div>

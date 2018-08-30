@@ -1,0 +1,25 @@
+.teams {
+	
+	@media (max-width: $breakwidth-medium) {
+		.row-container {
+			padding: 1em;
+		}
+	}
+
+	.members {
+		font-size: 0.4rem;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-betewen;
+	}
+
+	.member {
+		background: #fff;
+
+		border-radius: .5em;
+		box-shadow: 0 0 1em rgba(0,0,0,0.4);
+
+		margin: 0 1em 1em;
+	}
+
+}

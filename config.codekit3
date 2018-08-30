@@ -30,6 +30,13 @@
 		"oAP": "\/archive-wpn_podcast.php",
 		"oF": 0
 		},
+	"\/archive-wpn_teams.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/archive-wpn_teams.php",
+		"oF": 0
+		},
 	"\/assets\/prod\/css\/features\/big.css": {
 		"aP": 1,
 		"bl": 0,
@@ -139,7 +146,7 @@
 		"oAP": "\/assets\/prod\/js\/lib\/svgText.js.map",
 		"oF": 0
 		},
-	"\/assets\/src\/css\/_podcast.scss": {
+	"\/assets\/src\/css\/_teams.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 10,
@@ -147,7 +154,7 @@
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
-		"oAP": "\/assets\/prod\/css\/_podcast.css",
+		"oAP": "\/assets\/prod\/css\/_teams.css",
 		"oF": 0,
 		"oS": 3,
 		"uL": 1
@@ -265,6 +272,45 @@
 		"ma": 1,
 		"oA": 1,
 		"oAP": "\/assets\/prod\/css\/masthead\/_menu.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
+	"\/assets\/src\/css\/podcasts\/_.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "\/assets\/prod\/css\/podcasts\/_.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
+	"\/assets\/src\/css\/podcasts\/_archive.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "\/assets\/prod\/css\/podcasts\/_archive.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
+	"\/assets\/src\/css\/podcasts\/_single.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "\/assets\/prod\/css\/podcasts\/_single.css",
 		"oF": 0,
 		"oS": 3,
 		"uL": 1
@@ -605,6 +651,13 @@
 		"oAP": "\/tag.php",
 		"oF": 0
 		},
+	"\/taxonomy-wpn_podcast_genre.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/taxonomy-wpn_podcast_genre.php",
+		"oF": 0
+		},
 	"\/taxonomy.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -612,11 +665,25 @@
 		"oAP": "\/taxonomy.php",
 		"oF": 0
 		},
+	"\/template-parts\/loop-podcasts.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/template-parts\/loop-podcasts.php",
+		"oF": 0
+		},
 	"\/template-parts\/loop.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/template-parts\/loop.php",
+		"oF": 0
+		},
+	"\/template-parts\/team_member.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/template-parts\/team_member.php",
 		"oF": 0
 		}
 	},

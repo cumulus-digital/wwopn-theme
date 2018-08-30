@@ -1,32 +1,28 @@
-<?php 
+<?php
 namespace WWOPN_Theme;
 
 \get_header();
 ?>
 
-<main role="main">
+<main role="main" class="teams">
 
 	<section class="row basic-blue">
 		<div class="row-container">
 
 			<h1 class="stext st_purple" data-st-src="<?=\get_template_directory_uri()?>/assets/prod/images/stext/left.svg">
-				<?=\esc_html(single_tag_title())?>
+				Meet the Team
 			</h1>
 
 		</div>
-	</section>	
-	<section class="row taxonomy podcasts">
+	</section>
+	<section class="row">
 
-		<div class="row-container">
+		<div class="row-container members">
 
-			<?php get_template_part('template-parts/loop-podcasts'); ?>
-
-			<?php get_template_part('template-parts/pagination'); ?>
+			<?php get_template_part('template-parts/team_member'); ?>
 
 		</div>
-
 	</section>
-	<!-- /section -->
 </main>
 
 <?php get_footer(); ?>

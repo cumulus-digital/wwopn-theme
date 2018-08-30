@@ -8,14 +8,14 @@
 
 	margin: 0 auto;
 	max-width: $maxwidth;
-	padding: 1rem 0;
+	padding: 1em 0;
 	position: relative;
 
 	h2 {
 		display: block;
-		font-size: 1.75rem;
+		font-size: 1.75em;
 		@media (max-width: $breakwidth-medium) {
-			font-size: 1.75rem;
+			font-size: 1.75em;
 		}
 	}
 

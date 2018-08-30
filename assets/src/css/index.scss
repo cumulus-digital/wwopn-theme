@@ -67,7 +67,7 @@ nav.menu {
 	display: inline-block;
 	background: #000;
 	color: #fff;
-	font-size: 0.4rem;
+	font-size: 1em;
 	text-decoration: none;
 	line-height: 1;
 	padding: .5em .6em;
@@ -105,4 +105,5 @@ nav.menu {
 @import 'rows/_';
 @import 'footer/_';
 
-@import 'podcast';
+@import 'podcasts/_';
+@import 'teams';
