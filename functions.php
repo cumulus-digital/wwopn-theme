@@ -197,8 +197,14 @@ function query_getAllPosts($query) {
 	    ) &&
 	    $query->is_main_query()
 	){
-	        $query->set('posts_per_page', -1 );
-	        $query->set('orderby', 'menu_order asc');
+        $query->set('posts_per_page', -1 );
+        $query->set(
+        	'orderby',
+        	array(
+        		'menu_order' => 'asc',
+        		'title' => 'asc'
+        	)
+        );
 	}
 }
 add_action( 'pre_get_posts', ns('query_getAllPosts') );
