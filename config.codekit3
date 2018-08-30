@@ -146,6 +146,19 @@
 		"oAP": "\/assets\/prod\/js\/lib\/svgText.js.map",
 		"oF": 0
 		},
+	"\/assets\/src\/css\/_cards.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "\/assets\/prod\/css\/_cards.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
 	"\/assets\/src\/css\/_teams.scss": {
 		"aP": 1,
 		"bl": 0,
@@ -665,11 +678,18 @@
 		"oAP": "\/taxonomy.php",
 		"oF": 0
 		},
-	"\/template-parts\/loop-podcasts.php": {
+	"\/template-parts\/loop-cards-wpn_podcast.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/template-parts\/loop-podcasts.php",
+		"oAP": "\/template-parts\/loop-cards-wpn_podcast.php",
+		"oF": 0
+		},
+	"\/template-parts\/loop-cards.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/template-parts\/loop-cards.php",
 		"oF": 0
 		},
 	"\/template-parts\/loop.php": {

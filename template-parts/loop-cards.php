@@ -6,7 +6,7 @@ namespace WWOPN_Theme;
 	<?php while (\have_posts()): \the_post(); ?>
 
 		<!-- article -->
-		<article id="post-<?php \the_ID() ?>" <?php \post_class('post') ?>>
+		<article id="post-<?php \the_ID() ?>" <?php \post_class('card') ?>>
 
 			<a href="<?php \the_permalink() ?>" title="<?php \the_title() ?>">
 
@@ -24,11 +24,9 @@ namespace WWOPN_Theme;
 					<?php endif ?>
 
 					<div class="content">
-						<span class="listen">Listen Now!</span>
 
-						<div class="excerpt">
-							<?php \the_excerpt() ?>
-						</div>
+						<?php get_template_part('template-parts/loop-cards-' . \get_post_type()); ?>
+
 						
 						<?php \edit_post_link() ?>
 					</div>
