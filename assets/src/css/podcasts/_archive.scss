@@ -36,13 +36,15 @@
 		}
 
 		article.wpn_podcast {
-			background: #fff;
-
-			font-size: 0.4rem;
-
 			display: flex;
 			flex-direction: column;
 			flex: 0 1 300px;
+
+			background: #fff;
+			border-radius: 2px;
+
+			font-size: 0.4rem;
+
 			position: relative;
 
 			margin: .5em;
@@ -74,6 +76,8 @@
 
 			.content {
 				padding: 1em;
+				position: relative;
+				z-index: 2;
 			}
 
 			.excerpt {
@@ -81,6 +85,27 @@
 					margin-bottom: 0
 				}
 			}
+
+			.listen {
+				display: none;
+				background: $colors-blue;
+				color: #fff;
+				box-shadow: 0 0 .5em rgba(0,0,0,0.4);
+
+				font-size: 1em;
+				font-weight: bold;
+				text-shadow: 1px 1px $colors-purple;
+
+				padding: .25em .5em;
+
+				position: absolute;
+				top: -1em;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+				&:hover .listen {
+					display: block;
+				}
 
 			.post-edit-link {
 				color: #fff;
@@ -92,4 +117,6 @@
 
 		}
 	}
+
+	.link-more { display: none; }
 }

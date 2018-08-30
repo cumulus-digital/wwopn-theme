@@ -18,6 +18,7 @@ namespace WWOPN_Theme;
 					<?php endif ?>
 
 					<div class="content">
+						<span class="listen">Listen Now!</span>
 
 						<div class="excerpt">
 							<?php \the_excerpt() ?>
