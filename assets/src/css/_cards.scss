@@ -106,12 +106,11 @@ article.card {
 	}
 		&:hover .listen {
 			display: block;
-		}
-		@media (hover: none) {
-			pointer-events: none;
-			a {
-				pointer-events: auto;
+
+			@media (hover: none) {
+				display: none;
 			}
+
 		}
 
 	.post-edit-link {
