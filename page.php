@@ -4,7 +4,7 @@ namespace WWOPN_Theme;
 \get_header();
 ?>
 
-<main role="main">
+<main role="main" class="page">
 	<section class="row">
 		<div class="row-container">
 

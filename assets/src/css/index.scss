@@ -92,6 +92,14 @@ nav.menu {
 
 		margin-bottom: 0.25em;
 	}
+
+	a {
+		color: $colors-purple;
+
+		&:hover {
+			color: $colors-blue;
+		}
+	}
 }
 
 .body {
