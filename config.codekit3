@@ -9,6 +9,13 @@
 	],
 "creatorBuild": "26680",
 "files": {
+	"\/.gitattributes": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/.gitattributes",
+		"oF": 0
+		},
 	"\/.gitignore": {
 		"cB": 0,
 		"ft": 8192,
@@ -538,6 +545,13 @@
 		"plM": 3271548767,
 		"prP": 0
 		},
+	"\/LICENSE": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/LICENSE",
+		"oF": 0
+		},
 	"\/page.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -561,6 +575,17 @@
 		"opt": 1,
 		"plM": 3271548767,
 		"prP": 0
+		},
+	"\/screenshot.jpg": {
+		"ft": 16384,
+		"iS": 263824,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/screenshot.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 80
 		},
 	"\/single-wpn_podcast.php": {
 		"cB": 0,
