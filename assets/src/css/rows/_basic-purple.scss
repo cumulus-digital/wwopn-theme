@@ -1,0 +1,18 @@
+@at-root .basic-purple {
+	background: $colors-purple;
+	color: #fff;
+
+	.row-container {
+		background: none;
+	}
+	.button {
+		background: $colors-blue;
+		color: #fff;
+
+		&:hover {
+			background: transparent;
+			border-color: #fff;
+			color: #fff;
+		}
+	}
+}

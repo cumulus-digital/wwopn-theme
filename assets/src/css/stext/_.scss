@@ -1,0 +1,149 @@
+/**
+ * Base for svgText
+ */
+
+.stext { color: transparent }
+.st-converted {
+	display: inline-block;
+	line-height: 1;
+	filter: drop-shadow( 0 0 .05em rgba(0,0,0,0.3) );
+}
+.stext.st-processing {
+	color: transparent;
+}
+.st-comp {
+	span {
+		display: inline-block;
+		position: relative;
+		vertical-align: top;
+	}
+	* {
+		box-sizing: border-box;
+	}
+	svg {
+		display: inline-block;
+		height: 100%;
+		max-width: 100%;
+		position: relative;
+		vertical-align: top;
+		margin-left: -.33em;
+
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+}
+.st-word {
+	height: 1.13em;
+	width: auto;
+	white-space: nowrap;
+	overflow-wrap: break-word;
+
+	.st-original {
+		color: transparent;
+		position: absolute;
+		font-size: 0.75em;
+		left: 0;
+		top: 0;
+		z-index: 3765;
+		text-transform: uppercase;
+		line-height: 1;
+		letter-spacing: .15em;
+
+		.st_r & {
+			text-indent: 0.33em;
+		}
+	}
+}
+.st-space {
+	width: 0.02em;
+}
+
+// Letter kerning
+.st-space + .st-word[data-first_letter="A"] {
+	//margin-left: -0.25em;
+}
+
+svg[data-letter="I"] + svg,
+svg + svg[data-letter="I"],
+svg[data-letter="@"] + svg {
+	margin-left: -.325em;
+}
+
+svg[data-letter] + svg[data-letter="W"],
+svg[data-letter="C"] + svg[data-letter="A"],
+svg[data-letter="C"] + svg[data-letter="S"],
+svg[data-letter="A"] + svg[data-letter="S"],
+svg[data-letter="S"] + svg[data-letter="T"],
+svg[data-letter="R"] + svg[data-letter="O"],
+svg[data-letter="V"] + svg,
+svg + svg[data-letter="V"] {
+	margin-left: -.37em;
+}
+
+svg[data-letter="C"] + svg[data-letter="Y"],
+svg[data-letter="C"] + svg[data-letter="O"],
+svg[data-letter="T"] + svg[data-letter="O"],
+svg[data-letter="L"] + svg[data-letter="O"],
+svg[data-letter="R"] + svg[data-letter="T"],
+svg[data-letter="O"] + svg[data-letter="X"],
+svg[data-letter="X"] + svg[data-letter="O"],
+svg[data-letter="S"] + svg[data-letter="Y"] {
+	margin-left: -.4em;
+}
+
+svg[data-letter="A"] + svg[data-letter="C"],
+svg[data-letter="W"] + svg[data-letter="S"],
+svg[data-letter="Y"] + svg[data-letter="O"],
+svg[data-letter="D"] + svg[data-letter="Y"],
+svg[data-letter="P"] + svg[data-letter="A"],
+svg[data-letter="F"] + svg[data-letter="A"],
+svg[data-letter="Y"] + svg[data-letter="A"],
+svg[data-letter="O"] + svg[data-letter="V"],
+svg[data-letter="V"] + svg[data-letter="O"] {
+	margin-left: -.45em;
+}
+
+svg[data-letter="T"] + svg[data-letter="."],
+svg[data-letter="T"] + svg[data-letter=","],
+svg[data-letter="P"] + svg[data-letter="."],
+svg[data-letter="P"] + svg[data-letter=","],
+svg[data-letter="Y"] + svg[data-letter="."],
+svg[data-letter="Y"] + svg[data-letter=","],
+svg[data-letter="A"] + svg[data-letter="W"],
+svg[data-letter="A"] + svg[data-letter="V"],
+svg[data-letter="V"] + svg[data-letter="A"],
+svg[data-letter="A"] + svg[data-letter="Y"],
+svg[data-letter="Y"] + svg[data-letter="A"],
+svg[data-letter="A"] + svg[data-letter="T"],
+svg[data-letter="T"] + svg[data-letter="A"],
+svg[data-letter="L"] + svg[data-letter="Y"],
+svg[data-letter="L"] + svg[data-letter="T"],
+svg[data-letter="T"] + svg[data-letter="J"] {
+	margin-left: -.5em;
+}
+
+svg[data-letter="L"] + svg[data-letter="V"],
+svg[data-letter="W"] + svg[data-letter="A"] {
+	margin-left: -.54em;
+}
+
+.st_shadows path {
+	fill: url(#st_lg);
+}
+	.st_shadow1 {
+		stop-color: rgba(0,0,0,0.35);
+	}
+	.st_shadow2 {
+		stop-color: rgba(0,0,0,0.15);
+	}
+
+.st_face, .st_face path {
+	fill: #fff;
+}
+.st_sides, .st_sides path {
+	fill: inherit;
+}
+
+@import 'colors/blue';
+@import 'colors/purple';

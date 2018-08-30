@@ -1,0 +1,61 @@
+article.genre {
+
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 1em;
+	padding-bottom: 1em;
+
+	header {
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: .15em;
+
+		a {
+			color: inherit;
+			text-decoration: none;
+		}
+
+		.button {
+			align-self: flex-end;
+
+			background: none;
+			color: $colors-purple;
+			border: 0;
+
+			font-size: 0.8em;
+			font-weight: 200;
+
+			padding: 0;
+
+			&:before {
+				content: '\27A1  ';
+				color: lighten($colors-purple, 20%);
+				font-weight: bold;
+			}
+
+			&:hover {
+			}
+		}
+	}
+
+	&:last-child {
+		margin-bottom: 0
+	}
+}
+
+.wpn-f-genre {
+	ul {
+		display: flex;
+		flex: 0 1 auto;
+		flex-basis: auto;
+		flex-grow: 1;
+		flex-wrap: nowrap;
+	}
+	@media (max-width: $breakwidth-medium) {
+		ul {
+			flex-wrap: wrap;
+		}
+		li {
+			width: 50%;
+		}
+	}
+}

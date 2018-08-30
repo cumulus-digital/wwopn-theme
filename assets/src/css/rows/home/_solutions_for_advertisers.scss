@@ -1,0 +1,17 @@
+.solutions_for_advertisers {
+	h2 {
+		font-size: 1.8rem;
+		text-align: right;
+
+		@media (max-width: $breakwidth-small) {
+			text-align: center;
+		}
+	}
+	h3 {
+		font-size: 1rem;
+		margin-bottom: 0.25em;
+	}
+	.row-body {
+		max-width: 50%;
+	}
+}

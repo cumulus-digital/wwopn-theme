@@ -1,0 +1,67 @@
+.masthead {
+	background-color: $colors-purple;
+	background-image: 
+		linear-gradient(to top, rgba($colors-purple, 0.9), rgba($colors-purple, 0.9)),
+		url(../images/background-masthead.jpg);
+	background-attachment: fixed;
+	background-position: 25% 50%;
+	background-size: 220%;
+	animation: homepageslide 400s linear infinite;
+	transition: background-position 60s;
+
+	position: fixed;
+	height: 2rem;
+	left: 0;
+	top: 0;
+	width: 100%;
+	width: 100vw;
+	z-index: 2600;
+
+	@at-root body {
+		padding-top: 2rem;
+	}
+
+	@at-root body.admin-bar {
+		padding-top: 2rem;
+		.masthead {
+			top: 32px;
+		}
+
+		@media (max-width: $breakwidth-small) {
+			padding-top: calc( 2rem );
+
+			.masthead {
+				top: 46px;
+			}
+			#wpadminbar {
+				position: fixed;
+			}
+		}
+	}
+	@at-root body:not(.home) {
+		.masthead {
+			box-shadow: 0 0 .5em rgba(0,0,0,0.5);
+		}
+	}
+
+	.row-container {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		height: 2em;
+		padding: 0 0.5em;
+		position: static;
+	}
+
+	.logo {
+		height: 1em;
+
+		img {
+			height: 100%;
+		}
+	}
+
+	@import 'hamburger';
+	@import 'menu';
+}

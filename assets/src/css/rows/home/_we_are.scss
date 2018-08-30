@@ -1,0 +1,67 @@
+@at-root .we_are {
+
+	background: inherit;
+
+	.row-container {
+		background: none;
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+
+		@media (max-width: $breakwidth-medium) {
+			padding: 1rem;
+		}
+	
+		h2 {
+
+			font-size: 3em;
+			margin-right: 0.05em;
+
+			position: relative;
+			z-index: 0;
+
+			.st-space + .st-word[data-first_letter="A"] {
+				margin-left: 0;
+			}
+
+			@media (max-width: $breakwidth-medium) {
+				font-size: 2em;
+				
+				.st-word:first-child {
+					margin-left: -0.5em;
+				}
+
+			}
+
+			@include longshadow-left(#DDD);
+
+		}
+
+		.row-body {
+			position: relative;
+			z-index: 2;
+		}
+
+		.button {
+			background: $colors-blue;
+			color: #fff;
+
+			&:hover {
+				background: transparent;
+				border-color: $colors-blue;
+				color: $colors-blue;
+			}
+
+			&.alt {
+				background: $colors-purple;
+
+				&:hover {
+					background: transparent;
+					border-color: $colors-purple;
+					color: $colors-purple;
+				}
+			}
+
+		}
+
+	}
+}

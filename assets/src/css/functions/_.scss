@@ -1,0 +1,20 @@
+@function makelongshadow-left($color) {
+	$val: drop-shadow(0 0 0 $color);
+	@for $i from 1 through 30 {
+		$val: #{$val} drop-shadow(-#{$i}px #{$i}px 1px #{$color});
+	}
+	@return $val;
+}
+@function makelongshadow-right($color) {
+	$val: drop-shadow(0 0 0 $color);
+	@for $i from 1 through 30 {
+		$val: #{$val} drop-shadow(#{$i}px #{$i}px 1px #{$color});
+	}
+	@return $val;
+}
+@mixin longshadow-left($color) {
+	filter: makelongshadow-left($color);
+}
+@mixin longshadow-right($color) {
+	filter: makelongshadow-right($color);
+}

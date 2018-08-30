@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../src/js/index.js"],"names":["$","jQuery","alert","svgText"],"mappings":"YAAOA,IAAOC,QACbC,MAAM,qCAIPF,EAAE,UAAUG","file":"index.js","sourcesContent":["if ( ! $ || ! jQuery) {\n\talert('jQuery must be included in theme.');\n}\n\n// Transform svgText elements\n$('.stext').svgText();\n"]}

@@ -1,0 +1,18 @@
+.home {
+	
+	.row-container {
+
+		h2 {
+			display: block;
+			font-size: 2rem;
+			@media (max-width: $breakwidth-medium) {
+				font-size: 1.75rem;
+			}
+
+		}
+
+	}
+
+	@import 'we_are';
+	@import 'solutions_for_advertisers';
+}

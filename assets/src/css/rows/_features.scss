@@ -1,0 +1,25 @@
+.features {
+
+	@at-root @keyframes homepageslide {
+		from {
+			background-position: 0 50%;
+		}
+		to {
+			background-position: 300% 50%;
+		}
+	}
+
+	background-color: $colors-purple;
+	background-image: 
+		linear-gradient(to top, rgba($colors-purple, 0.9), rgba($colors-purple, 0.9)),
+		url(../images/background-masthead.jpg);
+	background-attachment: fixed;
+	background-position: 25% 50%;
+	background-size: 220%;
+	animation: homepageslide 400s linear infinite;
+	transition: all 60s;
+
+	.row-container {
+		padding: 0 0 .5rem;
+	}
+}

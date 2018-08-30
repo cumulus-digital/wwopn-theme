@@ -1,0 +1,87 @@
+.hamburger {
+	@at-root #hamburger-toggle {
+		display: none;
+	}
+
+	display: block;
+	position: relative;
+	z-index: 2;
+	height: 2rem;
+	width: 2rem;
+	overflow: hidden;
+	cursor: pointer;
+	transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+	border: none;
+	color: transparent;
+	text-align: center;
+
+	&:focus {
+		outline: none;
+	}
+
+	.burger-shade {
+		background: #000;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 0;
+		overflow: hidden;
+		transition: height .2s linear;
+		transition-delay: 0.1s;
+	}
+
+	.burger-lines {
+		position: absolute;
+		height: 1rem;
+		width: 1.5rem;
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+	}
+
+	.burger-line {
+		position: absolute;
+		display: block;
+		background: #fff;
+		opacity: 1;
+		border-radius: .2rem;
+		width: 100%;
+		height: .16em;
+		left: 0;
+		text-indent: 0;
+		transition: all 0.4s cubic-bezier(0.5, 0.1, 0, 1.2);
+
+		&:first-child {
+			top: .1em;
+		}
+
+		&:nth-child(2) {
+			top: .4em;
+		}
+
+		&:last-child {
+			top: .72em;
+		}
+
+		@at-root .masthead input:checked ~ .hamburger {
+			.burger-shade {
+				height: 100%;
+				transition: height .12s linear;
+			}
+			.burger-line:first-child,
+			.burger-line:last-child {
+				top: 50%;
+				left: 50%;
+				width: 70%;
+				transform: translateX(-50%) translateY(-50%) rotate(45deg)
+			}
+			.burger-line:nth-child(2) {
+				opacity: 0;
+			}
+			.burger-line:last-child {
+				transform: translateX(-50%) translateY(-50%) rotate(-45deg)
+			}
+		}
+	}
+}
