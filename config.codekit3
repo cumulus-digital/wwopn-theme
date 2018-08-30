@@ -546,13 +546,6 @@
 		"oAP": "\/classes\/MenuWalker.php",
 		"oF": 0
 		},
-	"\/ext.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/ext.html",
-		"oF": 0
-		},
 	"\/footer.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -581,16 +574,6 @@
 		"oAP": "\/index.php",
 		"oF": 0
 		},
-	"\/left.svg": {
-		"ft": 2097152,
-		"miP": 1,
-		"oA": 0,
-		"oAP": "\/left.svg",
-		"oF": 0,
-		"opt": 1,
-		"plM": 3271548767,
-		"prP": 0
-		},
 	"\/LICENSE": {
 		"cB": 0,
 		"ft": 8192,
@@ -611,16 +594,6 @@
 		"oA": 0,
 		"oAP": "\/README.txt",
 		"oF": 0
-		},
-	"\/right.svg": {
-		"ft": 2097152,
-		"miP": 1,
-		"oA": 0,
-		"oAP": "\/right.svg",
-		"oF": 0,
-		"opt": 1,
-		"plM": 3271548767,
-		"prP": 0
 		},
 	"\/screenshot.jpg": {
 		"ft": 16384,
