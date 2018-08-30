@@ -13,11 +13,15 @@ namespace WWOPN_Theme;
 
 					<article id="post-<?php the_ID(); ?>" <?php \post_class(); ?>>
 
-						<h1 class="stext st_blue" data-st-src="<?=\get_template_directory_uri()?>/assets/prod/images/stext/left.svg">
-							<?php \the_title(); ?>
-						</h1>
+						<header>
+							<h1 class="stext st_blue" data-st-src="<?=\get_template_directory_uri()?>/assets/prod/images/stext/left.svg">
+								<?php \the_title(); ?>
+							</h1>
+						</header>
 
-						<?php \the_content(); ?>
+						<div class="body">
+							<?php \the_content(); ?>
+						</div>
 
 					</article>
 					<?php \edit_post_link(); ?>

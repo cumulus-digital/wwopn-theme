@@ -75,7 +75,9 @@ namespace WWOPN_Theme;
 						</aside>
 
 						<div class="description">
-							<?php \the_content() ?>
+							<div class="body">
+								<?php \the_content() ?>
+							</div>
 						</div>
 
 					</div>
