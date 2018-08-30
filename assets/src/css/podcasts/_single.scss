@@ -7,7 +7,7 @@
 		z-index: 1;
 
 		.row-container {
-			padding: 0;
+			padding: 1.5em 1em 0;
 		}
 
 		&.has_header {
@@ -50,7 +50,13 @@
 			flex-wrap: nowrap;
 
 			position: relative;
-			top: 1.5em;
+			top: .75em;
+
+			@media (max-width: $breakwidth-medium) {
+				flex-direction: column;
+				align-items: center;
+				top: 1em;
+			}
 
 			figure, .title {
 				flex: 0 1 100%;
@@ -69,9 +75,10 @@
 				position: relative;
 				z-index: 2;
 
-				@media (max-width: $breakwidth-small) {
+				@media (max-width: $breakwidth-medium) {
 					flex-basis: auto;
-					margin: 0;
+					width: 75%;
+					margin: 0 0 .5em;
 				}
 
 				img {
@@ -84,6 +91,10 @@
 				display: block;
 				margin-bottom: .25em;
 				font-size: 0.75em;
+
+				@media (max-width: $breakwidth-medium) {
+					text-align: center;
+				}
 			}
 
 			.genres {
@@ -138,13 +149,6 @@
 			}
 
 			.title {
-				h1 {
-					//margin-left: -0.33em;
-
-					@media (max-width: $breakwidth-small) {
-						margin-left: 0;
-					}
-				}
 				h2 {
 					color: $colors-purple;
 					font-size: .9em;
@@ -162,19 +166,35 @@
 		align-items: flex-start;
 		flex-wrap: nowrap;
 
+		line-height: 1.4;
+
 		margin-top: 1.25em;
+		padding: 0 1em;
 
 		@media (max-width: $breakwidth-medium) {
 			flex-wrap: wrap;
+			flex-direction: column;
+
+			margin: 1em auto 0;
 		}
 
 		.description, .player_embed {
-			flex: 0 1 auto;
-			width: 50%;
+			flex: 0 1 50%;
+
+			@media(max-width: $breakwidth-medium) {
+				width: 100%;
+			}
 		}
 
-		.player_embed iframe {
-			max-width: 100%;
+		.player_embed {
+			margin-left: 1em;
+
+			@media (max-width: $breakwidth-medium) {
+				margin-left: 0;
+			}
+			iframe {
+				max-width: 100%;
+			}
 		}
 	}
 
