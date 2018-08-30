@@ -19,7 +19,7 @@ namespace WWOPN_Theme;
 
 		<div class="row-container members">
 
-			<?php get_template_part('template-parts/team_member'); ?>
+			<?php get_template_part('template-parts/loop-cards'); ?>
 
 		</div>
 	</section>

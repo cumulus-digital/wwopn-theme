@@ -685,6 +685,13 @@
 		"oAP": "\/template-parts\/loop-cards-wpn_podcast.php",
 		"oF": 0
 		},
+	"\/template-parts\/loop-cards-wpn_teams.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/template-parts\/loop-cards-wpn_teams.php",
+		"oF": 0
+		},
 	"\/template-parts\/loop-cards.php": {
 		"cB": 0,
 		"ft": 8192,

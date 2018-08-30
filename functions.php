@@ -186,3 +186,18 @@ function output_copyright_field() {
 function hasPodcastPlugin() {
 	return class_exists('WWOPN_Podcast/CPT');
 }
+
+// Return ALL posts for podcasts and team members
+function query_getAllPosts($query) {
+	if(
+		! \is_admin() &&
+		(
+	    	$query->is_post_type_archive('wpn_podcasts') ||
+	    	$query->is_post_type_archive('wpn_teams')
+	    ) &&
+	    $query->is_main_query()
+	){
+	        $query->set( 'posts_per_page', -1 );
+	}
+}
+add_action( 'pre_get_posts', ns('query_getAllPosts') );

@@ -8,7 +8,9 @@ namespace WWOPN_Theme;
 		<!-- article -->
 		<article id="post-<?php \the_ID() ?>" <?php \post_class('card') ?>>
 
+			<?php if (\get_post_type() !== 'wpn_teams'): ?>
 			<a href="<?php \the_permalink() ?>" title="<?php \the_title() ?>">
+			<?php endif ?>
 
 				<div>
 					<?php if ( \has_post_thumbnail()) : ?>
@@ -32,7 +34,9 @@ namespace WWOPN_Theme;
 					</div>
 				</div>
 
+			<?php if (\get_post_type() !== 'wpn_teams'): ?>
 			</a>
+			<?php endif ?>
 
 		</article>
 
