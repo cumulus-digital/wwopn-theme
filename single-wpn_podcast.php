@@ -66,11 +66,13 @@ namespace WWOPN_Theme;
 								<h1 class="stext st_blue" data-st-src="<?=\get_template_directory_uri()?>/assets/prod/images/stext/right.svg">
 									<?php \the_title() ?>
 								</h1>
+								<h2>
 								<?php if (\get_post_meta(get_the_ID(), '_wpn_podcast_meta_subTitle', true)): ?>
-									<h2>
 										<?=\get_post_meta(get_the_ID(), '_wpn_podcast_meta_subTitle', true) ?>
-									</h2>
+								<?php else: ?>
+									<span>&nbsp;</span>
 								<?php endif; ?>
+								</h2>
 							</div>
 						</div>
 					</div>
