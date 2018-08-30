@@ -37,23 +37,6 @@
 		"oAP": "\/archive-wpn_teams.php",
 		"oF": 0
 		},
-	"\/assets\/prod\/css\/features\/big.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 1,
-		"oA": 0,
-		"oAP": "\/assets\/prod\/css\/features\/big.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"\/assets\/prod\/css\/features\/big.css.map": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/assets\/prod\/css\/features\/big.css.map",
-		"oF": 0
-		},
 	"\/assets\/prod\/css\/index.css": {
 		"aP": 1,
 		"bl": 0,
