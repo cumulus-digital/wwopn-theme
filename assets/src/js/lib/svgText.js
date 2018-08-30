@@ -137,7 +137,6 @@
 					// if letter is not alphanumeric, use hex code
 					if ( ! letter.match(/[A-Z0-9]/)) {
 						useLetter = '_x' + letter.charCodeAt(0).toString(16).toUpperCase() + '_';
-						console.log(useLetter);
 					}
 
 					var viewBox = "0 0 100 100",
