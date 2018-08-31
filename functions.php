@@ -198,13 +198,23 @@ function query_getAllPosts($query) {
 	    $query->is_main_query()
 	){
         $query->set('posts_per_page', -1 );
-        $query->set(
-        	'orderby',
-        	array(
-        		'menu_order' => 'asc',
-        		'title' => 'asc'
-        	)
-        );
+
+        if ($query->is_post_type_archive('wpn_teams')) {
+	        $query->set(
+	        	'orderby',
+	        	array(
+	        		'menu_order' => 'asc',
+	        		'title' => 'asc'
+	        	)
+	        );
+	    } else {
+	    	$query->set(
+	    		'orderby',
+	    		array(
+	    			'title' => 'asc'
+	    		)
+	    	);
+	    }
 	}
 }
 add_action( 'pre_get_posts', ns('query_getAllPosts') );
