@@ -91,7 +91,7 @@ article.card {
 		display: none;
 		background: $colors-blue;
 		color: #fff;
-		box-shadow: 0 0 .5em rgba(0,0,0,0.4);
+		box-shadow: 0 1px 0 $colors-purple;
 
 		font-size: 1em;
 		font-weight: bold;
