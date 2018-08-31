@@ -1,5 +1,6 @@
 .wpn-f-bfg {
 	color: transparent;
+	flex: 1 1 33%;
 
 	@media (max-width: $breakwidth-large) {
 		a {
@@ -16,7 +17,7 @@
 
 	ul {
 		display: flex;
-		flex: 0 1 auto;
+		flex: 1 1 33%;
 		flex-basis: auto;
 		justify-content: center;
 		align-items: center;
@@ -24,7 +25,6 @@
 	}
 	.wpn-f-container {
 		flex-direction: column;
-		flex-grow: 1;
 		max-width: calc(100% / 3);
 
 		&:nth-child(even) {
@@ -40,7 +40,6 @@
 				flex-direction: row-reverse;
 			}
 			li {
-				flex-grow: 1;
 				width: 100%;
 			}
 			.wpn-f-cluster {
