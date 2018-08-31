@@ -54,17 +54,38 @@ namespace WWOPN_Theme;
 										)
 									?>
 									</div>
-									<aside class="tags">
 										<?php
-											\the_terms(
-												\get_the_ID(),
+											$tag_ids = \wp_get_post_terms(
+												$post->ID,
 												'wpn_podcast_tag',
-												'',
-												'',
-												''
-											)
+												array( 'fields' => 'ids' )
+											);
 										?>
-									</aside>
+										<?php if ($tag_ids): ?>
+											<?php
+											$tags = \wp_tag_cloud(array(
+												'taxonomy' => 'wpn_podcast_tag',
+												'format' => 'array',
+												'include'  => $tag_ids,
+												'number' => 4,
+												'echo' => false,
+												'smallest' => 1,
+												'largest' => 1,
+												'unit' => 'em',
+											));
+											?>
+											<?php if ($tags): ?>
+												<aside class="tags">
+													<ul>
+														<?php foreach ($tags as $tag): ?>
+															<li>
+																<?=$tag?>
+															</li>
+														<?php endforeach ?>
+													</ul>
+												</aside>
+											<?php endif; ?>
+										<?php endif; ?>
 								</div>
 								<h1 class="stext st_blue" data-st-src="<?=\get_template_directory_uri()?>/assets/prod/images/stext/right.svg">
 									<?php \the_title() ?>
@@ -89,6 +110,18 @@ namespace WWOPN_Theme;
 							<div class="body">
 								<?php \the_content() ?>
 							</div>
+							<aside class="tags">
+								<h5>Tags:</h5>
+								<?php
+									\the_terms(
+										\get_the_ID(),
+										'wpn_podcast_tag',
+										'',
+										'',
+										''
+									)
+								?>
+							</aside>
 						</div>
 
 						<div class="player_embed">

@@ -111,38 +111,23 @@
 					}
 				}
 
-				&:after {
-					content: '/';
-					vertical-align: bottom;
-				}
 			}
 			.tags {
-				display: inline-block;
 				font-size: 0.35em;
-				line-height: 1;
-				margin-right: 1em;
 				vertical-align: middle;
 
-				ul, li {
-					display: inline-block;
-					list-style: none;
-					margin: 0;
-					padding: 0;
-				}
-
 				a {
-					display: inline-block;
-					background: $colors-purple;
-					color: #fff;
-					border-radius: 1em;
-					padding: .5em .75em;
-					margin: 0 .2em .2em 0;
-					text-decoration: none;
-					white-space: nowrap;
+					background: #fff;
+					color: #333;
+
+					padding: .35em .5em;
+
+					opacity: 0.4;
 
 					&:hover {
-						background: #fff;
-						color: $colors-purple;
+						background: $colors-purple;
+						color: #fff;
+						opacity: 1;
 					}
 				}
 			}
@@ -201,6 +186,43 @@
 			}
 		}
 	}
+
+	.tags {
+		display: inline-block;
+		font-size: 0.3em;
+		line-height: 1;
+		vertical-align: middle;
+
+		h5 {
+			display: inline-block;
+			font-weight: 200;
+			font-size: 1.2em;
+			margin: 0 .5em 0 0;
+		}
+
+		ul, li {
+			display: inline-block;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		a {
+			display: inline-block;
+			background: $colors-purple;
+			color: #fff;
+			border-radius: 1em;
+			padding: .5em .75em;
+			margin: 0 .2em .2em 0;
+			text-decoration: none;
+			white-space: nowrap;
+
+			&:hover {
+				background: $colors-blue;
+			}
+		}
+	}
+
 
 	.post-edit-link {
 		position: fixed;
