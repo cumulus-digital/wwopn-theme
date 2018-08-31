@@ -1,4 +1,4 @@
-.features {
+.home .features {
 
 	@at-root @keyframes homepageslide {
 		from {
@@ -19,7 +19,16 @@
 	animation: homepageslide 400s linear infinite;
 	transition: all 60s;
 
+	@media (pointer:none), (pointer:coarse) {
+		background-image: none;
+		animation: none;
+	}
+
 	.row-container {
 		padding: 0 0 .5rem;
+
+		@media (max-width: $breakwidth-small) {
+			padding: 0;
+		}
 	}
 }

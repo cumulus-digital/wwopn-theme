@@ -9,6 +9,10 @@
 	animation: homepageslide 400s linear infinite;
 	transition: background-position 60s;
 
+	@media (pointer:none), (pointer:coarse) {
+		animation: none;
+	}
+
 	position: fixed;
 	height: 2rem;
 	left: 0;

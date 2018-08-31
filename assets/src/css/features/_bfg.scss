@@ -1,55 +1,45 @@
 .wpn-f-bfg {
-	color: transparent;
-	flex: 1 1 33%;
+	overflow: hidden;
 
-	@media (max-width: $breakwidth-large) {
-		a {
-			margin: 1px;
-
-			&:hover {
-				border: none;
-			}
-		}
-	}
-	@media (max-width: $breakwidth-small) {
-		display: block;
-	}
-
-	ul {
-		display: flex;
-		flex: 1 1 33%;
-		flex-basis: auto;
-		justify-content: center;
-		align-items: center;
-		align-content: center;
-	}
 	.wpn-f-container {
-		flex-direction: column;
-		max-width: calc(100% / 3);
+		width: 33.333333%;
+		float: left;
 
-		&:nth-child(even) {
-			flex-direction: column-reverse;
+		.wpn-f-cluster li {
+			width: 50%;
+			float: left;
+		}
+
+		&:nth-child(2) {
+			display: flex;
+			flex-wrap: wrap-reverse;
+			flex-direction: row-reverse;
+			
+			.wpn-f-big,
+			.wpn-f-cluster {
+				flex-basis: 100%;
+			}
 		}
 
 		@media (max-width: $breakwidth-small) {
-			max-width: 100%;
-			&,&:nth-child(even) {
-				flex-direction: row;
+			width: 100%;
+			float: none;
+			
+			display: flex;
+			flex-wrap: no-wrap;
+
+			&:nth-child(2) .wpn-f-big,
+			.wpn-f-big {
+				flex-basis: 66.666666%;
 			}
-			&:nth-child(even) {
-				flex-direction: row-reverse;
-			}
-			li {
-				width: 100%;
-			}
+			&:nth-child(2) .wpn-f-cluster,
 			.wpn-f-cluster {
-				width: 50%;
-				ul {
-					flex-direction: column;
-				}
+				flex-basis: 33.333333%;
+				flex-wrap: wrap;
+
 				li {
-					flex-grow: 0;
-					flex-shrink: 1;
+					display: block;
+					width: 100%;
 				}
 			}
 		}

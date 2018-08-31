@@ -30,6 +30,9 @@ html,body {
 		padding-top: 32px;
 	}
 }
+body {
+	min-height: 100vh;
+}
 
 h1, h2, h3 {
 	display: block;
