@@ -59,75 +59,7 @@
 	width: 0.02em;
 }
 
-// Letter kerning
-.st-space + .st-word[data-first_letter="A"] {
-	//margin-left: -0.25em;
-}
-
-svg[data-letter="I"] + svg,
-svg + svg[data-letter="I"],
-svg[data-letter="@"] + svg {
-	margin-left: -.325em;
-}
-
-svg[data-letter] + svg[data-letter="W"],
-svg[data-letter="C"] + svg[data-letter="A"],
-svg[data-letter="C"] + svg[data-letter="S"],
-svg[data-letter="A"] + svg[data-letter="S"],
-svg[data-letter="S"] + svg[data-letter="T"],
-svg[data-letter="R"] + svg[data-letter="O"],
-svg[data-letter="V"] + svg,
-svg + svg[data-letter="V"] {
-	margin-left: -.37em;
-}
-
-svg[data-letter="D"] + svg[data-letter="A"],
-svg[data-letter="C"] + svg[data-letter="Y"],
-svg[data-letter="C"] + svg[data-letter="O"],
-svg[data-letter="T"] + svg[data-letter="O"],
-svg[data-letter="L"] + svg[data-letter="O"],
-svg[data-letter="R"] + svg[data-letter="T"],
-svg[data-letter="O"] + svg[data-letter="X"],
-svg[data-letter="X"] + svg[data-letter="O"],
-svg[data-letter="S"] + svg[data-letter="Y"] {
-	margin-left: -.4em;
-}
-
-svg[data-letter="A"] + svg[data-letter="C"],
-svg[data-letter="W"] + svg[data-letter="S"],
-svg[data-letter="Y"] + svg[data-letter="O"],
-svg[data-letter="D"] + svg[data-letter="Y"],
-svg[data-letter="P"] + svg[data-letter="A"],
-svg[data-letter="F"] + svg[data-letter="A"],
-svg[data-letter="Y"] + svg[data-letter="A"],
-svg[data-letter="O"] + svg[data-letter="V"],
-svg[data-letter="V"] + svg[data-letter="O"] {
-	margin-left: -.45em;
-}
-
-svg[data-letter="T"] + svg[data-letter="."],
-svg[data-letter="T"] + svg[data-letter=","],
-svg[data-letter="P"] + svg[data-letter="."],
-svg[data-letter="P"] + svg[data-letter=","],
-svg[data-letter="Y"] + svg[data-letter="."],
-svg[data-letter="Y"] + svg[data-letter=","],
-svg[data-letter="A"] + svg[data-letter="W"],
-svg[data-letter="A"] + svg[data-letter="V"],
-svg[data-letter="V"] + svg[data-letter="A"],
-svg[data-letter="A"] + svg[data-letter="Y"],
-svg[data-letter="Y"] + svg[data-letter="A"],
-svg[data-letter="A"] + svg[data-letter="T"],
-svg[data-letter="T"] + svg[data-letter="A"],
-svg[data-letter="L"] + svg[data-letter="Y"],
-svg[data-letter="L"] + svg[data-letter="T"],
-svg[data-letter="T"] + svg[data-letter="J"] {
-	margin-left: -.5em;
-}
-
-svg[data-letter="L"] + svg[data-letter="V"],
-svg[data-letter="W"] + svg[data-letter="A"] {
-	margin-left: -.54em;
-}
+@import 'kerning';
 
 .st_face, .st_face path {
 	fill: #fff;
