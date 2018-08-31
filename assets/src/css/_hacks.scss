@@ -1,0 +1,10 @@
+/**
+ * Hacks for defaults outputted by Wordpress's editor
+ */
+
+// Wrap columns on small displays
+.wp-block-columns {
+	@media (max-width: $breakwidth-small) {
+		display: block;
+	}
+}
