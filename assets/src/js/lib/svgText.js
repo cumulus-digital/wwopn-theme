@@ -205,6 +205,13 @@
 				if (i + 1 < word_count) {
 					var spacer = me.createEl(me.options.spaceElement);
 					spacer.setAttribute('class', me.options.spaceClass);
+
+					var space = me.createEl(me.options.originalTextElement);
+						space.className = me.options.originalTextClass;
+						space.innerText = ' ';
+
+					spacer.appendChild(space);
+
 					compiled.appendChild(spacer);
 				}
 			});
