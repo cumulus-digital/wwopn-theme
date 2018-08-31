@@ -25,7 +25,7 @@ namespace WWOPN_Theme;
 						</div>
 					<?php endif ?>
 
-					<div class="content">
+					<div class="content body">
 
 						<?php get_template_part('template-parts/loop-cards-' . \get_post_type()); ?>
 

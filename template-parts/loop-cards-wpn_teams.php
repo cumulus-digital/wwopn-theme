@@ -25,6 +25,6 @@
 
 <?php endif ?>
 
-<div class="bio">
+<div class="body bio">
 	<?php \the_content() ?>
 </div>

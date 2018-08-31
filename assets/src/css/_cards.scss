@@ -76,13 +76,35 @@ article.card {
 	}
 
 	.content {
-		hyphens: auto;
 		padding: 1em;
 		position: relative;
 		z-index: 2;
 	}
 
-	.excerpt {
+	.excerpt, .body {
+		font-size: inherit;
+
+		word-break: break-word;
+		overflow-wrap: break-word;
+
+		hyphens: auto;
+		-webkit-hyphenate-limit-zone: 1.5em;
+		   -moz-hyphenate-limit-zone: 1.5em;
+		    -ms-hyphenate-limit-zone: 1.5em;
+		        hyphenate-limit-zone: 1.5em;
+		-webkit-hyphenate-limit-chars: 6;
+		   -moz-hyphenate-limit-chars: 6;
+		    -ms-hyphenate-limit-chars: 6;
+		        hyphenate-limit-chars: 6;
+		-webkit-hyphenate-limit-lines: 2;
+		   -moz-hyphenate-limit-lines: 2;
+		    -ms-hyphenate-limit-lines: 2;
+		        hyphenate-limit-lines: 2;
+		-webkit-hyphenate-character: "\002d";
+		   -moz-hyphenate-character: "\002d";
+		    -ms-hyphenate-character: "\002d";
+		        hyphenate-character: "\002d";
+
 		p:last-child {
 			margin-bottom: 0
 		}
