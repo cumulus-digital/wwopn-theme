@@ -235,15 +235,15 @@ function query_getAllPosts($query) {
 	        $query->set(
 	        	'orderby',
 	        	array(
-	        		'menu_order' => 'asc',
-	        		'title' => 'asc'
+	        		'menu_order' => 'DESC',
+	        		'title' => 'ASC'
 	        	)
 	        );
 	    } else {
 	    	$query->set(
 	    		'orderby',
 	    		array(
-	    			'title' => 'asc'
+	    			'title' => 'ASC'
 	    		)
 	    	);
 	    }
