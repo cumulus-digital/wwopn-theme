@@ -23,26 +23,6 @@ namespace WWOPN_Theme;
 
 		<div class="row-container">
 
-			<?php
-				$post_ids = \wp_list_pluck($posts, 'ID');
-				$tag_ids = \wp_get_object_terms(
-					$post_ids,
-					'wpn_podcast_tag',
-					array( 'fields' => 'ids' )
-				);
-			?>
-			<?php if (count($tag_ids)): ?>
-				<aside class="tags">
-					<?php
-					\wp_tag_cloud(array(
-						'taxonomy' => 'wpn_podcast_tag',
-						'include' => $tag_ids,
-						'exclude' => 0,
-					));
-					?>
-				</aside>
-			<?php endif ?>
-
 			<div class="cards">
 				<?php get_template_part('template-parts/loop-cards'); ?>
 			</div>

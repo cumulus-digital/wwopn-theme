@@ -716,6 +716,13 @@
 		"oAP": "\/taxonomy-wpn_podcast_genre.php",
 		"oF": 0
 		},
+	"\/taxonomy-wpn_podcast_tag.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/taxonomy-wpn_podcast_tag.php",
+		"oF": 0
+		},
 	"\/taxonomy.php": {
 		"cB": 0,
 		"ft": 8192,
