@@ -75,6 +75,10 @@ nav.menu {
 	}
 }
 
+main {
+	min-height: calc( 100vh - 4rem );
+}
+
 .post-edit-link {
 	display: inline-block;
 	background: #000;

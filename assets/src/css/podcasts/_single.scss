@@ -24,7 +24,7 @@
 					position: absolute;
 					top: 0;
 					left: 50%;
-					transform: translateX(-50%) translateY(-25%);
+					transform: translateX(-50%) translateY(-20%);
 					min-width: 100%;
 					min-height: 100%;
 				}
@@ -199,6 +199,14 @@
 				max-width: 100%;
 			}
 		}
+	}
+
+	.post-edit-link {
+		position: fixed;
+		bottom: 5%;
+		left: 0;
+
+		font-size: 0.4rem;
 	}
 
 }
