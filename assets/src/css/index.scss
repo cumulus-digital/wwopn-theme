@@ -116,6 +116,15 @@ main {
 			color: $colors-blue;
 		}
 	}
+
+	.post-edit-link {
+		position: fixed;
+		bottom: 5%;
+		left: 0;
+
+		font-size: 0.4rem;
+	}
+
 }
 
 .body {
