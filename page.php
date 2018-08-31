@@ -23,8 +23,8 @@ namespace WWOPN_Theme;
 							<?php \the_content(); ?>
 						</div>
 
-					</article>
 					<?php \edit_post_link(); ?>
+					</article>
 
 				<?php endwhile; ?>
 			<?php else: ?>
