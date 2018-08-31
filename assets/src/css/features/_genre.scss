@@ -74,17 +74,23 @@ article.genre {
 .wpn-f-genre {
 	ul {
 		display: flex;
-		flex: 0 1 auto;
+		flex: 0 1 20%;
 		flex-basis: auto;
 		flex-grow: 1;
 		flex-wrap: nowrap;
+
+		li {
+			flex-basis: 20%;
+			margin: 2px;
+		}
 	}
 	@media (max-width: $breakwidth-medium) {
 		ul {
 			flex-wrap: wrap;
+			flex: 0 1 50%;
 		}
 		li {
-			width: 50%;
+			flex-basis: 50%;
 		}
 	}
 	@media (max-width: $breakwidth-small) {
