@@ -111,16 +111,18 @@ namespace WWOPN_Theme;
 								<?php \the_content() ?>
 							</div>
 							<aside class="tags">
-								<h5>Tags:</h5>
-								<?php
-									\the_terms(
-										\get_the_ID(),
-										'wpn_podcast_tag',
-										'',
-										'',
-										''
-									)
-								?>
+								<?php if (\has_term('', 'wpn_podcast_tag')): ?>
+									<h5>Tags:</h5>
+									<?php
+										\the_terms(
+											\get_the_ID(),
+											'wpn_podcast_tag',
+											'',
+											'',
+											''
+										)
+									?>
+								<?php endif ?>
 							</aside>
 						</div>
 
