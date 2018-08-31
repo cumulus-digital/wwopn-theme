@@ -232,18 +232,13 @@ function query_getAllPosts($query) {
         $query->set('posts_per_page', -1 );
 
         if ($query->is_post_type_archive('wpn_teams')) {
-	        $query->set(
-	        	'orderby',
-	        	array(
-	        		'menu_order' => 'DESC',
-	        		'title' => 'ASC'
-	        	)
-	        );
+	        $query->set('orderby', 'menu_order title');
+	        $query->set('order', 'DESC');
 	    } else {
 	    	$query->set(
 	    		'orderby',
 	    		array(
-	    			'title' => 'ASC'
+	    			'title' => 'ASC',
 	    		)
 	    	);
 	    }
