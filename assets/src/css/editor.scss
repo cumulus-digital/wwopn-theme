@@ -1,0 +1,26 @@
+/**
+ * Editor stylesheet is injected into editor on admin
+ */
+@import 'variables';
+
+.edit-post-visual-editor {
+
+	color: #222;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 18px;
+
+	.editor-post-title__block .editor-post-title__input,
+	p {
+		font-family: inherit;
+		font-size: inherit;
+	}
+
+	.editor-post-title__block .editor-post-title__input {
+		color: $colors-blue;
+		font-size: 3em;
+		line-height: 1;
+		text-shadow: 1px 1px 0 $colors-purple;
+	}
+
+	@import 'page-content';
+}

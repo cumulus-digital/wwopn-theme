@@ -1,0 +1,63 @@
+header h1 {
+	display: block;
+	text-align: center;
+
+	margin-bottom: 0.25em;
+}
+
+a {
+	color: $colors-purple-highlight;
+
+	&:hover {
+		color: $colors-blue;
+	}
+}
+
+h1 {
+	@media (max-width: $breakwidth-small) {
+		font-size: 1.8em;
+	}
+}
+
+h2,h3 {
+	color: $colors-purple-highlight;
+	text-shadow: 1px 1px 0 $colors-blue;
+
+	margin-bottom: .5em;
+
+	font-weight: bold;
+}
+
+h3 {
+	font-size: 1.5em;
+}
+
+.big_button {
+	background: $colors-blue;
+	border: 2px solid transparent;
+	border-radius: .25em;
+	color: #fff;
+	display: inline-block;
+	font-size: 1.25em;
+	font-weight: 600;
+	line-height: 1;
+	margin: 0 .25em;
+	padding: .75em 1em;
+	text-align: center;
+	text-decoration: none;
+
+	&:hover {
+		background: transparent;
+		border-color: $colors-blue;
+		color: $colors-blue;
+	}
+
+	@media (max-width: $breakwidth-medium) {
+		margin-bottom: 0.25em;
+		
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+	}
+}

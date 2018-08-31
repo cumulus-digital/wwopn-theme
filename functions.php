@@ -81,6 +81,28 @@ function scripts_and_styles() {
 }
 \add_action('wp_enqueue_scripts', ns('scripts_and_styles'));
 
+function editor_styles() {
+	\wp_register_Style(
+		'google_montserrat_font',
+		'https://fonts.googleapis.com/css?family=Montserrat:100,200,400,700',
+		false,
+		null,
+		'all'
+	);
+	\wp_enqueue_style('google_montserrat_font');
+
+	\wp_register_Style(
+		'guttenberg_styles',
+		\get_template_directory_uri() . '/assets/prod/css/editor.css',
+		false,
+		null,
+		'all'
+	);
+	\wp_enqueue_style('guttenberg_styles');
+
+}
+\add_action('enqueue_block_editor_assets', ns('editor_styles'));
+
 /**
  * Replaces "[...]" (appended to automatically generated excerpts) with ... and
  * a 'Continue reading' link.

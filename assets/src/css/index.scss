@@ -1,12 +1,4 @@
-$maxwidth: 1200px;
-$breakwidth-large: 1030px;
-$breakwidth-medium: 820px;
-$breakwidth-small: 640px;
-
-$colors-purple: #6a2774;
-$colors-purple-highlight: #a33cb3;
-$colors-blue: #00aeef;
-
+@import 'variables';
 @import 'functions/_';
 
 * { box-sizing: border-box; }
@@ -103,19 +95,11 @@ main {
 	width: 80%;
 	margin: 0 auto;
 
-	header h1 {
-		display: block;
-		text-align: center;
+	@import 'page-content';
 
-		margin-bottom: 0.25em;
-	}
-
-	a {
-		color: $colors-purple-highlight;
-
-		&:hover {
-			color: $colors-blue;
-		}
+	@media (max-width: $breakwidth-small) {
+		width: 100%;
+		padding: 0 1em;
 	}
 
 	.post-edit-link {
@@ -135,6 +119,16 @@ main {
 
 .body {
 	font-size: 0.5rem;
+	line-height: 1.4;
+
+	@media (max-width: $breakwidth-small) {
+		font-size: 0.7rem;
+
+		& > h2,
+		& > h3 {
+			text-align: center;
+		}
+	}
 }
 
 @import 'stext/_';
