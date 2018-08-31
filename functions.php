@@ -224,7 +224,7 @@ function query_getAllPosts($query) {
 	if(
 		! \is_admin() &&
 		(
-	    	$query->is_post_type_archive('wpn_podcasts') ||
+	    	$query->is_post_type_archive('wpn_podcast') ||
 	    	$query->is_post_type_archive('wpn_teams')
 	    ) &&
 	    $query->is_main_query()
@@ -251,4 +251,3 @@ function front_page_template( $template ) {
 	return is_home() ? '' : $template;
 }
 add_filter( 'frontpage_template',  ns('front_page_template') );
-

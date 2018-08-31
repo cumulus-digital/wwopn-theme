@@ -13,6 +13,7 @@
 			compiledClass: 'st-comp',
 			wordClass: 'st-word',
 			spaceClass: 'st-space',
+			orphanWrapClass: 'st-orphan',
 			originalTextClass: 'st-original',
 			processingClass: 'st-processing',
 			convertedClass: 'st-converted',
@@ -21,6 +22,7 @@
 			wordElement: 'span',
 			spaceElement: 'span',
 			letterElement: 'span',
+			orphanWrapElement: 'span',
 			originalTextElement: 'span',
 			heightBasis: '1.15em',
 		},
@@ -208,7 +210,7 @@
 
 					var space = me.createEl(me.options.originalTextElement);
 						space.className = me.options.originalTextClass;
-						space.innerText = ' ';
+						space.innerHTML = '&nbsp;';
 
 					spacer.appendChild(space);
 
@@ -216,8 +218,17 @@
 				}
 			});
 
+			// Wrap last two words to allow preventing orphans
+			var $compiled = $(compiled),
+				$orphans = $compiled.slice(-1).remove(),
+				wrap = me.createEl(me.options.orphanWrapElement);
+
+			wrap.className = me.options.orphanWrapClass;
+
+			$compiled.children().slice(-3).wrapAll(wrap);
+
 			$el
-				.html(compiled)
+				.html($compiled)
 				.removeClass(me.options.processingClass)
 				.addClass(me.options.convertedClass);
 
