@@ -7,7 +7,7 @@
 		z-index: 1;
 
 		.row-container {
-			padding: 1.5em 1em 0;
+			padding: 1em 1em 0;
 		}
 
 		&.has_header {
@@ -50,13 +50,15 @@
 			flex-wrap: nowrap;
 
 			position: relative;
-			top: 1.25em;
+			top: 1em;
 
 			@media (max-width: $breakwidth-medium) {
-				flex-direction: column;
-				align-items: center;
-				top: 1em;
 				text-align: center;
+				display: block;
+			}
+
+			@at-root .single .podcast header.has_subtitle .info {
+				top: 1.5em;
 			}
 
 			figure, .title {
@@ -77,9 +79,8 @@
 				z-index: 2;
 
 				@media (max-width: $breakwidth-medium) {
-					flex-basis: auto;
 					width: 75%;
-					margin: 0 0 .5em;
+					margin: 0 auto .5em;
 				}
 
 				img {
@@ -146,6 +147,11 @@
 			}
 
 			.title {
+
+				@media (max-width: $breakwidth-small) {
+					font-size: .75em;
+				}
+
 				h2 {
 					color: #444;
 					font-size: .9em;

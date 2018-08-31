@@ -19,7 +19,10 @@ namespace WWOPN_Theme;
 					}
 				?>
 
-				<header class="<?=!($header_id && $header_img) ?: 'has_header'?>">
+				<header class="<?php
+					echo ($header_id && $header_img) ? 'has_header_img ' : '';
+					echo \get_post_meta(get_the_ID(), '_wpn_podcast_meta_subTitle', true) ? 'has_subtitle ' : '';
+				?>">
 
 					<div class="header-bg-container">
 						<?php if($header_id && $header_img): ?>
