@@ -125,6 +125,10 @@ main {
 		left: 0;
 
 		font-size: 0.4rem;
+
+		&:hover {
+			color: #fff;
+		}
 	}
 
 }
