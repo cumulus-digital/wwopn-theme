@@ -67,6 +67,16 @@ function scripts_and_styles() {
 			'all'
 		);
 		\wp_enqueue_style('wwopn_theme_style');
+
+		\wp_register_Style(
+			'google_montserrat_font',
+			'https://fonts.googleapis.com/css?family=Montserrat:100,200,400,700',
+			false,
+			null,
+			'all'
+		);
+		\wp_enqueue_style('google_montserrat_font');
+
 	}
 }
 \add_action('wp_enqueue_scripts', ns('scripts_and_styles'));
