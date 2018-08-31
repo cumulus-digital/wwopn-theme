@@ -58,6 +58,15 @@ p {
 	margin-top: 0;
 }
 
+a {
+	img {
+		border: 0;
+	}
+	&:focus {
+		outline: 0;
+	}
+}
+
 nav.menu {
 	ul, li {
 		list-style: none;
@@ -107,7 +116,6 @@ nav.menu {
 
 .body {
 	font-size: 0.5rem;
-
 }
 
 @import 'stext/_';
