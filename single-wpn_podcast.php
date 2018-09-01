@@ -68,6 +68,7 @@ namespace WWOPN_Theme;
 												'format' => 'array',
 												'include'  => $tag_ids,
 												'number' => 4,
+												'orderby' => 'count',
 												'echo' => false,
 												'smallest' => 1,
 												'largest' => 1,
