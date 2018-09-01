@@ -1,5 +1,3 @@
-<?php get_header(); ?>
-
 <main role="main">
 
 	<section class="row features">
@@ -88,5 +86,3 @@
 	</section>
 
 </main>
-
-<?php get_footer();
