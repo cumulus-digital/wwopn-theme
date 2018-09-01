@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" class="st_l" data-zflow="+" data-prefix="st_l">
     <defs>
         <linearGradient id="st_lg" x1="0%" y1="100%" x2="100%" y2="0%">
-            <stop class="st_shadow1" offset="0" stop-opacity=".25"/>
-            <stop class="st_shadow2" offset="1" stop-opacity="0"/>
+            <stop class="st_shadow1" offset="0" stop-opacity=".27"/>
+            <stop class="st_shadow2" offset="1" stop-opacity=".1"/>
         </linearGradient>
     </defs>
     <symbol id="st_l__x21_" data-name="!" viewBox="0 0 35.88 76.9">
