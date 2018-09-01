@@ -24,6 +24,9 @@
 			orphanWrapElement: 'span',
 			originalTextElement: 'span',
 			heightBasis: '1.15em',
+			letterCountMap: [
+				8, 10, 13, 16
+			]
 		},
 		loader_cache = [];
 
@@ -98,7 +101,10 @@
 			    
 			var text = dom.body.textContent,
 				words = text.trim().split(/[\s\t\n\r]+/),
-				word_count = words.length;
+				word_count = words.length,
+				total_letter_count = 0;
+
+			$el.attr('data-wc', word_count);
 
 			var loader = $('.' + me.options.loaderHolderClass + '[data-src="' + src + '"] svg'),
 				prefix = loader.data('prefix'),
@@ -126,6 +132,8 @@
 				if (zflow == '+') {
 					zIndex = word_count + i;
 				}
+
+				total_letter_count += letter_count;
 
 				wordEl.className = me.options.wordClass;
 				wordEl.style.zIndex = zIndex;
@@ -189,10 +197,10 @@
 					wordEl.appendChild(svg);
 
 					if (i === 0) {
-						wordEl.setAttribute('data-first_letter', letter);
+						wordEl.setAttribute('data-fl', letter);
 					}
 					if (i === letter_count - 1) {
-						wordEl.setAttribute('data-last_letter', letter);
+						wordEl.setAttribute('data-ll', letter);
 					}
 
 				});
@@ -240,7 +248,16 @@
 				}
 			}
 
+			var letter_class = 0;
+			me.options.letterCountMap.forEach(function(n, i) {
+				if (total_letter_count >= n) {
+					letter_class = i;
+				}
+			});
+
 			$el
+				.attr('data-lcl', letter_class)
+				.attr('data-tlc', total_letter_count)
 				.html(compiled)
 				.removeClass(me.options.processingClass)
 				.addClass(me.options.convertedClass);
@@ -250,12 +267,13 @@
 		wrapWords: function(compiled) {
 			var me = this,
 				$compiled = $(compiled),
-				$orphans = $compiled.slice(-1).remove(),
+				$orphans = $compiled.children().slice(-3),
 				wrap = me.createEl(me.options.orphanWrapElement);
 
 			wrap.className = me.options.orphanWrapClass;
+			wrap.setAttribute('data-fl', $orphans.first().data('fl'));
 
-			$compiled.children().slice(-3).wrapAll(wrap);
+			$orphans.wrapAll(wrap);
 			return $compiled;			
 		},
 

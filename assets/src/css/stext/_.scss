@@ -3,14 +3,17 @@
  */
 
 .stext { color: transparent }
+
 .st-converted {
 	display: inline-block;
 	line-height: 1;
 	filter: drop-shadow( 0 0 .05em rgba(0,0,0,0.3) );
 }
+
 .stext.st-processing {
 	color: transparent;
 }
+
 .st-comp {
 	display: block;
 
@@ -34,6 +37,7 @@
 		}
 	}
 }
+
 .st-word {
 	display: inline-block;
 	height: 1.15em;
@@ -41,16 +45,18 @@
 	white-space: nowrap;
 	overflow-wrap: break-word;
 
-	margin-left: -.05em;
-	&:first-child {
-		margin-left: 0;
+	left: -.05em;
+
+	&[data-fl="A"] {
+		left: -.13em;
 	}
 
-	&[data-first_letter="A"] {
-		margin-left: -.1em;
+	&[data-ll="A"] + .st-space + .st-word {
+		left: -.2em;
 	}
-	&[data-last_letter="A"] + .st-space + .st-word {
-		margin-left: -.15em;
+
+	&:first-child {
+		left: 0;
 	}
 
 	.st-original {
@@ -69,10 +75,19 @@
 		}
 	}
 }
+
 .st-space {
 	display: inline-block;
 	width: 0;
 	overflow: hidden;
+}
+
+.st-orphan {
+	display: inline-block;
+
+	.st-word[data-fl="A"] {
+		left: -.13em;
+	}
 }
 
 @import 'kerning';
