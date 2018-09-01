@@ -49,7 +49,7 @@
 	.row-headline-left &,
 	.row-headline-right & {
 		display: grid;
-		grid-gap: 1em;
+		grid-gap: .5em;
 		grid-template-columns: 1fr 1fr;
 		grid-template-areas: "left right";
 		align-items: center;
