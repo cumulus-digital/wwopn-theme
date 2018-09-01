@@ -41,9 +41,13 @@
 	white-space: nowrap;
 	overflow-wrap: break-word;
 
-	margin-left: -.1em;
+	margin-left: -.05em;
 	&:first-child {
 		margin-left: 0;
+	}
+
+	&[data-first_letter="A"] {
+		margin-left: -.1em;
 	}
 
 	.st-original {
