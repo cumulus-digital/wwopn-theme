@@ -9,8 +9,8 @@
 		overflow: hidden;
 
 		position: absolute;
-		top: 2rem;
-		right: 0;
+		top: 0;
+		right: 2rem;
 		left: 50%;
 
 		z-index: 1;
@@ -23,15 +23,18 @@
 		box-shadow: 0 .5em 1em rgba(0,0,0,0.25);
 
 		transition: all 0.3s ease-out;
-		transition-delay: 0;
 
 		@at-root .masthead input:checked ~ ul {
 			max-height: 100vh;
-			transition-delay: 0.2s
 		}
 
 		li {
 			display: block;
+
+			@media (max-height: $breakwidth-medium) {
+				display: inline-block;
+				margin: 0 .5em;
+			}
 		}
 
 		a {
@@ -54,8 +57,8 @@
 				rgba(darken($colors-purple, 25%),1));
 
 			font-size: 1em;
-			text-align: right;
 
+			top: 2rem;
 			left: auto;
 			right: 0;
 			transform: none;
@@ -75,6 +78,12 @@
 				display: block;
 				white-space: normal;
 			}
+		}
+
+		@media (max-width: $breakwidth-small) {
+			
+			text-align: right;
+
 		}
 
 	}
