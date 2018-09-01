@@ -38,6 +38,9 @@ namespace WWOPN_Theme;
 						'taxonomy' => 'wpn_podcast_tag',
 						'include' => $tag_ids,
 						'exclude' => 0,
+						'smallest' => 1,
+						'largest' => 1,
+						'unit' => 'em',
 					));
 					?>
 				</aside>
