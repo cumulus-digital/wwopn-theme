@@ -49,6 +49,9 @@
 	&[data-first_letter="A"] {
 		margin-left: -.1em;
 	}
+	&[data-last_letter="A"] + .st-space + .st-word {
+		margin-left: -.15em;
+	}
 
 	.st-original {
 		color: transparent;
