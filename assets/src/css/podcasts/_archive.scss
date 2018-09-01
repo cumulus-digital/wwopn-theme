@@ -47,6 +47,16 @@
 		display: block;
 		text-align: center;
 		margin-bottom: 1em;
+
+		a {
+			background: #ccc;
+			color: #fff;
+
+			&:hover {
+				background: $colors-purple;
+				opacity: 1;
+			}
+		}
 	}
 
 	.link-more { display: none; }
