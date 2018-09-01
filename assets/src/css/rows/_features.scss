@@ -25,10 +25,12 @@
 	}
 
 	.row-container {
-		padding: 0 0 .5rem;
+		padding: 0;
 
+		/*
 		@media (max-width: $breakwidth-small) {
 			padding: 0;
 		}
+		*/
 	}
 }
