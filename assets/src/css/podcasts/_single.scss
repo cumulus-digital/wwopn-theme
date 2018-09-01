@@ -8,6 +8,13 @@
 
 		.row-container {
 			padding: 1em 1em 0;
+
+			@media (max-width: $breakwidth-medium) {
+				padding-top: 0;
+			}
+			@media (max-width: $breakwidth-small) {
+				padding-top: .5em;
+			}
 		}
 
 		&.has_header_img {
@@ -52,7 +59,7 @@
 			position: relative;
 			top: 1em;
 
-			@media (max-width: $breakwidth-medium) {
+			@media (max-width: $breakwidth-small) {
 				text-align: center;
 				display: block;
 			}
@@ -80,6 +87,11 @@
 				z-index: 2;
 
 				@media (max-width: $breakwidth-medium) {
+					flex-basis: 200px;
+					max-width: 200px;
+					min-width: 150px;
+				}
+				@media (max-width: $breakwidth-small) {
 					width: 75%;
 					margin: 0 auto .5em;
 				}
@@ -138,10 +150,12 @@
 					font-size: .75em;
 				}
 
-				h1 {
-					margin-left: -.35em;
+				@media (min-width: $breakwidth-small) {
+					h1 {
+						margin-left: -.35em;
+					}
 				}
-				
+
 				h2 {
 					color: #444;
 					font-size: .9em;
@@ -192,11 +206,12 @@
 	}
 
 	.post-edit-link {
+		font-size: 0.4rem;
+
 		position: fixed;
 		bottom: 5%;
 		left: 0;
-
-		font-size: 0.4rem;
+		z-index: 20;
 	}
 
 }
