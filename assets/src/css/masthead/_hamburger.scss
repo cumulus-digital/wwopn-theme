@@ -27,14 +27,14 @@
 		width: 100%;
 		height: 0;
 		overflow: hidden;
-		transition: height .2s linear;
-		transition-delay: 0.1s;
+		transition: height .1s linear;
+		transition-delay: 0.2s;
 	}
 
 	.burger-lines {
 		position: absolute;
-		height: 1rem;
-		width: 1.5rem;
+		height: 1em;
+		width: 1.5em;
 		top: 50%;
 		left: 50%;
 		transform: translateX(-50%) translateY(-50%);
@@ -45,7 +45,7 @@
 		display: block;
 		background: #fff;
 		opacity: 1;
-		border-radius: .2rem;
+		border-radius: .2em;
 		width: 100%;
 		height: .16em;
 		left: 0;
@@ -67,7 +67,7 @@
 		@at-root .masthead input:checked ~ .hamburger {
 			.burger-shade {
 				height: 100%;
-				transition: height .12s linear;
+				transition-delay: 0s;
 			}
 			.burger-line:first-child,
 			.burger-line:last-child {

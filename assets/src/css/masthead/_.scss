@@ -49,17 +49,18 @@
 	}
 
 	.row-container {
-		display: flex;
-		flex-direction: row;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
 		align-items: center;
-		justify-content: space-between;
 		height: 2em;
 		padding: 0 0.5em;
-		position: static;
+		position: relative;
 	}
 
 	.logo {
+		grid-column: 1;
 		height: 1em;
+		align-self: center;
 
 		img {
 			height: 100%;

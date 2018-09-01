@@ -112,6 +112,9 @@
 
 				margin-bottom: .25em;
 
+				position: relative;
+				z-index: 1;
+
 				@at-root .single .podcast header.has_subtitle .title {
 					margin-bottom: 0;
 				}
