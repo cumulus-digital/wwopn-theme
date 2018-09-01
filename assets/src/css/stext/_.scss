@@ -41,6 +41,11 @@
 	white-space: nowrap;
 	overflow-wrap: break-word;
 
+	margin-left: -.1em;
+	&:first-child {
+		margin-left: 0;
+	}
+
 	.st-original {
 		color: transparent;
 		position: absolute;
@@ -58,7 +63,9 @@
 	}
 }
 .st-space {
-	width: 0.02em;
+	display: inline-block;
+	width: 0;
+	overflow: hidden;
 }
 
 @import 'kerning';
