@@ -69,6 +69,7 @@ namespace WWOPN_Theme;
 												'include'  => $tag_ids,
 												'number' => 4,
 												'orderby' => 'count',
+												'order' => 'DESC',
 												'echo' => false,
 												'smallest' => 1,
 												'largest' => 1,

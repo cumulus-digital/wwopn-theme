@@ -39,6 +39,7 @@ namespace WWOPN_Theme;
 						'include' => $tag_ids,
 						'exclude' => 0,
 						'orderby' => 'count',
+						'order' => 'DESC',
 						'smallest' => 1,
 						'largest' => 1,
 						'unit' => 'em',
