@@ -4,3 +4,7 @@ if ( ! $ || ! jQuery) {
 
 // Transform svgText elements
 $('.stext').svgText();
+
+$('iframe').on('load', function(){
+	this.className += ' loaded';
+});
