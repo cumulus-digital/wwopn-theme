@@ -2,17 +2,22 @@
 	grid-template-columns: 1.3fr 1fr;
 
 	h2 {
-		font-size: 1.8rem;
+		font-size: 1.8em;
 		text-align: right;
 
 		@media (max-width: $breakwidth-medium) {
 			text-align: center;
+		}
+		@media (max-width: $breakwidth-small) {
+			font-size: 1.6em;
 		}
 	}
 	h3 {
 		font-size: 1rem;
 		margin-bottom: 0.25em;
 	}
-	.row-body {
+
+	@media (max-width: $breakwidth-small) {
+		grid-template-columns: none;
 	}
 }

@@ -1,39 +1,18 @@
-@at-root .we_are {
+.we_are {
 
 	background: #fff;
 
 	.row-container {
 		background: none;
-		padding-left: 1.5rem;
-		padding-right: 1.5rem;
-
-		@media (max-width: $breakwidth-medium) {
-			padding: 1rem;
-		}
+		grid-template-columns: 1fr 1.5fr;
+		max-width: 975px;
 	
 		h2 {
 
-			font-size: 3em;
-			margin-right: 0.05em;
+			font-size: 2.8em;
 
 			position: relative;
 			z-index: 0;
-
-			.st-space + .st-word[data-first_letter="A"] {
-				margin-left: 0;
-			}
-
-			@media (max-width: $breakwidth-medium) {
-				font-size: 2em;
-				
-				.st-word:first-child {
-					//margin-left: -0.5em;
-				}
-
-			}
-
-			//@include longshadow-left(#DDD);
-
 		}
 
 		.row-body {

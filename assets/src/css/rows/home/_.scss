@@ -4,11 +4,14 @@
 
 		h2 {
 			display: block;
-			font-size: 2rem;
-			@media (max-width: $breakwidth-medium) {
-				font-size: 1.75rem;
-			}
+			font-size: 2em;
 
+			@media (max-width: $breakwidth-medium) {
+				font-size: 1.75em;
+			}
+			@media (max-width: $breakwidth-small) {
+				font-size: 1.6em;
+			}
 		}
 
 	}
