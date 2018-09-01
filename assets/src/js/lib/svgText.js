@@ -221,21 +221,23 @@
 
 			// If last word is short, wrap the last two to
 			// prevent ugly orphans
-			var last_word = words[words.length-1],
-				last_letters = last_word.split('');
+			if (words.length > 2) {
+				var last_word = words[words.length-1],
+					last_letters = last_word.split('');
 
-			if (last_letters.length < 5) {
-				
-				compiled = me.wrapWords(compiled);
-
-			} else {
-
-				// Last word wasn't short, but is the one before it?
-				var next_last_word = words[words.length-2],
-					next_last_letters = next_last_word.split('');
-
-				if (next_last_letters.length < 5) {
+				if (last_letters.length < 5) {
+					
 					compiled = me.wrapWords(compiled);
+
+				} else {
+
+					// Last word wasn't short, but is the one before it?
+					var next_last_word = words[words.length-2],
+						next_last_letters = next_last_word.split('');
+
+					if (next_last_letters.length < 5) {
+						compiled = me.wrapWords(compiled);
+					}
 				}
 			}
 
