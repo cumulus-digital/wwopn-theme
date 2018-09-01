@@ -541,6 +541,16 @@
 		"opt": 1,
 		"q": 80
 		},
+	"\/assets\/src\/images\/spinner.svg": {
+		"ft": 2097152,
+		"miP": 1,
+		"oA": 0,
+		"oAP": "\/assets\/prod\/images\/spinner.svg",
+		"oF": 0,
+		"opt": 1,
+		"plM": 3271548767,
+		"prP": 0
+		},
 	"\/assets\/src\/images\/stext\/left.svg": {
 		"ft": 2097152,
 		"miP": 1,

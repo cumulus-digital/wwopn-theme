@@ -216,6 +216,10 @@
 			}
 			iframe {
 				max-width: 100%;
+				
+				&[src*='omny'] {
+					background: url(../images/spinner.svg) no-repeat center center;
+				}
 			}
 		}
 	}
