@@ -6,6 +6,14 @@
 		background: none;
 		grid-template-columns: 1fr 1.5fr;
 		max-width: 975px;
+
+		@media (max-width: $breakwidth-medium) {
+			grid-template-columns: 1fr;
+
+			h2 .st-word:last-child {
+				margin-right: -1em;
+			}
+		}
 	
 		h2 {
 
