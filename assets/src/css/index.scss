@@ -92,12 +92,12 @@ main {
 }
 
 .page article {
-	width: 80%;
+	width: 70%;
 	margin: 0 auto;
 
 	@import 'page-content';
 
-	@media (max-width: $breakwidth-small) {
+	@media (max-width: $breakwidth-medium) {
 		width: 100%;
 		padding: 0 1em;
 	}
