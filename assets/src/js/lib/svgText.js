@@ -142,7 +142,8 @@
 					}
 
 					var viewBox = "0 0 100 100",
-						symbol = loader.find('#' + prefix + '_' + useLetter);
+						def = '#' + prefix + '_' + useLetter,
+						symbol = loader.find(def);
 					if (symbol.length) {
 						viewBox = symbol.attr('viewBox');
 					} else {
@@ -218,20 +219,43 @@
 				}
 			});
 
-			// Wrap last two words to allow preventing orphans
-			var $compiled = $(compiled),
+			// If last word is short, wrap the last two to
+			// prevent ugly orphans
+			var last_word = words[words.length-1],
+				last_letters = last_word.split('');
+
+			if (last_letters.length < 5) {
+				
+				compiled = me.wrapWords(compiled);
+
+			} else {
+
+				// Last word wasn't short, but is the one before it?
+				var next_last_word = words[words.length-2],
+					next_last_letters = next_last_word.split('');
+
+				if (next_last_letters.length < 5) {
+					compiled = me.wrapWords(compiled);
+				}
+			}
+
+			$el
+				.html(compiled)
+				.removeClass(me.options.processingClass)
+				.addClass(me.options.convertedClass);
+
+		},
+
+		wrapWords: function(compiled) {
+			var me = this,
+				$compiled = $(compiled),
 				$orphans = $compiled.slice(-1).remove(),
 				wrap = me.createEl(me.options.orphanWrapElement);
 
 			wrap.className = me.options.orphanWrapClass;
 
 			$compiled.children().slice(-3).wrapAll(wrap);
-
-			$el
-				.html($compiled)
-				.removeClass(me.options.processingClass)
-				.addClass(me.options.convertedClass);
-
+			return $compiled;			
 		},
 
 		createEl: function(type) {

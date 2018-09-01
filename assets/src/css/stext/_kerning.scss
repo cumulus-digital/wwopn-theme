@@ -2,31 +2,50 @@
 	//margin-left: -0.25em;
 }
 
+svg[data-letter="@"] + svg,
 svg[data-letter="I"] + svg,
-svg + svg[data-letter="I"],
-svg[data-letter="@"] + svg {
+svg                  + svg[data-letter="I"] {
 	margin-left: -.325em;
 }
 
-svg[data-letter] + svg[data-letter="W"],
-svg[data-letter="C"] + svg[data-letter="A"],
-svg[data-letter="C"] + svg[data-letter="S"],
-svg[data-letter="A"] + svg[data-letter="S"],
-svg[data-letter="S"] + svg[data-letter="T"],
-svg[data-letter="R"] + svg[data-letter="O"],
 svg[data-letter="V"] + svg,
-svg + svg[data-letter="V"] {
+svg                  + svg[data-letter="V"],
+svg[data-letter="R"] + svg[data-letter="E"],
+svg[data-letter="W"] + svg[data-letter="E"] {
+	margin-left: -.35em;
+}
+
+svg[data-letter="1"] + svg[data-letter="0"],
+svg[data-letter="C"] + svg[data-letter="A"],
+svg[data-letter="R"] + svg[data-letter="A"],
+svg[data-letter="W"] + svg[data-letter="I"],
+svg[data-letter="1"] + svg[data-letter="O"],
+svg[data-letter="R"] + svg[data-letter="O"],
+svg[data-letter="W"] + svg[data-letter="P"],
+svg[data-letter="A"] + svg[data-letter="S"],
+svg[data-letter="C"] + svg[data-letter="S"],
+svg[data-letter="K"] + svg[data-letter="S"],
+svg[data-letter="O"] + svg[data-letter="S"],
+svg[data-letter="T"] + svg[data-letter="S"],
+svg[data-letter="O"] + svg[data-letter="T"],
+svg[data-letter="S"] + svg[data-letter="T"],
+svg[data-letter="R"] + svg[data-letter="U"],
+svg[data-letter]     + svg[data-letter="W"] {
 	margin-left: -.37em;
 }
 
+svg[data-letter="B"] + svg[data-letter="A"],
+svg[data-letter="S"] + svg[data-letter="A"],
 svg[data-letter="D"] + svg[data-letter="A"],
-svg[data-letter="C"] + svg[data-letter="Y"],
 svg[data-letter="C"] + svg[data-letter="O"],
-svg[data-letter="T"] + svg[data-letter="O"],
 svg[data-letter="L"] + svg[data-letter="O"],
+svg[data-letter="T"] + svg[data-letter="O"],
+svg[data-letter="X"] + svg[data-letter="O"],
+svg[data-letter="'"] + svg[data-letter="S"],
+svg[data-letter="’"] + svg[data-letter="S"],
 svg[data-letter="R"] + svg[data-letter="T"],
 svg[data-letter="O"] + svg[data-letter="X"],
-svg[data-letter="X"] + svg[data-letter="O"],
+svg[data-letter="C"] + svg[data-letter="Y"],
 svg[data-letter="S"] + svg[data-letter="Y"] {
 	margin-left: -.4em;
 }
@@ -37,16 +56,21 @@ svg[data-letter="O"] + svg[data-letter="W"] {
 	margin-left: -.42em;
 }
 
+svg[data-letter="D"] + svg[data-letter="A"] {
+	margin-left: -.43em;
+}
 
-svg[data-letter="A"] + svg[data-letter="C"],
-svg[data-letter="W"] + svg[data-letter="S"],
-svg[data-letter="Y"] + svg[data-letter="O"],
-svg[data-letter="D"] + svg[data-letter="Y"],
-svg[data-letter="P"] + svg[data-letter="A"],
-svg[data-letter="F"] + svg[data-letter="A"],
+svg[data-letter="X"] + svg[data-letter="-"],
 svg[data-letter="Y"] + svg[data-letter="A"],
+svg[data-letter="A"] + svg[data-letter="C"],
+svg[data-letter="A"] + svg[data-letter="G"],
+svg[data-letter="K"] + svg[data-letter="O"],
+svg[data-letter="V"] + svg[data-letter="O"],
+svg[data-letter="Y"] + svg[data-letter="O"],
+svg[data-letter="W"] + svg[data-letter="S"],
+svg[data-letter="D"] + svg[data-letter="Y"],
 svg[data-letter="O"] + svg[data-letter="V"],
-svg[data-letter="V"] + svg[data-letter="O"] {
+svg[data-letter="R"] + svg[data-letter="Y"]{
 	margin-left: -.45em;
 }
 
@@ -56,20 +80,26 @@ svg[data-letter="P"] + svg[data-letter="."],
 svg[data-letter="P"] + svg[data-letter=","],
 svg[data-letter="Y"] + svg[data-letter="."],
 svg[data-letter="Y"] + svg[data-letter=","],
-svg[data-letter="A"] + svg[data-letter="W"],
-svg[data-letter="A"] + svg[data-letter="V"],
-svg[data-letter="V"] + svg[data-letter="A"],
-svg[data-letter="A"] + svg[data-letter="Y"],
-svg[data-letter="Y"] + svg[data-letter="A"],
-svg[data-letter="A"] + svg[data-letter="T"],
+svg[data-letter="F"] + svg[data-letter="A"],
+svg[data-letter="P"] + svg[data-letter="A"],
 svg[data-letter="T"] + svg[data-letter="A"],
-svg[data-letter="L"] + svg[data-letter="Y"],
+svg[data-letter="V"] + svg[data-letter="A"],
+svg[data-letter="Y"] + svg[data-letter="A"],
+svg[data-letter="T"] + svg[data-letter="J"],
+svg[data-letter="A"] + svg[data-letter="T"],
 svg[data-letter="L"] + svg[data-letter="T"],
-svg[data-letter="T"] + svg[data-letter="J"] {
+svg[data-letter="A"] + svg[data-letter="W"],
+svg[data-letter="A"] + svg[data-letter="Y"] {
 	margin-left: -.5em;
 }
 
+svg[data-letter="W"] + svg[data-letter="A"],
 svg[data-letter="L"] + svg[data-letter="V"],
-svg[data-letter="W"] + svg[data-letter="A"] {
+svg[data-letter="L"] + svg[data-letter="Y"] {
 	margin-left: -.54em;
+}
+
+svg[data-letter="V"] + svg[data-letter="A"],
+svg[data-letter="A"] + svg[data-letter="V"] {
+	margin-left: -.55em;
 }
