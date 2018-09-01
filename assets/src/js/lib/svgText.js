@@ -21,7 +21,6 @@
 			compiledElement: 'span',
 			wordElement: 'span',
 			spaceElement: 'span',
-			letterElement: 'span',
 			orphanWrapElement: 'span',
 			originalTextElement: 'span',
 			heightBasis: '1.15em',

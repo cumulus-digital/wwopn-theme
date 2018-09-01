@@ -8,6 +8,7 @@ svg                  + svg[data-letter="I"] {
 	margin-left: -.325em;
 }
 
+svg[data-letter="Q"] + svg[data-letter="A"],
 svg[data-letter="V"] + svg,
 svg                  + svg[data-letter="V"],
 svg[data-letter="R"] + svg[data-letter="E"],
@@ -35,8 +36,10 @@ svg[data-letter]     + svg[data-letter="W"] {
 }
 
 svg[data-letter="B"] + svg[data-letter="A"],
+svg[data-letter="J"] + svg[data-letter="A"],
 svg[data-letter="S"] + svg[data-letter="A"],
 svg[data-letter="D"] + svg[data-letter="A"],
+svg[data-letter="A"] + svg[data-letter="J"],
 svg[data-letter="C"] + svg[data-letter="O"],
 svg[data-letter="L"] + svg[data-letter="O"],
 svg[data-letter="T"] + svg[data-letter="O"],
@@ -50,8 +53,11 @@ svg[data-letter="S"] + svg[data-letter="Y"] {
 	margin-left: -.4em;
 }
 
+svg[data-letter="O"] + svg[data-letter="A"],
 svg[data-letter="D"] + svg[data-letter="V"],
+svg[data-letter="A"] + svg[data-letter="O"],
 svg[data-letter="W"] + svg[data-letter="O"],
+svg[data-letter="A"] + svg[data-letter="Q"],
 svg[data-letter="O"] + svg[data-letter="W"] {
 	margin-left: -.42em;
 }
@@ -74,13 +80,17 @@ svg[data-letter="R"] + svg[data-letter="Y"]{
 	margin-left: -.45em;
 }
 
+svg[data-letter="F"] + svg[data-letter="A"] {
+	margin-left: -.47em;
+}
+
+
 svg[data-letter="T"] + svg[data-letter="."],
 svg[data-letter="T"] + svg[data-letter=","],
 svg[data-letter="P"] + svg[data-letter="."],
 svg[data-letter="P"] + svg[data-letter=","],
 svg[data-letter="Y"] + svg[data-letter="."],
 svg[data-letter="Y"] + svg[data-letter=","],
-svg[data-letter="F"] + svg[data-letter="A"],
 svg[data-letter="P"] + svg[data-letter="A"],
 svg[data-letter="T"] + svg[data-letter="A"],
 svg[data-letter="V"] + svg[data-letter="A"],
