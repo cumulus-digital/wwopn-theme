@@ -12,8 +12,9 @@
 	color: transparent;
 }
 .st-comp {
+	display: block;
+
 	span {
-		display: inline-block;
 		position: relative;
 		vertical-align: top;
 	}
@@ -34,7 +35,8 @@
 	}
 }
 .st-word {
-	height: 1.13em;
+	display: inline-block;
+	height: 1.15em;
 	width: auto;
 	white-space: nowrap;
 	overflow-wrap: break-word;
