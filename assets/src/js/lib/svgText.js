@@ -25,7 +25,7 @@
 			originalTextElement: 'span',
 			heightBasis: '1.15em',
 			letterCountMap: [
-				8, 10, 13, 16
+				8, 9, 11, 14, 16
 			]
 		},
 		loader_cache = [];
