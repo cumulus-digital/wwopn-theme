@@ -27,7 +27,7 @@ namespace WWOPN_Theme;
 					<div class="header-bg-container">
 						<?php if($header_id && $header_img): ?>
 
-							<img src="<?=\wp_get_attachment_image_src($header_img->ID, 'full')[0]; ?>">
+							<img src="<?=\wp_get_attachment_image_src($header_img->ID, 'full')[0]; ?>" alt="">
 
 						<?php endif ?>
 					</div>
@@ -37,7 +37,7 @@ namespace WWOPN_Theme;
 							<?php if (\has_post_thumbnail()): ?>
 							<figure>
 								<a href="<?php \the_permalink() ?>" title="<?php \the_title() ?>">
-									<img src="<?=\wp_get_attachment_image_src(get_post_thumbnail_id(\get_the_ID()), 'full')[0] ?>">
+									<img src="<?=\wp_get_attachment_image_src(get_post_thumbnail_id(\get_the_ID()), 'full')[0] ?>" alt="">
 								</a>
 							</figure>
 							<?php endif ?>
@@ -54,40 +54,40 @@ namespace WWOPN_Theme;
 										)
 									?>
 									</div>
+									<?php
+										$tag_ids = \wp_get_post_terms(
+											$post->ID,
+											'wpn_podcast_tag',
+											array( 'fields' => 'ids' )
+										);
+									?>
+									<?php if ($tag_ids): ?>
 										<?php
-											$tag_ids = \wp_get_post_terms(
-												$post->ID,
-												'wpn_podcast_tag',
-												array( 'fields' => 'ids' )
-											);
+										$tags = \wp_tag_cloud(array(
+											'taxonomy' => 'wpn_podcast_tag',
+											'format' => 'array',
+											'include'  => $tag_ids,
+											'number' => 4,
+											'orderby' => 'count',
+											'order' => 'DESC',
+											'echo' => false,
+											'smallest' => 1,
+											'largest' => 1,
+											'unit' => 'em',
+										));
 										?>
-										<?php if ($tag_ids): ?>
-											<?php
-											$tags = \wp_tag_cloud(array(
-												'taxonomy' => 'wpn_podcast_tag',
-												'format' => 'array',
-												'include'  => $tag_ids,
-												'number' => 4,
-												'orderby' => 'count',
-												'order' => 'DESC',
-												'echo' => false,
-												'smallest' => 1,
-												'largest' => 1,
-												'unit' => 'em',
-											));
-											?>
-											<?php if ($tags): ?>
-												<aside class="tags">
-													<ul>
-														<?php foreach ($tags as $tag): ?>
-															<li>
-																<?=$tag?>
-															</li>
-														<?php endforeach ?>
-													</ul>
-												</aside>
-											<?php endif; ?>
+										<?php if ($tags): ?>
+											<aside class="tags">
+												<ul>
+													<?php foreach ($tags as $tag): ?>
+														<li>
+															<?=$tag?>
+														</li>
+													<?php endforeach ?>
+												</ul>
+											</aside>
 										<?php endif; ?>
+									<?php endif; ?>
 								</div>
 								<h1 class="stext st_blue" data-st-src="<?=\get_template_directory_uri()?>/assets/prod/images/stext/right.svg">
 									<?php \the_title() ?>
@@ -147,6 +147,7 @@ namespace WWOPN_Theme;
 			</p>
 		</article>
 	<?php endif; ?>
+	</div>
 </main>
 
 <?php \get_footer(); ?>

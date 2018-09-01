@@ -11,6 +11,10 @@
 	padding: 1em 0;
 	position: relative;
 
+	@media (max-width: $breakwidth-medium) {
+		padding: 1em;
+	}
+
 	h2 {
 		display: block;
 		font-size: 1.75em;
@@ -26,13 +30,12 @@
 
 	.row-body {
 		margin: 0 auto;
-		max-width: 80%;
+		//max-width: 80%;
 		text-align: center;
 	}
 
 	.row-headline-top & {
-		display: flex;
-		flex-direction: column;
+		display: block;
 
 		h2 {
 			margin: 0 0 0.5em;
@@ -42,20 +45,26 @@
 
 	.row-headline-left &,
 	.row-headline-right & {
-		display: flex;
-		flex-direction: row;
+		display: grid;
+		grid-gap: 1em;
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas: "left right";
 		align-items: center;
 
 		h2 {
-			margin: 0 0.5em 0 0;
+			grid-area: left;
+		}
+		.row-body {
+			grid-area: right;
 		}
 	}
 		.row-headline-right & {
-			flex-direction: row-reverse;
-
 			h2 {
+				grid-area: right;
 				text-align: right;
-				margin: 0 0 0 0.5em;
+			}
+			.row-body {
+				grid-area: left;
 			}
 		}
 
@@ -63,12 +72,18 @@
 		.row-headline-top &,
 		.row-headline-left &,
 		.row-headline-right & {
-			display: block;
+			//display: block;
+			grid-template-columns: none;
+			grid-template-rows: auto auto;
+			grid-template-areas: "top" "bottom";
 
 			h2 {
-				margin: 0 0 0.3em;
+				grid-area: top;
 				text-align: center;
 				width: 100%;
+			}
+			.row-body {
+				grid-area: bottom;
 			}
 		}
 

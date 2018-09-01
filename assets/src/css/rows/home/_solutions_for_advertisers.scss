@@ -1,9 +1,11 @@
-.solutions_for_advertisers {
+.solutions_for_advertisers .row-container {
+	grid-template-columns: 1.3fr 1fr;
+
 	h2 {
 		font-size: 1.8rem;
 		text-align: right;
 
-		@media (max-width: $breakwidth-small) {
+		@media (max-width: $breakwidth-medium) {
 			text-align: center;
 		}
 	}
@@ -12,6 +14,5 @@
 		margin-bottom: 0.25em;
 	}
 	.row-body {
-		max-width: 50%;
 	}
 }
