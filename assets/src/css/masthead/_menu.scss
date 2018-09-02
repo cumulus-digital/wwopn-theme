@@ -24,7 +24,6 @@
 
 		li {
 			display: block;
-			border: 1px solid #000;
 
 			&:last-child {
 				border-bottom-width: 5px;
@@ -50,30 +49,6 @@
 
 		@at-root .masthead input:checked ~ ul {
 			max-height: 100vh;
-		}
-
-		// for wide, short displays
-		@media (max-height: $breakwidth-small) and (max-width: $breakwidth-medium) {
-			text-align: center;
-
-			top: 2rem;
-			right: 0;
-
-			max-height: 0;
-			min-width: 100%;
-
-			@at-root .masthead input:checked ~ ul {
-				max-height: calc( 100vh - 2rem );
-			}
-
-			li {
-				display: inline-block;
-				float: right;
-			}
-
-			a {
-				padding: 1em;
-			}
 		}
 
 		// for skinny, tall displays
