@@ -14,17 +14,17 @@ article.genre {
 	padding-bottom: 1em;
 
 	@include phone {
-		border-bottom: 0;
-		padding-bottom: 0;
+		padding-bottom: .5em;
 		margin-bottom: .5em;
 	}
 
 	header {
 		display: flex;
-		flex-wrap: wrap;
+		align-items: center;
 		margin-bottom: .15em;
 
 		a {
+			display: inline-block;
 			color: inherit;
 			text-decoration: none;
 		}
@@ -32,30 +32,33 @@ article.genre {
 		@include phone {
 			font-size: 0.8em;
 			display: block;
-			padding: 0 .5em;
 			margin-bottom: .25em;
 
 			h2 {
-				display: inline;
+				display: inline-block;
 			}
 		}
 
 		.button {
-			align-self: flex-end;
-
-			background: none;
-			color: $colors-purple;
+			background: $colors-blue;
+			color: #fff;
+			border-radius: 3px;
 			border: 0;
 
-			font-size: 0.8em;
+			font-size: 0.5em;
 			font-weight: 200;
 
-			padding: 0;
+			padding: .25em .5em;
 
 			&:before {
 				content: '❯ ';
-				color: lighten($colors-purple, 20%);
+				//color: lighten($colors-purple, 20%);
 				font-weight: bold;
+			}
+
+			&:hover {
+				background: $colors-purple;
+				color: #fff;
 			}
 
 			@minclude phone {
@@ -73,13 +76,17 @@ article.genre {
 
 .wpn-f-genre {
 	ul {
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-		grid-gap: 2px;
+		display: flex;
+		flex-wrap: wrap;
 	}
-	@include tablet {
-		ul {
-			grid-template-columns: 1fr 1fr
+	li {
+		flex-basis: 25%;
+		padding: 2px;
+	}
+	@include phone {
+		li {
+			flex-basis: 50%;
+			padding: 1px;
 		}
 	}
 }
