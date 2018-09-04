@@ -52,7 +52,7 @@
 		}
 
 		// for skinny, tall displays
-		@media (max-width: $breakwidth-small) {
+		@include phone {
 			background: rgba(0,0,0,0.9);
 
 			font-size: 1em;

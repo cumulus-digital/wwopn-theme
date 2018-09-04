@@ -21,7 +21,7 @@
 			}
 		}
 
-		@media (max-width: $breakwidth-small) {
+		@include phone {
 			width: 100%;
 			float: none;
 			

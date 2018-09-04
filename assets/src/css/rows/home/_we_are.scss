@@ -7,7 +7,7 @@
 		grid-template-columns: 1fr 1.5fr;
 		max-width: 975px;
 
-		@media (max-width: $breakwidth-medium) {
+		@include tablet {
 			grid-template-columns: 1fr;
 
 			h2 .st-word:last-child {

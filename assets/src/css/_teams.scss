@@ -1,6 +1,6 @@
 .teams {
 	
-	@media (max-width: $breakwidth-medium) {
+	@include tablet {
 		.row-container {
 			padding: 1em;
 		}

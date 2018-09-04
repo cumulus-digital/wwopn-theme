@@ -97,7 +97,7 @@ main {
 
 	@import 'page-content';
 
-	@media (max-width: $breakwidth-medium) {
+	@include tablet {
 		width: 100%;
 	}
 
@@ -120,7 +120,7 @@ main {
 	font-size: 0.5rem;
 	line-height: 1.4;
 
-	@media (max-width: $breakwidth-small) {
+	@include phone {
 		font-size: 0.7rem;
 
 		& > h2,

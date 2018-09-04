@@ -13,7 +13,7 @@ article.genre {
 	margin-bottom: 1em;
 	padding-bottom: 1em;
 
-	@media (max-width: $breakwidth-small) {
+	@include phone {
 		border-bottom: 0;
 		padding-bottom: 0;
 		margin-bottom: .5em;
@@ -29,7 +29,7 @@ article.genre {
 			text-decoration: none;
 		}
 
-		@media (max-width: $breakwidth-small) {
+		@include phone {
 			font-size: 0.8em;
 			display: block;
 			padding: 0 .5em;
@@ -58,7 +58,7 @@ article.genre {
 				font-weight: bold;
 			}
 
-			@media (max-width: $breakwidth-small) {
+			@minclude phone {
 				display: inline-block;
 				font-size: 0.7em;
 			}

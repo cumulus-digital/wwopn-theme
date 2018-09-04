@@ -31,7 +31,7 @@
 			top: 32px;
 		}
 
-		@media (max-width: $breakwidth-small) {
+		@include phone {
 			padding-top: calc( 2rem );
 
 			.masthead {

@@ -5,10 +5,10 @@
 		font-size: 1.8em;
 		text-align: right;
 
-		@media (max-width: $breakwidth-medium) {
+		@include tablet {
 			text-align: center;
 		}
-		@media (max-width: $breakwidth-small) {
+		@include phone {
 			font-size: 1.6em;
 		}
 	}
@@ -17,7 +17,7 @@
 		margin-bottom: 0.25em;
 	}
 
-	@media (max-width: $breakwidth-small) {
+	@include phone {
 		grid-template-columns: none;
 	}
 }

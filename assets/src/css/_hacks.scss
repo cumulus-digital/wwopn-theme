@@ -4,7 +4,7 @@
 
 // Wrap columns on small displays
 .wp-block-columns {
-	@media (max-width: $breakwidth-small) {
+	@include phone {
 		display: block;
 	}
 }

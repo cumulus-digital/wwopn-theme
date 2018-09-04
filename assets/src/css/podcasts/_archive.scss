@@ -17,11 +17,7 @@
 			}
 		}
 
-		@media(max-width: $breakwidth-small) {
-			padding: .5em;
-		}
-
-		@media(max-width: $breakwidth-medium) {
+		@include tablet {
 			flex-direction: column;
 
 			padding-top: 0;
@@ -31,13 +27,17 @@
 				margin-bottom: 1em;
 			}
 		}
+
+		@include phone {
+			padding: .5em;
+		}
 	}
 
 	.podcasts .row-container {
 
 		padding: .5em 0;
 
-		@media (max-width: $breakwidth-small) {
+		@include phone {
 			padding: .5em;
 		}
 

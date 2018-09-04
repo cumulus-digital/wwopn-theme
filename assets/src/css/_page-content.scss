@@ -14,7 +14,7 @@ a {
 }
 
 h1 {
-	@media (max-width: $breakwidth-small) {
+	@include phone {
 		font-size: 1.8em;
 	}
 }
@@ -52,7 +52,7 @@ h3 {
 		color: $colors-blue;
 	}
 
-	@media (max-width: $breakwidth-medium) {
+	@include tablet {
 		margin-bottom: 0.25em;
 		
 		&:last-child {
