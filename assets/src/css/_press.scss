@@ -29,6 +29,26 @@ main.press {
 				margin: 0;
 				padding: 0;
 			}
+
+			.email:before,
+			.twitter:before {
+				content: '';
+				display: inline-block;
+				background-size: contain;
+				width: 1em;
+				height: 1em;
+				margin-right: .5em;
+				vertical-align: bottom;
+				opacity: 0.5;
+			}
+
+			.email:before {
+				background: url(../images/icons/envelop.svg) no-repeat center center;
+			}
+			.twitter:before {
+				background: url(../images/icons/twitter.svg) no-repeat center center;
+			}
+
 		}
 
 		@include phone {
@@ -105,7 +125,7 @@ main.press {
 						content: '';
 						display: inline-block;
 						background: url(../images/icons/share.svg) no-repeat center center;
-						background-size: 100%;
+						background-size: contain;
 						width: 1em;
 						height: 1em;
 						vertical-align: top;
