@@ -95,7 +95,7 @@
 			</h2>
 			<div class="row-body">
 				<div class="buttons">
-					<a href="<?=\get_permalink(\get_page_by_path('/contact'))?>" class="button">Advertisers</a>
+					<a href="<?=\get_permalink(\get_page_by_path('/advertising'))?>" class="button">Advertisers</a>
 					<a href="<?=\get_permalink(\get_page_by_path('/pitch'))?>" class="button alt">Creators</a>
 				</div>
 			</div>
