@@ -44,6 +44,13 @@
 		"oAP": "\/archive-wpn_teams.php",
 		"oF": 0
 		},
+	"\/archive.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/archive.php",
+		"oF": 0
+		},
 	"\/assets\/prod\/css\/editor.css": {
 		"aP": 1,
 		"bl": 0,
@@ -88,6 +95,16 @@
 		"oIPL": 0,
 		"opt": 0,
 		"q": 80
+		},
+	"\/assets\/prod\/images\/spinner.svg": {
+		"ft": 2097152,
+		"miP": 1,
+		"oA": 0,
+		"oAP": "\/assets\/prod\/images\/spinner.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 2197802879,
+		"prP": 0
 		},
 	"\/assets\/prod\/images\/stext\/left.svg": {
 		"ft": 2097152,
@@ -700,6 +717,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/single-wpn_podcast.php",
+		"oF": 0
+		},
+	"\/single.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/single.php",
 		"oF": 0
 		},
 	"\/style.css": {
