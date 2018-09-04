@@ -42,7 +42,7 @@
 
 	<section class="row row-headline-left how_to_listen basic">
 		<div class="row-container">
-			<h2 class="stext st_blue" data-st-src="<?=\get_template_directory_uri()?>/assets/prod/images/stext/right.svg">
+			<h2 class="stext st_purple" data-st-src="<?=\get_template_directory_uri()?>/assets/prod/images/stext/right.svg">
 				Meet the Team
 			</h2>
 			<div class="row-body">
