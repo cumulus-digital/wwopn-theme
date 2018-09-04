@@ -1,0 +1,9 @@
+main.press {
+	.card {
+		flex-basis: calc(50% - 1em);
+
+		.headline {
+			padding-bottom: 56.25%;
+		}
+	}
+}

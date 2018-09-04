@@ -37,6 +37,13 @@
 		"oAP": "\/archive-wpn_podcast.php",
 		"oF": 0
 		},
+	"\/archive-wpn_prs.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/archive-wpn_prs.php",
+		"oF": 0
+		},
 	"\/archive-wpn_teams.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -170,19 +177,6 @@
 		"oAP": "\/assets\/prod\/js\/lib\/svgText.js.map",
 		"oF": 0
 		},
-	"\/assets\/src\/css\/_cards.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 1,
-		"oA": 1,
-		"oAP": "\/assets\/prod\/css\/_cards.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
 	"\/assets\/src\/css\/_hacks.scss": {
 		"aP": 1,
 		"bl": 0,
@@ -209,6 +203,19 @@
 		"oS": 3,
 		"uL": 1
 		},
+	"\/assets\/src\/css\/_press.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "\/assets\/prod\/css\/_press.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
 	"\/assets\/src\/css\/_teams.scss": {
 		"aP": 1,
 		"bl": 0,
@@ -231,6 +238,45 @@
 		"ma": 1,
 		"oA": 1,
 		"oAP": "\/assets\/prod\/css\/_variables.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
+	"\/assets\/src\/css\/cards\/_.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "\/assets\/prod\/css\/cards\/_.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
+	"\/assets\/src\/css\/cards\/_pressreleases.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "\/assets\/prod\/css\/cards\/_pressreleases.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
+	"\/assets\/src\/css\/cards\/_teams.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "\/assets\/prod\/css\/cards\/_teams.css",
 		"oF": 0,
 		"oS": 3,
 		"uL": 1
@@ -687,6 +733,13 @@
 		"oAP": "\/LICENSE",
 		"oF": 0
 		},
+	"\/page-press.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/page-press.php",
+		"oF": 0
+		},
 	"\/page.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -764,18 +817,32 @@
 		"oAP": "\/taxonomy.php",
 		"oF": 0
 		},
-	"\/template-parts\/loop-cards-wpn_podcast.php": {
+	"\/template-parts\/cards\/inc-featured_image.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/template-parts\/loop-cards-wpn_podcast.php",
+		"oAP": "\/template-parts\/cards\/inc-featured_image.php",
 		"oF": 0
 		},
-	"\/template-parts\/loop-cards-wpn_teams.php": {
+	"\/template-parts\/cards\/wpn_podcast.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/template-parts\/loop-cards-wpn_teams.php",
+		"oAP": "\/template-parts\/cards\/wpn_podcast.php",
+		"oF": 0
+		},
+	"\/template-parts\/cards\/wpn_prs.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/template-parts\/cards\/wpn_prs.php",
+		"oF": 0
+		},
+	"\/template-parts\/cards\/wpn_teams.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/template-parts\/cards\/wpn_teams.php",
 		"oF": 0
 		},
 	"\/template-parts\/loop-cards.php": {
