@@ -96,6 +96,10 @@ main {
 	article.page {
 		width: 70%;
 		margin: 0 auto;
+
+		> header {
+			font-size: 0.8em;
+		}
 	}
 
 	@import 'page-content';

@@ -34,6 +34,23 @@
 				</h3>
 				<div class="buttons">
 					<a href="<?=\get_permalink(\get_page_by_path('/insights'))?>" class="button">See What Podcasts Can Do</a>
+					<a href="<?=\get_permalink(\get_page_by_path('/download-report'))?>" class="button">Download the 2018 Report</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="row row-headline-left how_to_listen basic">
+		<div class="row-container">
+			<h2 class="stext st_blue" data-st-src="<?=\get_template_directory_uri()?>/assets/prod/images/stext/right.svg">
+				Meet the Team
+			</h2>
+			<div class="row-body">
+				<h3>
+					Get to know the talented folks behind the pods.
+				</h3>
+				<div class="buttons">
+					<a href="<?=\get_permalink(\get_page_by_path('/team'))?>" class="button">Check Us Out</a>
 				</div>
 			</div>
 		</div>
@@ -78,7 +95,7 @@
 			</h2>
 			<div class="row-body">
 				<div class="buttons">
-					<a href="<?=\get_permalink(\get_page_by_path('/contact'))?>" class="button">Listeners</a>
+					<a href="<?=\get_permalink(\get_page_by_path('/contact'))?>" class="button">Advertisers</a>
 					<a href="<?=\get_permalink(\get_page_by_path('/pitch'))?>" class="button alt">Creators</a>
 				</div>
 			</div>
