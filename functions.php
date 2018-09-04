@@ -244,7 +244,7 @@ function query_getAllPosts($query) {
 	    }
 	}
 }
-add_action( 'pre_get_posts', ns('query_getAllPosts') );
+add_action( 'pre_get_posts', ns('query_getAllPosts'), 1, 1 );
 
 // Use front-page.php if blog is set to static posts
 function front_page_template( $template ) {
