@@ -9,10 +9,10 @@
 		.row-container {
 			padding: 1em 1em 0;
 
-			@media (max-width: $breakwidth-medium) {
+			@include tablet {
 				padding-top: 0;
 			}
-			@media (max-width: $breakwidth-small) {
+			@include phone {
 				padding-top: .5em;
 			}
 		}
@@ -63,7 +63,7 @@
 			position: relative;
 			top: 1em;
 
-			@media (max-width: $breakwidth-small) {
+			@include phone {
 				text-align: center;
 				display: block;
 			}
@@ -90,12 +90,12 @@
 				position: relative;
 				z-index: 2;
 
-				@media (max-width: $breakwidth-medium) {
+				@include tablet {
 					flex-basis: 200px;
 					max-width: 200px;
 					min-width: 150px;
 				}
-				@media (max-width: $breakwidth-small) {
+				@include phone {
 					width: 75%;
 					margin: 0 auto .5em;
 				}
@@ -119,7 +119,7 @@
 					margin-bottom: 0;
 				}
 
-				@media (max-width: $breakwidth-medium) {
+				@include tablet {
 					font-size: .8em;
 				}
 
@@ -140,7 +140,7 @@
 						font-size: 2.25em;
 					}					
 
-					@media (min-width: $breakwidth-small) {
+					@include phone {
 						margin-left: -.35em;
 					}
 				}
@@ -162,7 +162,7 @@
 				color: rgba(255,255,255,0.75);
 				text-shadow: 1px 1px 0 #000;
 
-				@media(max-width: $breakwidth-small) {
+				@include phone {
 					margin-bottom: .5em;
 				}
 
@@ -195,6 +195,12 @@
 						opacity: 1;
 					}
 				}
+
+				@include phone {
+					font-size: 0.45em;
+					display: block;
+					margin-bottom: 1em;
+				}
 			}
 
 		}
@@ -214,7 +220,7 @@
 		margin-top: 1.25em;
 		padding: 0 1em;
 
-		@media (max-width: $breakwidth-medium) {
+		@include tablet {
 			flex-wrap: wrap;
 			flex-direction: column;
 
@@ -225,7 +231,7 @@
 		.description, .player_embed {
 			flex: 0 1 50%;
 
-			@media(max-width: $breakwidth-medium) {
+			@include tablet {
 				width: 100%;
 			}
 		}
@@ -233,7 +239,7 @@
 		.player_embed {
 			margin-left: 1em;
 
-			@media (max-width: $breakwidth-medium) {
+			@include tablet {
 				margin-left: 0;
 			}
 			iframe {

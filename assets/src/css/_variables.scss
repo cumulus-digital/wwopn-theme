@@ -3,6 +3,36 @@ $breakwidth-large: 1030px;
 $breakwidth-medium: 820px;
 $breakwidth-small: 640px;
 
+$breakpoints: (
+	max: 1200px,
+	large: 1030px,
+	medium: 820px,
+	small: 640px
+);
+$devices: (
+	phone: '640px',
+	tablet: '820px'
+);
+
+
 $colors-purple: #6a2774;
 $colors-purple-highlight: #a33cb3;
 $colors-blue: #00aeef;
+
+@mixin mq($size, $q: 'max-width') {
+	@media ($q: map-get($breakpoints, $size)) {
+		@content;
+	}
+}
+
+@mixin phone() {
+	@media (max-width: map-get($devices, 'phone')) {
+		@content;
+	}
+}
+
+@mixin tablet() {
+	@media (max-width: map-get($devices, 'tablet')) {
+		@content;
+	}
+}
