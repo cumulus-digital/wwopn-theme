@@ -1,11 +1,15 @@
-<?php get_template_part('template-parts/cards/inc-featured_image'); ?>
+<a href="<?php \the_permalink() ?>" title="<?php \the_title() ?>">
 
-<div class="content">
+	<?php get_template_part('template-parts/cards/inc-featured_image'); ?>
 
-	<span class="listen">Listen Now!</span>
+	<div class="content">
 
-	<div class="body excerpt">
-		<?php \the_excerpt() ?>
+		<span class="listen">Listen Now!</span>
+
+		<div class="body excerpt">
+			<?php \the_excerpt() ?>
+		</div>
+
 	</div>
 
-</div>
+</a>

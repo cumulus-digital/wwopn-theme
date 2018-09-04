@@ -604,6 +604,36 @@
 		"opt": 1,
 		"q": 80
 		},
+	"\/assets\/src\/images\/icons\/envelop.svg": {
+		"ft": 2097152,
+		"miP": 1,
+		"oA": 0,
+		"oAP": "\/assets\/prod\/images\/icons\/envelop.svg",
+		"oF": 0,
+		"opt": 1,
+		"plM": 2197802879,
+		"prP": 0
+		},
+	"\/assets\/src\/images\/icons\/share.svg": {
+		"ft": 2097152,
+		"miP": 1,
+		"oA": 0,
+		"oAP": "\/assets\/prod\/images\/icons\/share.svg",
+		"oF": 0,
+		"opt": 1,
+		"plM": 2197802879,
+		"prP": 0
+		},
+	"\/assets\/src\/images\/icons\/twitter.svg": {
+		"ft": 2097152,
+		"miP": 1,
+		"oA": 0,
+		"oAP": "\/assets\/prod\/images\/icons\/twitter.svg",
+		"oF": 0,
+		"opt": 1,
+		"plM": 2197802879,
+		"prP": 0
+		},
 	"\/assets\/src\/images\/spinner.svg": {
 		"ft": 2097152,
 		"miP": 1,

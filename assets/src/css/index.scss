@@ -91,9 +91,12 @@ main {
 	}
 }
 
-.page article {
-	width: 70%;
-	margin: 0 auto;
+.page {
+
+	article.page {
+		width: 70%;
+		margin: 0 auto;
+	}
 
 	@import 'page-content';
 

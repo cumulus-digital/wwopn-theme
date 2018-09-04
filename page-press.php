@@ -8,34 +8,104 @@ namespace WWOPN_Theme;
 	<section class="row">
 		<div class="row-container">
 
-			<?php if (\have_posts()): ?>
-				<?php while (\have_posts()) : \the_post(); ?>
+			<header class="page_header">
+				<h1 class="stext st_blue" data-st-src="<?=\get_template_directory_uri()?>/assets/prod/images/stext/left.svg">
+					<?php \the_title(); ?>
+				</h1>
 
-					<article id="post-<?php the_ID(); ?>" <?php \post_class(); ?>>
+				<aside class="contact">
+					<h2>Media Contact</h2>
+					<?php if (\get_option('wpn_prs_mediacontact')): ?>
+						<h3><?=esc_html(\get_option('wpn_prs_mediacontact')['mc_name'])?></h3>
+						<ul>
+							<?php if (\get_option('wpn_prs_mediacontact')['mc_email']): ?>
+								<li class="email">
+									<a href="mailto:<?=esc_attr(\get_option('wpn_prs_mediacontact')['mc_email'])?>">
+										<?=esc_html(\get_option('wpn_prs_mediacontact')['mc_email'])?>
+									</a>
+								</li>
+							<?php endif ?>
+							<?php if (\get_option('wpn_prs_mediacontact')['mc_twitter']): ?>
+								<li class="twitter">
+									<a href="https://twitter.com/<?=esc_attr(\get_option('wpn_prs_mediacontact')['mc_twitter'])?>">
+										@<?=esc_html(\get_option('wpn_prs_mediacontact')['mc_twitter'])?>
+									</a>
+								</li>
+							<?php endif ?>							
+						</ul>
+					<?php endif ?>
+				</aside>
+			</header>
 
-						<header>
-							<h1 class="stext st_blue" data-st-src="<?=\get_template_directory_uri()?>/assets/prod/images/stext/left.svg">
-								<?php \the_title(); ?>
-							</h1>
-						</header>
+			<section class="content">
 
-						testing
+				<section class="column releases">
+					<header>
+						<h2>Releases</h2>
+					</header>
 
-					<?php \edit_post_link(); ?>
-					</article>
+					<?php
+					$tax_release = \get_term_by(
+						'slug', 'release', 'wpn_prs_type'
+					);
+					?>
+					<?php if ($tax_release): ?>
+						<div class="cards">
+	
+							<?php
+							$releases = get_posts(array(
+								'post_type' => 'wpn_prs',
+								'numberposts' => -1,
+								'tax_query' => $tax_release,
+							));
+							?>
+							<?php foreach($releases as $release): ?>
+								<?php \setup_postdata($GLOBALS['post'] =& $release) ?>
+								<article id="post-<?php \the_ID() ?>" <?php \post_class('card') ?>>
+									<?php get_template_part('template-parts/cards/wpn_prs'); ?>
+								</article>
+							<?php endforeach ?>
 
-				<?php endwhile; ?>
-			<?php else: ?>
+						</div>
 
-				<article>
+					<?php endif ?>
+				</section>
 
-					<p>
-						Sorry, nothing to display.
-					</p>
+				<section class="column news">
+					<header>
+						<h2>In the News</h2>
+					</header>
 
-				</article>
+					<?php
+					$tax_release = \get_term_by(
+						'slug', 'news', 'wpn_prs_type'
+					);
+					?>
+					<?php if ($tax_release): ?>
+						<div class="cards">
+					
+							<?php
+							$releases = get_posts(array(
+								'post_type' => 'wpn_prs',
+								'numberposts' => -1,
+								'tax_query' => $tax_release,
+							));
+							?>
+							<?php foreach($releases as $release): ?>
+								<?php \setup_postdata($GLOBALS['post'] =& $release) ?>
+								<article id="post-<?php \the_ID() ?>" <?php \post_class('card') ?>>
+									<?php get_template_part('template-parts/cards/wpn_prs'); ?>
+								</article>
+							<?php endforeach ?>
 
-			<?php endif; ?>
+						</div>
+
+					<?php endif ?>
+				</section>
+
+			</section>
+
+			<?php \edit_post_link(); ?>
 
 		</div>
 	</section>
