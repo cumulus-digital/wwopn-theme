@@ -52,7 +52,7 @@
 			</div>
 			<div class="row-body">
 				<div class="buttons">
-					<a href="<?=\get_permalink(\get_page_by_path('/download-report'))?>" class="button">Get It Here</a>
+					<a href="<?=\get_permalink(\get_page_by_path('westwood-one-podcast-download-report-2018'))?>" class="button">Get It Here</a>
 				</div>
 			</div>
 		</div>
