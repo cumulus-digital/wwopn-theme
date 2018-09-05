@@ -32,6 +32,11 @@
 		margin: 0 0 0.5em;
 	}
 
+	h4 {
+		color: #fff;
+		margin: 0;
+	}
+
 	.row-body {
 		margin: 0 auto;
 		//max-width: 80%;
@@ -41,7 +46,7 @@
 	.row-headline-top & {
 		display: block;
 
-		h2 {
+		h2,.headline {
 			margin: 0 0 0.5em;
 			text-align: center;
 		}
@@ -55,15 +60,16 @@
 		grid-template-areas: "left right";
 		align-items: center;
 
-		h2 {
+		h2,.headline {
 			grid-area: left;
+			margin-bottom: 0;
 		}
 		.row-body {
 			grid-area: right;
 		}
 	}
 		.row-headline-right & {
-			h2 {
+			h2,.headline {
 				grid-area: right;
 				text-align: right;
 			}
@@ -80,14 +86,19 @@
 			grid-template-columns: none;
 			grid-template-rows: auto auto;
 			grid-template-areas: "top" "bottom";
+			text-align: center;
 
-			h2 {
+			h2,.headline {
 				grid-area: top;
 				text-align: center;
 				width: 100%;
 			}
 			.row-body {
 				grid-area: bottom;
+
+				.buttons {
+					margin-top: 1em;
+				}
 			}
 		}
 
@@ -111,6 +122,15 @@
 			background: transparent;
 			border-color: $colors-blue;
 			color: $colors-blue;
+		}
+
+		&.alt {
+			background: $colors-purple;
+
+			&:hover {
+				border-color: $colors-purple;
+				color: $colors-purple;
+			}
 		}
 
 		@include tablet {

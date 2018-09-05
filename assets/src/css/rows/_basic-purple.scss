@@ -14,5 +14,16 @@
 			border-color: #fff;
 			color: #fff;
 		}
+
+		&.alt {
+			background: #fff;
+			color: $colors-purple;
+
+			&:hover {
+				background: transparent;
+				border-color: #fff;
+				color: #fff;
+			}
+		}
 	}
 }

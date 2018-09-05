@@ -6,11 +6,11 @@
 		</div>
 	</section>
 
-	<section class="row row-headline-left we_are">
+	<section class="row row-headline-left">
 		<div class="row-container">
-			<h2 class="stext st_blue" data-st-src="<?=\get_template_directory_uri()?>/assets/prod/images/stext/left.svg">
-				We Are&hellip;
-			</h2>
+			<div class="headline">
+				<img src="<?=\get_template_directory_uri()?>/assets/prod/images/wwopn-logo-purple.svg" alt="Westwood One Podcast Network">
+			</div>
 			<div class="row-body">
 				<h3>
 					The Leader in News, Talk, Sports, Entertainment &amp; Lifestyle Podcasts.
@@ -28,20 +28,38 @@
 			<h2 class="stext st_purple" data-st-src="<?=\get_template_directory_uri()?>/assets/prod/images/stext/left.svg">
 				Podcasting Insights
 			</h2>
-			<div class="row-body">
+			<div class="row-body" style="max-width: 850px">
 				<h3>
-					Download the latest research for advertisers and content creators.
+					See the latest research for advertisers and content creators.
 				</h3>
 				<div class="buttons">
 					<a href="<?=\get_permalink(\get_page_by_path('/insights'))?>" class="button">See What Podcasts Can Do</a>
-					<a href="<?=\get_permalink(\get_page_by_path('/download-report'))?>" class="button">Download the 2018 Report</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="row row-headline-left podcast_download basic-purple">
+		<div class="row-container" style="max-width: 950px">
+			<div class="headline">
+				<h3 class="stext st_blue" data-st-src="<?=\get_template_directory_uri()?>/assets/prod/images/stext/right.svg">
+					Westwood One's
+				</h3>
+				<h2 class="stext st_blue" data-st-src="<?=\get_template_directory_uri()?>/assets/prod/images/stext/right.svg">
+					Podcast Download
+				</h2>
+				<h4>FALL 2018</h4>
+			</div>
+			<div class="row-body">
+				<div class="buttons">
+					<a href="<?=\get_permalink(\get_page_by_path('/download-report'))?>" class="button">Get It Here</a>
 				</div>
 			</div>
 		</div>
 	</section>
 
 	<section class="row row-headline-left how_to_listen basic">
-		<div class="row-container">
+		<div class="row-container" style="max-width: 960px">
 			<h2 class="stext st_purple" data-st-src="<?=\get_template_directory_uri()?>/assets/prod/images/stext/right.svg">
 				Meet the Team
 			</h2>
