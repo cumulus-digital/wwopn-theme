@@ -55,8 +55,15 @@ namespace WWOPN_Theme;
 							<?php
 							$releases = get_posts(array(
 								'post_type' => 'wpn_prs',
-								'numberposts' => -1,
-								'tax_query' => $tax_release,
+								'showposts' => -1,
+								'tax_query' => array(
+									array(
+										'taxonomy' => $tax_release->taxonomy,
+										'field' => 'term_id',
+										'terms' => $tax_release->term_id,
+										'include_children' => false,
+									)
+								),
 							));
 							?>
 							<?php foreach($releases as $release): ?>
@@ -77,22 +84,29 @@ namespace WWOPN_Theme;
 					</header>
 
 					<?php
-					$tax_release = \get_term_by(
+					$tax_news = \get_term_by(
 						'slug', 'news', 'wpn_prs_type'
 					);
 					?>
-					<?php if ($tax_release): ?>
+					<?php if ($tax_news): ?>
 						<div class="cards">
 					
 							<?php
-							$releases = get_posts(array(
+							$news = get_posts(array(
 								'post_type' => 'wpn_prs',
-								'numberposts' => -1,
-								'tax_query' => $tax_release,
+								'showposts' => -1,
+								'tax_query' => array(
+									array(
+										'taxonomy' => $tax_news->taxonomy,
+										'field' => 'term_id',
+										'terms' => $tax_news->term_id,
+										'include_children' => false,
+									)
+								)
 							));
 							?>
-							<?php foreach($releases as $release): ?>
-								<?php \setup_postdata($GLOBALS['post'] =& $release) ?>
+							<?php foreach($news as $news_item): ?>
+								<?php \setup_postdata($GLOBALS['post'] =& $news_item) ?>
 								<article id="post-<?php \the_ID() ?>" <?php \post_class('card') ?>>
 									<?php get_template_part('template-parts/cards/wpn_prs'); ?>
 								</article>
