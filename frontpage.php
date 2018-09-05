@@ -23,22 +23,6 @@
 		</div>
 	</section>
 
-	<section class="row row-headline-top podcasting_insights basic-blue">
-		<div class="row-container">
-			<h2 class="stext st_purple" data-st-src="<?=\get_template_directory_uri()?>/assets/prod/images/stext/left.svg">
-				Podcasting Insights
-			</h2>
-			<div class="row-body" style="max-width: 850px">
-				<h3>
-					See the latest research for advertisers and content creators.
-				</h3>
-				<div class="buttons">
-					<a href="<?=\get_permalink(\get_page_by_path('/insights'))?>" class="button">See What Podcasts Can Do</a>
-				</div>
-			</div>
-		</div>
-	</section>
-
 	<section class="row row-headline-left podcast_download basic-purple">
 		<div class="row-container" style="max-width: 950px">
 			<div class="headline">
@@ -53,6 +37,22 @@
 			<div class="row-body">
 				<div class="buttons">
 					<a href="<?=\get_permalink(\get_page_by_path('westwood-one-podcast-download-report-2018'))?>" class="button">Get It Here</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="row row-headline-top podcasting_insights basic-blue">
+		<div class="row-container">
+			<h2 class="stext st_purple" data-st-src="<?=\get_template_directory_uri()?>/assets/prod/images/stext/left.svg">
+				Podcasting Insights
+			</h2>
+			<div class="row-body" style="max-width: 850px">
+				<h3>
+					See the latest research for advertisers and content creators.
+				</h3>
+				<div class="buttons">
+					<a href="<?=\get_permalink(\get_page_by_path('/insights'))?>" class="button">See What Podcasts Can Do</a>
 				</div>
 			</div>
 		</div>
