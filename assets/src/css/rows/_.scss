@@ -128,6 +128,7 @@
 			background: $colors-purple;
 
 			&:hover {
+				background: transparent;
 				border-color: $colors-purple;
 				color: $colors-purple;
 			}
