@@ -67,7 +67,7 @@ namespace WWOPN_Theme;
 											'taxonomy' => 'wpn_podcast_tag',
 											'format' => 'array',
 											'include'  => $tag_ids,
-											'number' => 4,
+											'number' => 3,
 											'orderby' => 'count',
 											'order' => 'DESC',
 											'echo' => false,
@@ -99,6 +99,7 @@ namespace WWOPN_Theme;
 								<?php endif; ?>
 								</h2>
 							</div>
+
 						</div>
 					</div>
 
@@ -112,6 +113,31 @@ namespace WWOPN_Theme;
 							<div class="body">
 								<?php \the_content() ?>
 							</div>
+
+							<?php if (\get_post_meta(get_the_ID(), '_wpn_podcast_meta_social', true)): ?>
+							<aside class="social">
+								<ul>
+								<?php foreach(\get_post_meta(get_the_ID(), '_wpn_podcast_meta_social', true) as $soc_service=>$soc_link): ?>
+									<li class="\esc_attr($soc_service) ?>">
+										<a href="<?=\esc_url($soc_link) ?>">
+											<?php if ($soc_service=='facebook'): ?>
+												<svg class="facebook" aria-labelledby="facebook-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.676 0H1.324C.593 0 0 .593 0 1.324v21.352C0 23.408.593 24 1.324 24h11.494v-9.294H9.689v-3.621h3.129V8.41c0-3.099 1.894-4.785 4.659-4.785 1.325 0 2.464.097 2.796.141v3.24h-1.921c-1.5 0-1.792.721-1.792 1.771v2.311h3.584l-.465 3.63H16.56V24h6.115c.733 0 1.325-.592 1.325-1.324V1.324C24 .593 23.408 0 22.676 0"/></svg>
+												<span>
+													Facebook
+												</span>
+											<?php endif ?>
+											<?php if ($soc_service=='twitter'): ?>
+												<svg class="twitter" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.954 4.569a10 10 0 0 1-2.825.775 4.958 4.958 0 0 0 2.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 0 0-8.384 4.482C7.691 8.094 4.066 6.13 1.64 3.161a4.822 4.822 0 0 0-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 0 1-2.228-.616v.061a4.923 4.923 0 0 0 3.946 4.827 4.996 4.996 0 0 1-2.212.085 4.937 4.937 0 0 0 4.604 3.417 9.868 9.868 0 0 1-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 0 0 7.557 2.209c9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63a9.936 9.936 0 0 0 2.46-2.548l-.047-.02z"/></svg>
+												<span>
+													Twitter
+												</span>
+											<?php endif ?>
+										</a>
+									</li>
+								<?php endforeach ?>
+								</ul>
+							</aside>
+							<?php endif ?>
 							
 							<aside class="tags">
 								<?php if (\has_term('', 'wpn_podcast_tag')): ?>
