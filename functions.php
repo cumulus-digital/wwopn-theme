@@ -2,6 +2,10 @@
 namespace WWOPN_Theme;
 require 'classes/MenuWalker.php';
 
+// Remove emoji crud
+remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+remove_action( 'wp_print_styles', 'print_emoji_styles' );
+
 // Helper to namespace stuff
 function ns($str) {
 	return __NAMESPACE__ . '\\' . $str;
