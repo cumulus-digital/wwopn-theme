@@ -101,6 +101,10 @@ main {
 		> header {
 			font-size: 0.8em;
 		}
+
+		@include tablet {
+			width: 100%;
+		}
 	}
 
 	@import 'page-content';
