@@ -163,6 +163,16 @@
 		"plM": 2197802879,
 		"prP": 0
 		},
+	"\/assets\/prod\/images\/wwopn-logo-purple.svg": {
+		"ft": 2097152,
+		"miP": 1,
+		"oA": 0,
+		"oAP": "\/assets\/prod\/images\/wwopn-logo-purple.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 2197802879,
+		"prP": 0
+		},
 	"\/assets\/prod\/images\/wwopn-logo.svg": {
 		"ft": 2097152,
 		"miP": 1,
@@ -633,6 +643,56 @@
 		"oIPL": 0,
 		"opt": 1,
 		"q": 80
+		},
+	"\/assets\/src\/images\/badges\/apple.svg": {
+		"ft": 2097152,
+		"miP": 1,
+		"oA": 0,
+		"oAP": "\/assets\/prod\/images\/badges\/apple.svg",
+		"oF": 0,
+		"opt": 1,
+		"plM": 2197802879,
+		"prP": 0
+		},
+	"\/assets\/src\/images\/badges\/google.svg": {
+		"ft": 2097152,
+		"miP": 1,
+		"oA": 0,
+		"oAP": "\/assets\/prod\/images\/badges\/google.svg",
+		"oF": 0,
+		"opt": 1,
+		"plM": 2197802879,
+		"prP": 0
+		},
+	"\/assets\/src\/images\/badges\/spotify.svg": {
+		"ft": 2097152,
+		"miP": 1,
+		"oA": 0,
+		"oAP": "\/assets\/prod\/images\/badges\/spotify.svg",
+		"oF": 0,
+		"opt": 1,
+		"plM": 2197802879,
+		"prP": 0
+		},
+	"\/assets\/src\/images\/badges\/stitcher.svg": {
+		"ft": 2097152,
+		"miP": 1,
+		"oA": 0,
+		"oAP": "\/assets\/prod\/images\/badges\/stitcher.svg",
+		"oF": 0,
+		"opt": 1,
+		"plM": 2197802879,
+		"prP": 0
+		},
+	"\/assets\/src\/images\/badges\/tunein.svg": {
+		"ft": 2097152,
+		"miP": 1,
+		"oA": 0,
+		"oAP": "\/assets\/prod\/images\/badges\/tunein.svg",
+		"oF": 0,
+		"opt": 1,
+		"plM": 2197802879,
+		"prP": 0
 		},
 	"\/assets\/src\/images\/icons\/envelop.svg": {
 		"ft": 2097152,
