@@ -118,6 +118,7 @@ namespace WWOPN_Theme;
 							<aside class="social">
 								<ul>
 								<?php foreach(\get_post_meta(get_the_ID(), '_wpn_podcast_meta_social', true) as $soc_service=>$soc_link): ?>
+									<?php if ($soc_link): ?>
 									<li class="\esc_attr($soc_service) ?>">
 										<a href="<?=\esc_url($soc_link) ?>">
 											<?php if ($soc_service=='facebook'): ?>
@@ -134,6 +135,7 @@ namespace WWOPN_Theme;
 											<?php endif ?>
 										</a>
 									</li>
+									<?php endif ?>
 								<?php endforeach ?>
 								</ul>
 							</aside>
