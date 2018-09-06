@@ -23,6 +23,17 @@
 		</div>
 	</section>
 
+	<section class="row empowher_network basic-purple" style="border-bottom: 1px dashed #3a0a44">
+		<div class="row-container" style="padding: 0 1em; text-align: left">
+			<a href="/westwood-one-launches-female-empowerment-network-with-9-original-podcast-series/" style="display: block">
+				<img src="<?=\get_template_directory_uri()?>/assets/prod/images/introducing.svg" width="80%" style="max-width: 200px">
+				<div style="padding: 1em 0; text-align: center">
+					<img src="<?=\get_template_directory_uri()?>/assets/prod/images/empowher-network.svg" alt="The Empow(h)er Podcast Network" width="100%" style="max-width: 800px">
+				</div>
+			</a>
+		</div>
+	</section>
+
 	<section class="row row-headline-left podcast_download basic-purple">
 		<div class="row-container" style="max-width: 950px">
 			<div class="headline">
