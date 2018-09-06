@@ -112,21 +112,7 @@ namespace WWOPN_Theme;
 							<div class="body">
 								<?php \the_content() ?>
 							</div>
-							<aside class="storelinks">
-								<ul>
-								<?php foreach(\get_post_meta(get_the_ID(), '_wpn_podcast_meta_storelinks', true) as $store=>$storelink): ?>
-
-									<?php if ($storelink): ?>
-									<li class="<?=\esc_attr($store) ?>">
-										<a href="<?=\esc_url($storelink)?>" target="_blank">
-											<img src="<?=\get_template_directory_uri()?>/assets/prod/images/badges/<?=\esc_attr($store) ?>.svg" alt="listen on <?=\esc_attr($store) ?>">
-										</a>
-									</li>
-									<?php endif ?>
-
-								<?php endforeach; ?>
-								</ul>
-							</aside>
+							
 							<aside class="tags">
 								<?php if (\has_term('', 'wpn_podcast_tag')): ?>
 									<h5>Tags:</h5>
@@ -146,6 +132,24 @@ namespace WWOPN_Theme;
 						<div class="player_embed">
 							<?=\get_post_meta(get_the_ID(), '_wpn_podcast_meta_playerembed', true) ?>
 						</div>
+
+						<?php if (\get_post_meta(get_the_ID(), '_wpn_podcast_meta_social', true)): ?>
+						<aside class="storelinks">
+							<ul>
+							<?php foreach(\get_post_meta(get_the_ID(), '_wpn_podcast_meta_storelinks', true) as $store=>$storelink): ?>
+
+								<?php if ($storelink): ?>
+								<li class="<?=\esc_attr($store) ?>">
+									<a href="<?=\esc_url($storelink)?>" target="_blank">
+										<img src="<?=\get_template_directory_uri()?>/assets/prod/images/badges/<?=\esc_attr($store) ?>.svg" alt="listen on <?=\esc_attr($store) ?>">
+									</a>
+								</li>
+								<?php endif ?>
+
+							<?php endforeach; ?>
+							</ul>
+						</aside>
+						<?php endif ?>
 
 					</div>
 
