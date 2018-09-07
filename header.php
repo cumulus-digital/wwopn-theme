@@ -40,9 +40,11 @@ namespace WWOPN_Theme;
 				</a>
 			</div>
 
+			<?php if ( ! \is_post_type_archive('wpn_podcast') && ! is_tax('wpn_podcast_genre') && ! is_tax('wpn_podcast_tag')): ?>
 			<div class="all_shows">
 				<a href="/pods">All Shows</a>
 			</div>
+			<?php endif ?>
 
 			<nav class="menu">
 				<input type="checkbox" id="hamburger-toggle" aria-hidden="true" />
