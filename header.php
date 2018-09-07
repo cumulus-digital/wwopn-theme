@@ -9,6 +9,20 @@ namespace WWOPN_Theme;
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 	<meta name="description" content="<?php bloginfo('description'); ?>">
 
+	<link rel="apple-touch-icon" sizes="180x180" href="<?=\get_template_directory_uri()?>/assets/prod/images/favicons/apple-touch-icon.png?v=jw7E9OzRQe">
+	<link rel="icon" type="image/png" sizes="32x32" href="<?=\get_template_directory_uri()?>/assets/prod/images/favicons/favicon-32x32.png?v=jw7E9OzRQe">
+	<link rel="icon" type="image/png" sizes="194x194" href="<?=\get_template_directory_uri()?>/assets/prod/images/favicons/favicon-194x194.png?v=jw7E9OzRQe">
+	<link rel="icon" type="image/png" sizes="192x192" href="<?=\get_template_directory_uri()?>/assets/prod/images/favicons/android-chrome-192x192.png?v=jw7E9OzRQe">
+	<link rel="icon" type="image/png" sizes="16x16" href="<?=\get_template_directory_uri()?>/assets/prod/images/favicons/favicon-16x16.png?v=jw7E9OzRQe">
+	<link rel="manifest" href="<?=\get_template_directory_uri()?>/assets/prod/images/favicons/site.webmanifest?v=jw7E9OzRQe">
+	<link rel="mask-icon" href="<?=\get_template_directory_uri()?>/assets/prod/images/favicons/safari-pinned-tab.svg?v=jw7E9OzRQe" color="#6a2774">
+	<link rel="shortcut icon" href="<?=\get_template_directory_uri()?>/assets/prod/images/favicons/favicon.ico?v=jw7E9OzRQe">
+	<meta name="apple-mobile-web-app-title" content="WWOPN">
+	<meta name="application-name" content="WWOPN">
+	<meta name="msapplication-TileColor" content="#6a2774">
+	<meta name="msapplication-config" content="<?=\get_template_directory_uri()?>/assets/prod/images/favicons/browserconfig.xml?v=jw7E9OzRQe">
+	<meta name="theme-color" content="#6a2774">
+
 	<?php \wp_head(); ?>
 </head>
 <body <?php \body_class(); ?>>
