@@ -157,9 +157,11 @@ namespace WWOPN_Theme;
 							</aside>
 						</div>
 
-						<div class="player_embed">
-							<?=\WWOPN_Podcast\CPT::getPlayerEmbed() ?>
-						</div>
+						<?php if (\WWOPN_Podcast\CPT::getPlayerEmbed()): ?>
+							<div class="player_embed">
+								<?=\WWOPN_Podcast\CPT::getPlayerEmbed() ?>
+							</div>
+						<?php endif ?>
 
 						<?php if (\WWOPN_Podcast\CPT::getStoreLinks()): ?>
 						<aside class="storelinks">
