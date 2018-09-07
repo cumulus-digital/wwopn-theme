@@ -9,7 +9,7 @@ namespace WWOPN_Theme;
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 	<meta name="description" content="<?php bloginfo('description'); ?>">
 
-	<link rel="apple-touch-icon" sizes="1000x1000" href="<?=\get_template_directory_uri()?>/assets/prod/images/favicons/apple-touch-icon.png?v=jw7E9OzRQe">
+	<link rel="apple-touch-icon" sizes="180x180" href="<?=\get_template_directory_uri()?>/assets/prod/images/favicons/apple-touch-icon-180x180.png?v=jw7E9OzRQe">
 	<link rel="icon" type="image/png" sizes="32x32" href="<?=\get_template_directory_uri()?>/assets/prod/images/favicons/favicon-32x32.png?v=jw7E9OzRQe">
 	<link rel="icon" type="image/png" sizes="194x194" href="<?=\get_template_directory_uri()?>/assets/prod/images/favicons/favicon-194x194.png?v=jw7E9OzRQe">
 	<link rel="icon" type="image/png" sizes="192x192" href="<?=\get_template_directory_uri()?>/assets/prod/images/favicons/android-chrome-192x192.png?v=jw7E9OzRQe">
