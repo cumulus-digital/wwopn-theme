@@ -118,7 +118,6 @@ namespace WWOPN_Theme;
 							<aside class="social">
 								<ul>
 								<?php foreach(\WWOPN_Podcast\CPT::getSocialLinks() as $soc_service=>$soc_link): ?>
-									<?php if ($soc_link): ?>
 									<li class="\esc_attr($soc_service) ?>">
 										<a href="<?=\esc_url($soc_link) ?>" target="_blank" rel="noopener">
 											<?php if ($soc_service=='facebook'): ?>
@@ -135,7 +134,6 @@ namespace WWOPN_Theme;
 											<?php endif ?>
 										</a>
 									</li>
-									<?php endif ?>
 								<?php endforeach ?>
 								</ul>
 							</aside>
@@ -168,13 +166,11 @@ namespace WWOPN_Theme;
 							<ul>
 							<?php foreach(\WWOPN_Podcast\CPT::getStoreLinks() as $store=>$storelink): ?>
 
-								<?php if ($storelink): ?>
 								<li class="<?=\esc_attr($store) ?>">
 									<a href="<?=\esc_url($storelink)?>" target="_blank" rel="noopener">
 										<img src="<?=\get_template_directory_uri()?>/assets/prod/images/badges/<?=\esc_attr($store) ?>.svg" alt="listen on <?=\esc_attr($store) ?>">
 									</a>
 								</li>
-								<?php endif ?>
 
 							<?php endforeach; ?>
 							</ul>
