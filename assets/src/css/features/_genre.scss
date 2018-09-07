@@ -20,7 +20,8 @@ article.genre {
 
 	header {
 		display: flex;
-		align-items: center;
+		align-items: baseline;
+		justify-content: space-between;
 		margin-bottom: .15em;
 
 		a {
@@ -31,11 +32,11 @@ article.genre {
 
 		@include phone {
 			font-size: 0.8em;
-			display: block;
 			margin-bottom: .25em;
 
 			h2 {
 				display: inline-block;
+				font-size: 1.25em;
 			}
 		}
 
@@ -50,9 +51,10 @@ article.genre {
 
 			padding: .25em .5em;
 
+			white-space: nowrap;
+
 			&:before {
 				content: '❯ ';
-				//color: lighten($colors-purple, 20%);
 				font-weight: bold;
 			}
 
@@ -61,9 +63,9 @@ article.genre {
 				color: #fff;
 			}
 
-			@minclude phone {
+			@include phone {
 				display: inline-block;
-				font-size: 0.7em;
+				font-size: .7em;
 			}
 		}
 	}
@@ -80,13 +82,17 @@ article.genre {
 		flex-wrap: wrap;
 	}
 	li {
-		flex-basis: 25%;
+		flex-basis: calc(20% - 2px);
 		padding: 2px;
 	}
 	@include phone {
 		li {
-			flex-basis: 50%;
+			flex-basis: calc(50% - 1px);
 			padding: 1px;
+
+			&:nth-child(5) {
+				display: none;
+			}
 		}
 	}
 }

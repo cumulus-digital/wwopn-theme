@@ -40,6 +40,10 @@ namespace WWOPN_Theme;
 				</a>
 			</div>
 
+			<div class="all_shows">
+				<a href="/pods">All Shows</a>
+			</div>
+
 			<nav class="menu">
 				<input type="checkbox" id="hamburger-toggle" aria-hidden="true" />
 				<label for="hamburger-toggle" class="hamburger" aria-hidden="true">
