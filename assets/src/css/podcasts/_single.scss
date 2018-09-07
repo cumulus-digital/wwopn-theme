@@ -327,21 +327,23 @@
 			}
 			img {
 				display: block;
-				border: 1px solid transparent;
 				width: auto;
 				height: 1.25em;
-				transition: border 0.1s;
+				opacity: 1;
+				transition: opacity 0.1s;
 			}
+
 			a {
 				display: block;
 				text-decoration: none;
 
 				&:hover img {
-					border-width: 0;
+					opacity: 0.8;
 				}
+
 				@media (hover:none) {
 					img {
-						border: 0;
+						opacity: 1;
 					}
 				}
 			}
