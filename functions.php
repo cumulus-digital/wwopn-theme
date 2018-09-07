@@ -15,6 +15,27 @@ function ns($str) {
 	return __NAMESPACE__ . '\\' . $str;
 }
 
+// Remove Yoast ad
+if (defined('WPSEO_VERSION')) {
+	// https://buddydev.com/remove-this-site-is-optimized-with-the-yoast-seo-plugin-vx-y-z/
+	\add_action( 'template_redirect', function () {
+	 
+	    if ( ! class_exists( 'WPSEO_Frontend' ) ) {
+	        return;
+	    }
+	 
+	    $instance = \WPSEO_Frontend::get_instance();
+	 
+	    // make sure, future version of the plugin does not break our site.
+	    if ( ! method_exists( $instance, 'debug_mark') ) {
+	        return ;
+	    }
+	 
+	    // ok, let us remove the love letter.
+	    \remove_action( 'wpseo_head', array( $instance, 'debug_mark' ), 2 );
+	}, 9999 );
+}
+
 function theme_setup() {
 
 	\add_theme_support( 'title-tag' );
