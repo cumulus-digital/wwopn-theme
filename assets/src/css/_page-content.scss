@@ -1,4 +1,11 @@
 header h1 {
+	&.blue {
+		color: $colors-blue;
+	}
+	&.purple {
+		color: $colors-purple;
+	}
+
 	display: block;
 	text-align: center;
 
@@ -36,6 +43,7 @@ h3 {
 	background: $colors-blue;
 	border: 2px solid transparent;
 	border-radius: .25em;
+	box-shadow: 0 2px 0 $colors-purple;
 	color: #fff;
 	display: inline-block;
 	font-size: 1.25em;
@@ -50,6 +58,7 @@ h3 {
 		background: transparent;
 		border-color: $colors-blue;
 		color: $colors-blue;
+		box-shadow: none;
 	}
 
 	@include tablet {

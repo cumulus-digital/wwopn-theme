@@ -1,6 +1,10 @@
 <?php
 namespace WWOPN_Theme;
+
+const PREFIX = 'wwopn_theme';
+
 require 'classes/MenuWalker.php';
+require 'classes/CustomMetas.php';
 
 // Remove emoji crud
 remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
@@ -85,6 +89,10 @@ function scripts_and_styles() {
 }
 \add_action('wp_enqueue_scripts', ns('scripts_and_styles'));
 
+/**
+ * Add stylesheet to post/page editor
+ * @return void
+ */
 function editor_styles() {
 	\wp_register_Style(
 		'google_montserrat_font',
@@ -228,24 +236,24 @@ function query_getAllPosts($query) {
 	if(
 		! \is_admin() &&
 		(
-	    	$query->is_post_type_archive('wpn_podcast') ||
-	    	$query->is_post_type_archive('wpn_teams')
-	    ) &&
-	    $query->is_main_query()
+			$query->is_post_type_archive('wpn_podcast') ||
+			$query->is_post_type_archive('wpn_teams')
+		) &&
+		$query->is_main_query()
 	){
-        $query->set('posts_per_page', -1 );
+		$query->set('posts_per_page', -1 );
 
-        if ($query->is_post_type_archive('wpn_teams')) {
-	        $query->set('orderby', 'menu_order title');
-	        $query->set('order', 'DESC');
-	    } else {
-	    	$query->set(
-	    		'orderby',
-	    		array(
-	    			'title' => 'ASC',
-	    		)
-	    	);
-	    }
+		if ($query->is_post_type_archive('wpn_teams')) {
+			$query->set('orderby', 'menu_order title');
+			$query->set('order', 'DESC');
+		} else {
+			$query->set(
+				'orderby',
+				array(
+					'title' => 'ASC',
+				)
+			);
+		}
 	}
 }
 add_action( 'pre_get_posts', ns('query_getAllPosts'), 1, 1 );
@@ -258,19 +266,19 @@ add_filter( 'frontpage_template',  ns('front_page_template') );
 
 // Remove prefix from archive titles
 function archive_title($title) {
-    if ( is_category() ) {
-        $title = single_cat_title( '', false );
-    } elseif ( is_tag() ) {
-        $title = single_tag_title( '', false );
-    } elseif ( is_author() ) {
-        $title = '<span class="vcard">' . get_the_author() . '</span>';
-    } elseif ( is_post_type_archive() ) {
-        $title = post_type_archive_title( '', false );
-    } elseif ( is_tax() ) {
-        $title = single_term_title( '', false );
-    }
-  
-    return $title;
+	if ( is_category() ) {
+		$title = single_cat_title( '', false );
+	} elseif ( is_tag() ) {
+		$title = single_tag_title( '', false );
+	} elseif ( is_author() ) {
+		$title = '<span class="vcard">' . get_the_author() . '</span>';
+	} elseif ( is_post_type_archive() ) {
+		$title = post_type_archive_title( '', false );
+	} elseif ( is_tax() ) {
+		$title = single_term_title( '', false );
+	}
+
+	return $title;
 }
- 
+
 add_filter('get_the_archive_title', ns('archive_title'));
