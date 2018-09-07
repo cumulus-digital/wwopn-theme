@@ -283,14 +283,25 @@
 				padding-right: 0;
 			}
 		}
+		img {
+			display: block;
+			border: 1px solid transparent;
+			width: auto;
+			height: 1.25em;
+			transition: border 0.1s;
+		}
 		a {
 			display: block;
 			text-decoration: none;
-		}
-		img {
-			display: block;
-			width: auto;
-			height: 1.25em;
+
+			&:hover img {
+				border-width: 0;
+			}
+			@media (hover:none) {
+				img {
+					border: 0;
+				}
+			}
 		}
 	}
 
