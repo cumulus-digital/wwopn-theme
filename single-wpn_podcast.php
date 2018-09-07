@@ -93,8 +93,8 @@ namespace WWOPN_Theme;
 									<?php \the_title() ?>
 								</h1>
 								<h2>
-								<?php if (\get_post_meta(get_the_ID(), '_wpn_podcast_meta_subTitle', true)): ?>
-										<?=\get_post_meta(get_the_ID(), '_wpn_podcast_meta_subTitle', true) ?>
+								<?php if (\WWOPN_Podcast\CPT::getSubTitle()): ?>
+										<?=\WWOPN_Podcast\CPT::getSubTitle() ?>
 								<?php else: ?>
 								<?php endif; ?>
 								</h2>
@@ -114,10 +114,10 @@ namespace WWOPN_Theme;
 								<?php \the_content() ?>
 							</div>
 
-							<?php if (\get_post_meta(get_the_ID(), '_wpn_podcast_meta_social', true)): ?>
+							<?php if (\WWOPN_Podcast\CPT::getSocialLinks()): ?>
 							<aside class="social">
 								<ul>
-								<?php foreach(\get_post_meta(get_the_ID(), '_wpn_podcast_meta_social', true) as $soc_service=>$soc_link): ?>
+								<?php foreach(\WWOPN_Podcast\CPT::getSocialLinks() as $soc_service=>$soc_link): ?>
 									<?php if ($soc_link): ?>
 									<li class="\esc_attr($soc_service) ?>">
 										<a href="<?=\esc_url($soc_link) ?>">
@@ -158,13 +158,13 @@ namespace WWOPN_Theme;
 						</div>
 
 						<div class="player_embed">
-							<?=\get_post_meta(get_the_ID(), '_wpn_podcast_meta_playerembed', true) ?>
+							<?=\WWOPN_Podcast\CPT::getPlayerEmbed() ?>
 						</div>
 
-						<?php if (\get_post_meta(get_the_ID(), '_wpn_podcast_meta_social', true)): ?>
+						<?php if (\WWOPN_Podcast\CPT::getStoreLinks()): ?>
 						<aside class="storelinks">
 							<ul>
-							<?php foreach(\get_post_meta(get_the_ID(), '_wpn_podcast_meta_storelinks', true) as $store=>$storelink): ?>
+							<?php foreach(\WWOPN_Podcast\CPT::getStoreLinks() as $store=>$storelink): ?>
 
 								<?php if ($storelink): ?>
 								<li class="<?=\esc_attr($store) ?>">

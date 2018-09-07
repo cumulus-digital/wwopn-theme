@@ -113,6 +113,16 @@
 		"plM": 2197802879,
 		"prP": 0
 		},
+	"\/assets\/prod\/images\/badges\/Daily Wire.svg": {
+		"ft": 2097152,
+		"miP": 1,
+		"oA": 0,
+		"oAP": "\/assets\/prod\/images\/badges\/Daily Wire.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 2197802879,
+		"prP": 0
+		},
 	"\/assets\/prod\/images\/badges\/google.svg": {
 		"ft": 2097152,
 		"miP": 1,
@@ -153,6 +163,16 @@
 		"plM": 2197802879,
 		"prP": 0
 		},
+	"\/assets\/prod\/images\/empowher-network.svg": {
+		"ft": 2097152,
+		"miP": 1,
+		"oA": 0,
+		"oAP": "\/assets\/prod\/images\/empowher-network.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 2197802879,
+		"prP": 0
+		},
 	"\/assets\/prod\/images\/icons\/envelop.svg": {
 		"ft": 2097152,
 		"miP": 1,
@@ -178,6 +198,16 @@
 		"miP": 1,
 		"oA": 0,
 		"oAP": "\/assets\/prod\/images\/icons\/twitter.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 2197802879,
+		"prP": 0
+		},
+	"\/assets\/prod\/images\/introducing.svg": {
+		"ft": 2097152,
+		"miP": 1,
+		"oA": 0,
+		"oAP": "\/assets\/prod\/images\/introducing.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 2197802879,
@@ -699,6 +729,16 @@
 		"miP": 1,
 		"oA": 0,
 		"oAP": "\/assets\/prod\/images\/badges\/apple.svg",
+		"oF": 0,
+		"opt": 1,
+		"plM": 2197802879,
+		"prP": 0
+		},
+	"\/assets\/src\/images\/badges\/daily-wire.svg": {
+		"ft": 2097152,
+		"miP": 1,
+		"oA": 0,
+		"oAP": "\/assets\/prod\/images\/badges\/daily-wire.svg",
 		"oF": 0,
 		"opt": 1,
 		"plM": 2197802879,
