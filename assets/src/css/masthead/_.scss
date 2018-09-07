@@ -75,12 +75,19 @@
 
 	.all_shows {
 		grid-column: 2;
+
 		white-space: nowrap;
-		font-size: .4em;
+		font-size: .3em;
 		text-transform: uppercase;
 
 		a {
-			opacity: .5;
+			display: block;
+			background: #fff;
+			color: $colors-purple;
+			border-radius: 3px;
+			padding: .25em .5em;
+
+			opacity: .6;
 
 			&:hover {
 				opacity: 1;
