@@ -27,7 +27,7 @@ namespace WWOPN_Theme;
 					<div class="header-bg-container">
 						<?php if($header_id && $header_img): ?>
 
-							<img src="<?=\wp_get_attachment_image_src($header_img->ID, 'full')[0]; ?>" alt="">
+							<img data-src="<?=\wp_get_attachment_image_src($header_img->ID, 'full')[0]; ?>" alt="">
 
 						<?php endif ?>
 					</div>
@@ -37,7 +37,7 @@ namespace WWOPN_Theme;
 							<?php if (\has_post_thumbnail()): ?>
 							<figure>
 								<a href="<?php \the_permalink() ?>" title="<?php \the_title() ?>">
-									<img src="<?=\wp_get_attachment_image_src(get_post_thumbnail_id(\get_the_ID()), 'full')[0] ?>" alt="">
+									<img data-src="<?=\wp_get_attachment_image_src(get_post_thumbnail_id(\get_the_ID()), 'full')[0] ?>" alt="">
 								</a>
 							</figure>
 							<?php endif ?>
@@ -168,7 +168,7 @@ namespace WWOPN_Theme;
 
 								<li class="<?=\esc_attr($store) ?>">
 									<a href="<?=\esc_url($storelink)?>" target="_blank" rel="noopener">
-										<img src="<?=\get_template_directory_uri()?>/assets/prod/images/badges/<?=\esc_attr($store) ?>.svg" alt="listen on <?=\esc_attr($store) ?>">
+										<img data-src="<?=\get_template_directory_uri()?>/assets/prod/images/badges/<?=\esc_attr($store) ?>.svg" alt="listen on <?=\esc_attr($store) ?>">
 									</a>
 								</li>
 

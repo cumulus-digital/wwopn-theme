@@ -5,6 +5,21 @@ if ( ! $ || ! jQuery) {
 // Transform svgText elements
 $('.stext').svgText();
 
+// Note iframes that have finished loading
 $('iframe').on('load', function(){
 	this.className += ' loaded';
 });
+
+// Load lazyload.js
+(function(w, d){
+    var b = d.getElementsByTagName('body')[0];
+    var s = d.createElement("script"); 
+    var v = !("IntersectionObserver" in w) ? "8.15.2" : "10.16.2";
+    s.async = true; // This includes the script as async. See the "recipes" section for more information about async loading of LazyLoad.
+    s.src = "https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/" + v + "/lazyload.min.js";
+    w.lazyLoadOptions = {
+    	elements_selector: 'img[data-src]'
+    };
+    b.appendChild(s);
+}(window, document));
+

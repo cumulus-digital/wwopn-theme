@@ -1,6 +1,6 @@
 <?php if ( \has_post_thumbnail()) : ?>
 	<figure>
-			<?php \the_post_thumbnail() ?>
+			<img data-src="<?=\get_the_post_thumbnail_url(get_the_ID(), 'full') ?>">
 	</figure>
 <?php else: ?>
 	<div class="headline">

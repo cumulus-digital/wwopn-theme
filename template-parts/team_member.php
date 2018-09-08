@@ -11,7 +11,7 @@ namespace WWOPN_Theme;
 			<?php if ( \has_post_thumbnail()) : ?>
 				<figure>
 					<a href="<?php \the_permalink() ?>" title="<?php \the_title() ?>">
-						<?php \the_post_thumbnail() ?>
+						<img data-src="<?=\get_the_post_thumbnail_url() ?>">
 					</a>
 				</figure>
 			<?php endif ?>

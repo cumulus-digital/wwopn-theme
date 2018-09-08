@@ -61,6 +61,10 @@ a {
 	}
 }
 
+img:not([src]) {
+    visibility: hidden;
+}
+
 nav.menu {
 	ul, li {
 		list-style: none;

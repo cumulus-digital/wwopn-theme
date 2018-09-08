@@ -3,6 +3,9 @@ namespace WWOPN_Theme;
 
 const PREFIX = 'wwopn_theme';
 
+// Let other scripts know we're lazy loading
+define('HAS_LAZY', true);
+
 require 'classes/MenuWalker.php';
 require 'classes/CustomMetas.php';
 

@@ -1436,6 +1436,13 @@
 		"oAP": "\/template-parts\/loop.php",
 		"oF": 0
 		},
+	"\/template-parts\/pagination.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/template-parts\/pagination.php",
+		"oF": 0
+		},
 	"\/template-parts\/team_member.php": {
 		"cB": 0,
 		"ft": 8192,

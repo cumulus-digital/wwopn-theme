@@ -6,7 +6,7 @@
 
 		<?php if ( \has_post_thumbnail()) : ?>
 			<figure>
-					<?php \the_post_thumbnail() ?>
+					<img data-src="<?=\get_the_post_thumbnail_url() ?>">
 			</figure>
 		<?php endif ?>
 
