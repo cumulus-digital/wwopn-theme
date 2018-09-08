@@ -1,6 +1,10 @@
 .solutions_for_advertisers .row-container {
 	grid-template-columns: 1.6fr 1fr;
 
+	@include tablet {
+		grid-template-columns: 1fr;
+	}
+
 	h2 {
 		font-size: 1.8em;
 		text-align: right;
