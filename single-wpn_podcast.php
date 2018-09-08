@@ -10,7 +10,7 @@ namespace WWOPN_Theme;
 	<?php if (\have_posts()): ?>
 		<?php while (\have_posts()) : \the_post(); ?>
 
-			<article id="podcast-<?php the_ID() ?>" <?php \post_class(array('podcast')) ?>>
+			<article id="podcast-<?php the_ID() ?>" <?php \post_class(array('podcast')) ?> itemscope itemtype="http://schema.org/RadioSeries">
 
 				<?php 
 					$header_id = \get_post_meta(\get_the_ID(), '_wpn_podcast_meta_headerimage', true);
@@ -27,7 +27,7 @@ namespace WWOPN_Theme;
 					<div class="header-bg-container">
 						<?php if($header_id && $header_img): ?>
 
-							<img data-src="<?=\wp_get_attachment_image_src($header_img->ID, 'full')[0]; ?>" alt="">
+							<img src="<?=\wp_get_attachment_image_src($header_img->ID, 'full')[0]; ?>" alt="">
 
 						<?php endif ?>
 					</div>
@@ -37,36 +37,31 @@ namespace WWOPN_Theme;
 							<?php if (\has_post_thumbnail()): ?>
 							<figure>
 								<a href="<?php \the_permalink() ?>" title="<?php \the_title() ?>">
-									<img data-src="<?=\wp_get_attachment_image_src(get_post_thumbnail_id(\get_the_ID()), 'full')[0] ?>" alt="">
+									<img itemprop="thumbnail" src="<?=\wp_get_attachment_image_src(get_post_thumbnail_id(\get_the_ID()), 'full')[0] ?>" alt="">
 								</a>
 							</figure>
 							<?php endif ?>
 							<div class="title">
 								<div class="meta">
 									<div class="genres">
-									<?php 
-										\the_terms(
-											\get_the_ID(),
-											'wpn_podcast_genre',
-											'',
-											', ',
-											''
-										)
-									?>
+									<?php $genres = \wp_get_post_terms($post->ID, 'wpn_podcast_genre') ?>
+									<?php foreach($genres as $genre): ?>
+										<a href="<?=esc_url(\get_term_link($genre)) ?>" rel="tag" itemprop="genre"><?=esc_html($genre->name) ?></a><?=(next($genres) ? ', ' : '') ?>
+									<?php endforeach ?>
 									</div>
 									<?php
-										$tag_ids = \wp_get_post_terms(
+										$tags = \wp_get_post_terms(
 											$post->ID,
 											'wpn_podcast_tag',
-											array( 'fields' => 'ids' )
+											array( 'fields' => 'all' )
 										);
 									?>
-									<?php if ($tag_ids): ?>
+									<?php if ($tags): ?>
 										<?php
-										$tags = \wp_tag_cloud(array(
+										$popular_tags = \wp_tag_cloud(array(
 											'taxonomy' => 'wpn_podcast_tag',
 											'format' => 'array',
-											'include'  => $tag_ids,
+											'include'  => array_column($tags, 'term_id'),
 											'number' => 3,
 											'orderby' => 'count',
 											'order' => 'DESC',
@@ -76,10 +71,10 @@ namespace WWOPN_Theme;
 											'unit' => 'em',
 										));
 										?>
-										<?php if ($tags): ?>
+										<?php if ($popular_tags): ?>
 											<aside class="tags">
-												<ul>
-													<?php foreach ($tags as $tag): ?>
+												<ul itemprop="keywords" content="<?=implode(', ', array_column($tags, 'name')) ?>">
+													<?php foreach ($popular_tags as $tag): ?>
 														<li>
 															<?=$tag?>
 														</li>
@@ -89,10 +84,10 @@ namespace WWOPN_Theme;
 										<?php endif; ?>
 									<?php endif; ?>
 								</div>
-								<h1 class="stext st_blue" data-st-src="<?=\get_template_directory_uri()?>/assets/prod/images/stext/right.svg">
+								<h1 itemprop="name headline" content="<?=\get_the_title() ?>" class="stext st_blue" data-st-src="<?=\get_template_directory_uri()?>/assets/prod/images/stext/right.svg">
 									<?php \the_title() ?>
 								</h1>
-								<h2>
+								<h2 itemprop="alternativeHeadline">
 								<?php if (\WWOPN_Podcast\CPT::getSubTitle()): ?>
 										<?=\WWOPN_Podcast\CPT::getSubTitle() ?>
 								<?php else: ?>
@@ -110,7 +105,7 @@ namespace WWOPN_Theme;
 					<div class="content">
 
 						<div class="description">
-							<div class="body">
+							<div class="body" itemprop="description">
 								<?php \the_content() ?>
 							</div>
 
@@ -139,20 +134,20 @@ namespace WWOPN_Theme;
 							</aside>
 							<?php endif ?>
 							
+							<?php if (\has_term('', 'wpn_podcast_tag')): ?>
 							<aside class="tags">
-								<?php if (\has_term('', 'wpn_podcast_tag')): ?>
-									<h5>Tags:</h5>
-									<?php
-										\the_terms(
-											\get_the_ID(),
-											'wpn_podcast_tag',
-											'',
-											'',
-											''
-										)
-									?>
-								<?php endif ?>
+								<h5>Tags:</h5>
+								<?php
+									\the_terms(
+										\get_the_ID(),
+										'wpn_podcast_tag',
+										'',
+										'',
+										''
+									)
+								?>
 							</aside>
+							<?php endif ?>
 						</div>
 
 						<?php if (\WWOPN_Podcast\CPT::getPlayerEmbed()): ?>
