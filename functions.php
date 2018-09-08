@@ -7,8 +7,8 @@ require 'classes/MenuWalker.php';
 require 'classes/CustomMetas.php';
 
 // Remove emoji crud
-remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
-remove_action( 'wp_print_styles', 'print_emoji_styles' );
+\remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+\remove_action( 'wp_print_styles', 'print_emoji_styles' );
 
 // Add excerpt support for Pages
 \add_action('init', function() {
@@ -44,7 +44,7 @@ if (defined('WPSEO_VERSION')) {
 function theme_setup() {
 
 	\add_theme_support( 'title-tag' );
-	add_theme_support('post-thumbnails', array('page', 'post', 'wpn_podcast', 'wpn_teams', 'wpn_prs'));
+	\add_theme_support('post-thumbnails', array('page', 'post', 'wpn_podcast', 'wpn_teams', 'wpn_prs'));
 
 	\register_nav_menus(array(
 		'header-menu' => __('Header Menu'),
@@ -52,21 +52,21 @@ function theme_setup() {
 	));
 
 	// Add theme support for Custom Logo.
-	add_theme_support( 'custom-logo', array(
+	\add_theme_support( 'custom-logo', array(
 		'width'       => 250,
 		'height'      => 250,
 		'flex-width'  => true,
 	) );
 
 }
-add_action( 'after_setup_theme', ns('theme_setup') );
+\add_action( 'after_setup_theme', ns('theme_setup') );
 
 /**
  * Enqueue scripts and styles
  * @return [type] [description]
  */
 function scripts_and_styles() {
-	if ($GLOBALS['pagenow'] != 'wp-login.php' && ! is_admin()) {
+	if ($GLOBALS['pagenow'] != 'wp-login.php' && ! \is_admin()) {
 		\wp_deregister_script('jquery');
 		\wp_register_script(
 			'jquery',
@@ -148,18 +148,18 @@ function editor_styles() {
  * @return string 'Continue reading' link prepended with an ellipsis.
  */
 function excerpt_more( $link ) {
-	if ( is_admin() ) {
+	if ( \is_admin() ) {
 		return $link;
 	}
 
 	$link = sprintf( '<p class="link-more"><a href="%1$s" class="more-link">%2$s</a></p>',
-		esc_url( get_permalink( get_the_ID() ) ),
+		esc_url( \get_permalink( get_the_ID() ) ),
 		/* translators: %s: Name of current post */
-		sprintf( 'Listen to <span class="screen-reader-text">%s</span>', get_the_title( get_the_ID() ) )
+		sprintf( 'Listen to <span class="screen-reader-text">%s</span>', \get_the_title( \get_the_ID() ) )
 	);
 	return ' &hellip; ' . $link;
 }
-add_filter( 'excerpt_more', ns('excerpt_more') );
+\add_filter( 'excerpt_more', ns('excerpt_more') );
 
 /**
  * Modifies tag cloud widget arguments to display all tags in the same font size
@@ -176,7 +176,7 @@ function tag_cloud_args( $args ) {
 
 	return $args;
 }
-add_filter( 'widget_tag_cloud_args', ns('tag_cloud_args') );
+\add_filter( 'widget_tag_cloud_args', ns('tag_cloud_args') );
 
 // Header menu
 function header_menu() {
@@ -228,7 +228,7 @@ function remove_identity() {
 \add_filter('the_generator', ns('remove_identity'));
 
 function custom_admin_footer() {
-	return '&copy; ' . date('Y') . ' ' . esc_html(get_option('copyright_info'));
+	return '&copy; ' . date('Y') . ' ' . esc_html(\get_option('copyright_info'));
 }
 \add_filter('admin_footer_text', ns('custom_admin_footer'));
 
@@ -244,7 +244,7 @@ function register_copyright_field() {
 			'default' => NULL,
 		)
 	);
-	add_settings_field('copyright_info', '<label for="copyright_info">'.__('Copyright Info' , 'copyright_info' ).'</label>' , ns('output_copyright_field'), 'general' );
+	\add_settings_field('copyright_info', '<label for="copyright_info">'.__('Copyright Info' , 'copyright_info' ).'</label>' , ns('output_copyright_field'), 'general' );
 }
 function output_copyright_field() {
 	$value = \get_option( 'copyright_info', '' );
@@ -282,29 +282,28 @@ function query_getAllPosts($query) {
 		}
 	}
 }
-add_action( 'pre_get_posts', ns('query_getAllPosts'), 1, 1 );
+\add_action( 'pre_get_posts', ns('query_getAllPosts'), 1, 1 );
 
 // Use front-page.php if blog is set to static posts
 function front_page_template( $template ) {
-	return is_home() ? '' : $template;
+	return \is_home() ? '' : $template;
 }
-add_filter( 'frontpage_template',  ns('front_page_template') );
+\add_filter( 'frontpage_template',  ns('front_page_template') );
 
 // Remove prefix from archive titles
 function archive_title($title) {
-	if ( is_category() ) {
-		$title = single_cat_title( '', false );
-	} elseif ( is_tag() ) {
-		$title = single_tag_title( '', false );
-	} elseif ( is_author() ) {
-		$title = '<span class="vcard">' . get_the_author() . '</span>';
-	} elseif ( is_post_type_archive() ) {
-		$title = post_type_archive_title( '', false );
-	} elseif ( is_tax() ) {
-		$title = single_term_title( '', false );
+	if ( \is_category() ) {
+		$title = \single_cat_title( '', false );
+	} elseif ( \is_tag() ) {
+		$title = \single_tag_title( '', false );
+	} elseif ( \is_author() ) {
+		$title = '<span class="vcard">' . \get_the_author() . '</span>';
+	} elseif ( \is_post_type_archive() ) {
+		$title = \post_type_archive_title( '', false );
+	} elseif ( \is_tax() ) {
+		$title = \single_term_title( '', false );
 	}
 
 	return $title;
 }
-
-add_filter('get_the_archive_title', ns('archive_title'));
+\add_filter('get_the_archive_title', ns('archive_title'));
