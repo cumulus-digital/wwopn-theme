@@ -10,6 +10,11 @@ require 'classes/CustomMetas.php';
 remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 remove_action( 'wp_print_styles', 'print_emoji_styles' );
 
+// Add excerpt support for Pages
+\add_action('init', function() {
+	\add_post_type_support( 'page', 'excerpt' );
+});
+
 // Helper to namespace stuff
 function ns($str) {
 	return __NAMESPACE__ . '\\' . $str;
@@ -39,7 +44,7 @@ if (defined('WPSEO_VERSION')) {
 function theme_setup() {
 
 	\add_theme_support( 'title-tag' );
-	add_theme_support( 'post-thumbnails' );
+	add_theme_support('post-thumbnails', array('page', 'post', 'wpn_podcast', 'wpn_teams', 'wpn_prs'));
 
 	\register_nav_menus(array(
 		'header-menu' => __('Header Menu'),
