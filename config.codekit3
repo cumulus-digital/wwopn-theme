@@ -205,6 +205,17 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/assets\/prod\/images\/favicons\/apple-touch-icon-180x180.png": {
+		"ft": 32768,
+		"iS": 5266,
+		"oA": 0,
+		"oAP": "\/assets\/prod\/images\/favicons\/apple-touch-icon-180x180.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"\/assets\/prod\/images\/favicons\/apple-touch-icon.png": {
 		"ft": 32768,
 		"iS": 19761,
@@ -494,19 +505,6 @@
 		"ma": 1,
 		"oA": 1,
 		"oAP": "\/assets\/prod\/css\/_press.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
-	"\/assets\/src\/css\/_teams.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 1,
-		"oA": 1,
-		"oAP": "\/assets\/prod\/css\/_teams.css",
 		"oF": 0,
 		"oS": 3,
 		"uL": 1
