@@ -3,6 +3,9 @@ namespace WWOPN_Theme;
 
 const PREFIX = 'wwopn_theme';
 
+// Auto-update plugins
+\add_filter( 'auto_update_plugin', '__return_true' );
+
 // Let other scripts know we're lazy loading
 define('HAS_LAZY', true);
 
@@ -27,18 +30,18 @@ function ns($str) {
 if (defined('WPSEO_VERSION')) {
 	// https://buddydev.com/remove-this-site-is-optimized-with-the-yoast-seo-plugin-vx-y-z/
 	\add_action( 'template_redirect', function () {
-	 
+
 	    if ( ! class_exists( 'WPSEO_Frontend' ) ) {
 	        return;
 	    }
-	 
+
 	    $instance = \WPSEO_Frontend::get_instance();
-	 
+
 	    // make sure, future version of the plugin does not break our site.
 	    if ( ! method_exists( $instance, 'debug_mark') ) {
 	        return ;
 	    }
-	 
+
 	    // ok, let us remove the love letter.
 	    \remove_action( 'wpseo_head', array( $instance, 'debug_mark' ), 2 );
 	}, 9999 );
@@ -242,7 +245,7 @@ function register_copyright_field() {
 		'copyright_info',
 		array(
 			'description' => 'Copyright text displayed on site.',
-			'type' => 'string', 
+			'type' => 'string',
 			'sanitize_callback' => 'sanitize_text_field',
 			'default' => NULL,
 		)
