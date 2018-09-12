@@ -22,7 +22,7 @@ class MenuWalker extends \Walker_Nav_Menu
 		);
 		$class_names = ' class="'. \esc_attr($class_names) . '"';
 
-		$output .= $indent . '<li id="menu-item-'. $item->ID . '"' . $value . $class_names .'>';
+		$output .= $indent . '<li itemprop="name" id="menu-item-'. $item->ID . '"' . $value . $class_names .'>';
 
 		$attributes  = ! empty($item->attr_title) ?
 			' title="' . \esc_attr($item->attr_title) . '"' : '';
@@ -32,6 +32,7 @@ class MenuWalker extends \Walker_Nav_Menu
 			' rel="' . \esc_attr($item->xfn) . '"' : '';
 		$attributes .= ! empty($item->url)        ?
 			' href="' . \esc_attr($item->url) . '"' : '';
+		$attributes .= ' itemprop="url"';
 
 		if (is_array($args)) {
 			$args = (object) $args;

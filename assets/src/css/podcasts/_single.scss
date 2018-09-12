@@ -141,7 +141,7 @@
 					}					
 
 					@include phone {
-						margin-left: -.35em;
+						margin-left: -.25em;
 					}
 				}
 
@@ -304,7 +304,10 @@
 
 		.storelinks {
 			margin: .5em 0 0 1em;
-			margin-top: .5em;
+
+			@include phone {
+				margin: .5em 0 0;
+			}
 
 			ul, li {
 				list-style: none;

@@ -197,7 +197,7 @@ function header_menu() {
 		'after'           => '',
 		'link_before'     => '',
 		'link_after'      => '',
-		'items_wrap'      => '<ul>%3$s</ul>',
+		'items_wrap'      => '<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement">%3$s</ul>',
 		'depth'           => 0,
 		'walker'          => new MenuWalker
 	));

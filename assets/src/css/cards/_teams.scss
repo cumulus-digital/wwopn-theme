@@ -1,10 +1,4 @@
 main.teams {
-	
-	@include tablet {
-		.row-container {
-			padding: 1em;
-		}
-	}
 
 	h1 {
 		display: block;
@@ -18,7 +12,7 @@ main.teams {
 		}
 
 		.roles {
-			color: #AAA;
+			color: #666;
 			font-weight: 200;
 			
 			text-align: center;
@@ -43,7 +37,7 @@ main.teams {
 		}
 
 		.favorite_podcast {
-			color: #aaa;
+			color: #999;
 			font-size: 0.8em;
 			text-align: center;
 			margin-bottom: .25em;
