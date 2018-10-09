@@ -1,5 +1,5 @@
 .single .podcast {
-	
+
 	header {
 		background: $colors-blue;
 		color: #fff;
@@ -135,10 +135,10 @@
 					}
 					&[data-lcl="2"] {
 						font-size: 2.5em;
-					}					
+					}
 					&[data-lcl="3"] {
 						font-size: 2.25em;
-					}					
+					}
 
 					@include phone {
 						margin-left: -.25em;
@@ -286,6 +286,26 @@
 			}
 		}
 
+		/*
+		.body {
+			@include phone {
+				max-height: 250px;
+				overflow: hidden;
+				position: relative;
+
+				&:after {
+					content: '';
+					background: linear-gradient(to bottom, rgba(245,245,245,0) 0%,rgba(245,245,245,1) 100%);
+					width: 100%;
+					height: 3em;
+					position: absolute;
+					bottom: 0;
+					left: 0;
+				}
+			}
+		}
+		*/
+
 		.player_embed {
 			margin-left: 1em;
 
@@ -295,7 +315,7 @@
 			iframe {
 				background: url(../images/spinner.svg) no-repeat center center;
 				max-width: 100%;
-				
+
 				.loaded {
 					background: none;
 				}
