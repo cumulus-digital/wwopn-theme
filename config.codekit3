@@ -7,7 +7,7 @@
 		"uuidString": "9146CB47-D58F-494C-80FD-77C83004EF9B"
 		}
 	],
-"creatorBuild": "28901",
+"creatorBuild": "28905",
 "files": {
 	"/.gitattributes": {
 		"cB": 0,
@@ -119,7 +119,7 @@
 		"oA": 0,
 		"oAP": "/assets/prod/images/badges/Daily Wire.svg",
 		"oF": 0,
-		"opt": 0,
+		"opt": 1,
 		"plM": 2197802879,
 		"prP": 0
 		},
@@ -904,6 +904,16 @@
 		"plM": 2197802879,
 		"prP": 0
 		},
+	"/assets/src/images/badges/google.svg": {
+		"ft": 2097152,
+		"miP": 1,
+		"oA": 0,
+		"oAP": "/assets/prod/images/badges/google.svg",
+		"oF": 0,
+		"opt": 1,
+		"plM": 2197802879,
+		"prP": 0
+		},
 	"/assets/src/images/badges/spotify.svg": {
 		"ft": 2097152,
 		"miP": 1,
@@ -951,7 +961,7 @@
 		"oAP": "/assets/prod/images/favicons/android-chrome-192x192.png",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -962,7 +972,7 @@
 		"oAP": "/assets/prod/images/favicons/android-chrome-512x512.png",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -1064,7 +1074,7 @@
 		"oAP": "/assets/prod/images/favicons/mstile-310x150.png",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -1328,8 +1338,8 @@
 		"oA": 0,
 		"oAP": "/screenshot.jpg",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"q": 80
 		},
 	"/single-wpn_podcast.php": {
