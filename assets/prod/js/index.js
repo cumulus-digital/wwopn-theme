@@ -1,2 +1,2 @@
-"use strict";$&&jQuery||alert("jQuery must be included in theme."),$(".stext").svgText(),$("iframe").on("load",function(){this.className+=" loaded"}),function(e,a){var t=a.getElementsByTagName("body")[0],s=a.createElement("script"),n="IntersectionObserver"in e?"10.16.2":"8.15.2";s.async=!0,s.src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/"+n+"/lazyload.min.js",e.lazyLoadOptions={elements_selector:"img[data-src]"},t.appendChild(s)}(window,document);
-//# sourceMappingURL=./index.js.map
+"use strict";$&&jQuery||alert("jQuery must be included in theme."),$(".stext").svgText(),$("iframe").on("load",function(){this.className+=" loaded"}),function(e,a){var t=a.getElementsByTagName("body")[0],l=a.createElement("script");l.async=!0,l.src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/12.0.0/lazyload.min.js",e.lazyLoadOptions={elements_selector:"img[data-src]"},t.appendChild(l)}(window,document);
+//# sourceMappingURL=index.js.map
