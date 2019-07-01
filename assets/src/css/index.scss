@@ -68,6 +68,7 @@ img[data-src],
 img[data-srcset] {
   display: block;
   min-height: 1px;
+  min-width: 1px;
 }
 
 nav.menu {
