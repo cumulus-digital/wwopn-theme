@@ -37,8 +37,8 @@
 	<section class="row row-headline-left podcast_download basic-purple">
 		<div class="row-container" style="max-width: 950px">
 			<div class="headline">
-				<h3 class="stext st_blue" data-st-src="<?=\get_template_directory_uri()?>/assets/prod/images/stext/right.svg">
-					Westwood One's
+				<h3 style="font-size: 72%;text-transform:uppercase;">
+					<strong>Westwood One</strong> and <strong>Audio Insight Inc.'s</strong>
 				</h3>
 				<h2 class="stext st_blue" data-st-src="<?=\get_template_directory_uri()?>/assets/prod/images/stext/right.svg">
 					Podcast Download
