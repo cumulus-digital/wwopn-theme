@@ -1435,6 +1435,14 @@
 		"oAP": "/taxonomy.php",
 		"oF": 0
 		},
+	"/template-fullwidth_page.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/template-fullwidth_page.php",
+		"oF": 0
+		},
 	"/template-parts/cards/inc-featured_image.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -1481,6 +1489,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/template-parts/loop.php",
+		"oF": 0
+		},
+	"/template-parts/page-inner.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/template-parts/page-inner.php",
 		"oF": 0
 		},
 	"/template-parts/pagination.php": {

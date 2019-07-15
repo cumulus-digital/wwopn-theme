@@ -117,6 +117,10 @@ main {
 		}
 	}
 
+	&.full-width article.page {
+		width: 100%;
+	}
+
 	@import 'page-content';
 
 	@include tablet {
