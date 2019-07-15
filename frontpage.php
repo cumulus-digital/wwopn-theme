@@ -43,7 +43,7 @@
 				<h2 class="stext st_blue" data-st-src="<?=\get_template_directory_uri()?>/assets/prod/images/stext/right.svg">
 					Podcast Download
 				</h2>
-				<h4>Spring 2019</h4>
+				<h4>Spring 2019 Report</h4>
 			</div>
 			<div class="row-body">
 				<div class="buttons">
