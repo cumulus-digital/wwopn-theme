@@ -73,18 +73,16 @@ h3 {
 
 article .is-style-full-browser-width,
 article .is-style-full-content-width {
+	width: 100vw;
 	position: relative;
 	left: 50%;
 	right: 50%;
 	transform: translateX(-50%);
 }
-article .is-style-full-browser-width {
-	width: 100vw;
+article .is-style-full-content-width {
+	max-width: $maxwidth;
 
 	@include tablet {
-		padding: 0 1em;
+		max-width: calc(100vw - 2em);
 	}
-}
-article .is-style-full-content-width {
-	width: $maxwidth;
 }

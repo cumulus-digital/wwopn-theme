@@ -1,15 +1,16 @@
 /* global wp */
 (function($, wp, window, undefined) {
 
-	var fullBrowserWidth = {
-		name: "full-browser-width",
-		label: "Full Browser Width"
-	};
-
-	var fullContentWidth = {
-		name: "full-content-width",
-		label: "Full Content Width"
-	};
+	var customStyles = [
+		{
+			name: "full-content-width",
+			label: "Full Content Width"
+		},
+		{
+			name: "full-browser-width",
+			label: "Full Browser Width"
+		},
+	];
 
 	$(function(){
 	
@@ -23,8 +24,9 @@
 			) {
 				return;
 			}
-			wp.blocks.registerBlockStyle(block.name, fullBrowserWidth);
-			wp.blocks.registerBlockStyle(block.name, fullContentWidth);
+			customStyles.forEach(function(style) {
+				wp.blocks.registerBlockStyle(block.name, style);
+			});
 		});
 	
 	});
