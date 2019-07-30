@@ -108,7 +108,7 @@ function scripts_and_styles() {
 		);
 		\wp_enqueue_style('wwopn_theme_style');
 
-		\wp_register_Style(
+		\wp_register_style(
 			'google_montserrat_font',
 			'https://fonts.googleapis.com/css?family=Montserrat:100,200,400,700',
 			false,
@@ -126,7 +126,7 @@ function scripts_and_styles() {
  * @return void
  */
 function editor_styles() {
-	\wp_register_Style(
+	\wp_register_style(
 		'google_montserrat_font',
 		'https://fonts.googleapis.com/css?family=Montserrat:100,200,400,700',
 		false,
@@ -135,7 +135,7 @@ function editor_styles() {
 	);
 	\wp_enqueue_style('google_montserrat_font');
 
-	\wp_register_Style(
+	\wp_register_style(
 		'guttenberg_styles',
 		\get_template_directory_uri() . '/assets/prod/css/editor.css',
 		false,
@@ -143,6 +143,15 @@ function editor_styles() {
 		'all'
 	);
 	\wp_enqueue_style('guttenberg_styles');
+
+	\wp_register_script(
+		'wwopn_block_styles',
+		\get_template_directory_uri() . '/assets/prod/js/lib/block_styles.js',
+		array('jquery'),
+		null,
+		true
+	);
+	\wp_enqueue_script('wwopn_block_styles');
 
 }
 \add_action('enqueue_block_editor_assets', ns('editor_styles'));

@@ -71,15 +71,20 @@ h3 {
 	}
 }
 
-.full-width {
-	width: 100vw;
+article .is-style-full-browser-width,
+article .is-style-full-content-width {
 	position: relative;
 	left: 50%;
 	right: 50%;
-	margin-left: -50vw;
-	margin-right: -50vw;
+	transform: translateX(-50%);
+}
+article .is-style-full-browser-width {
+	width: 100vw;
 
 	@include tablet {
 		padding: 0 1em;
 	}
+}
+article .is-style-full-content-width {
+	width: $maxwidth;
 }
