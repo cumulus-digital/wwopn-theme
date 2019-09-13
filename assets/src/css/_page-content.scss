@@ -1,4 +1,9 @@
 header h1 {
+	@at-root .page.single header h1 {
+		&.blue, &.purple {
+			font-size: 1em;
+		}
+	}
 	&.blue {
 		color: $colors-blue;
 	}

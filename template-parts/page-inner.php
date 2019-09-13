@@ -24,6 +24,7 @@ namespace WWOPN_Theme;
 							<?php \the_title(); ?>
 						</h1>
 						<?php
+						break;
 					case 'plain_blue':
 						?>
 						<h1 class="blue">
