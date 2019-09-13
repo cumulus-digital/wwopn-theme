@@ -14,7 +14,7 @@ namespace WWOPN_Theme;
 					<article id="post-<?php the_ID(); ?>" <?php \post_class(); ?>>
 
 						<header>
-							<h1 class="stext st_blue" data-st-src="<?=\get_template_directory_uri()?>/assets/prod/images/stext/left.svg">
+							<h1 class="purple">
 								<?php \the_title(); ?>
 							</h1>
 						</header>
