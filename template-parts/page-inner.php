@@ -18,6 +18,12 @@ namespace WWOPN_Theme;
 						</h1>
 						<?php
 						break;
+					case '3d_blue':
+						?>
+						<h1 class="stext st_blue" data-st-src="<?=\get_template_directory_uri()?>/assets/prod/images/stext/left.svg">
+							<?php \the_title(); ?>
+						</h1>
+						<?php
 					case 'plain_blue':
 						?>
 						<h1 class="blue">
@@ -26,18 +32,21 @@ namespace WWOPN_Theme;
 						<?php
 						break;
 					case 'plain_purple':
+					default:
 						?>
 						<h1 class="purple">
 							<?php \the_title(); ?>
 						</h1>
 						<?php
 						break;
+					/*
 					default:
 						?>
 						<h1 class="stext st_blue" data-st-src="<?=\get_template_directory_uri()?>/assets/prod/images/stext/left.svg">
 							<?php \the_title(); ?>
 						</h1>
 						<?php
+					*/
 				endswitch;
 				?>
 			</header>
