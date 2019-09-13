@@ -6,7 +6,10 @@ namespace WWOPN_Theme;
 
 		<article id="post-<?php the_ID(); ?>" <?php \post_class(); ?>>
 
-			<?php $title_display = PageMeta\CustomMetas::getTitleDisplay() ?>
+			<?php $title_display = PageMeta\CustomMetas::getTitleDisplay(\get_the_ID()) ?>
+			<!--
+				<?php var_dump($title_display) ?>
+			-->
 			<?php if ($title_display !== 'none'): ?>
 			<header>
 				<?php
