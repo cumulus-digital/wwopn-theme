@@ -25,7 +25,7 @@ $('iframe').on('load', function(){
 // Allow .tgmp-onair class links to open TGMP onair tray
 $(function() {
     if (window.self.tgmp) {
-        $('.tgmp_onair a').click(function(e) {
+        $('a.tgmp_onair, .tgmp_onair a').click(function(e) {
             e.preventDefault();
             window.self.tgmp.onair();
         });
