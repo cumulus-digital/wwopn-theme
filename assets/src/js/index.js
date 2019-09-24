@@ -22,3 +22,12 @@ $('iframe').on('load', function(){
     b.appendChild(s);
 }(window, document));
 
+// Allow .tgmp-onair class links to open TGMP onair tray
+$(function() {
+    if (window.self.tgmp) {
+        $('.tgmp_onair a').click(function(e) {
+            e.preventDefault();
+            window.self.tgmp.onair();
+        });
+    }
+});
