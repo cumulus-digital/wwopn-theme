@@ -35,10 +35,10 @@
 	</section>
 
 	<section class="row row-headline-left podcast_download basic-purple">
-		<div class="row-container" style="max-width: 950px">
+		<div class="row-container" style="max-width: 960px">
 			<div class="headline">
 				<h3 style="font-size: 72%;text-transform:uppercase;">
-					<strong>Westwood One</strong> and <strong>Audience Insights Inc.'s</strong>
+					<strong>Westwood One's</strong><!--and <strong>Audience Insights Inc.'s</strong>-->
 				</h3>
 				<h2 class="stext st_blue" data-st-src="<?=\get_template_directory_uri()?>/assets/prod/images/stext/right.svg">
 					Podcast Download
