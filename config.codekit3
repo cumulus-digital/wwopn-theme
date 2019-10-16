@@ -368,6 +368,26 @@
 		"plM": 2197802879,
 		"prP": 0
 		},
+	"/assets/prod/images/icons/facebook.svg": {
+		"ft": 2097152,
+		"miP": 1,
+		"oA": 0,
+		"oAP": "/assets/prod/images/icons/facebook.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 2197802879,
+		"prP": 0
+		},
+	"/assets/prod/images/icons/instagram.svg": {
+		"ft": 2097152,
+		"miP": 1,
+		"oA": 0,
+		"oAP": "/assets/prod/images/icons/instagram.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 2197802879,
+		"prP": 0
+		},
 	"/assets/prod/images/icons/share.svg": {
 		"ft": 2097152,
 		"miP": 1,
@@ -1160,6 +1180,26 @@
 		"miP": 1,
 		"oA": 0,
 		"oAP": "/assets/prod/images/icons/envelop.svg",
+		"oF": 0,
+		"opt": 1,
+		"plM": 2197802879,
+		"prP": 0
+		},
+	"/assets/src/images/icons/facebook.svg": {
+		"ft": 2097152,
+		"miP": 1,
+		"oA": 0,
+		"oAP": "/assets/prod/images/icons/facebook.svg",
+		"oF": 0,
+		"opt": 1,
+		"plM": 2197802879,
+		"prP": 0
+		},
+	"/assets/src/images/icons/instagram.svg": {
+		"ft": 2097152,
+		"miP": 1,
+		"oA": 0,
+		"oAP": "/assets/prod/images/icons/instagram.svg",
 		"oF": 0,
 		"opt": 1,
 		"plM": 2197802879,
