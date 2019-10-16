@@ -113,8 +113,8 @@ namespace WWOPN_Theme;
 							<aside class="social">
 								<ul>
 								<?php foreach(\WWOPN_Podcast\CPT::getSocialLinks() as $soc_service=>$soc_link): ?>
-									<li class="\esc_attr($soc_service) ?>">
-										<a href="<?=\esc_url($soc_link) ?>" target="_blank" rel="noopener">
+									<li class="<? echo \esc_attr($soc_service) ?>">
+										<a href="<? echo \esc_url($soc_link) ?>" target="_blank" rel="noopener">
 											<?php
 												switch ($soc_service):
 													case 'website':
