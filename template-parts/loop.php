@@ -13,7 +13,7 @@ namespace WWOPN_Theme;
 				<div>
 					<?php if ( \has_post_thumbnail()) : ?>
 						<figure>
-								<img src="" data-src="<?=\get_the_post_thumbnail_url() ?>" alt="">
+								<img src="" data-src="<?php echo \get_the_post_thumbnail_url() ?>" alt="">
 						</figure>
 					<?php endif ?>
 

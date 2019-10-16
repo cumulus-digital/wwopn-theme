@@ -13,14 +13,14 @@ namespace WWOPN_Theme;
 				switch($title_display):
 					case '3d_purple':
 						?>
-						<h1 class="stext st_purple" data-st-src="<?=\get_template_directory_uri()?>/assets/prod/images/stext/left.svg">
+						<h1 class="stext st_purple" data-st-src="<?php echo \get_template_directory_uri()?>/assets/prod/images/stext/left.svg">
 							<?php \the_title(); ?>
 						</h1>
 						<?php
 						break;
 					case '3d_blue':
 						?>
-						<h1 class="stext st_blue" data-st-src="<?=\get_template_directory_uri()?>/assets/prod/images/stext/left.svg">
+						<h1 class="stext st_blue" data-st-src="<?php echo \get_template_directory_uri()?>/assets/prod/images/stext/left.svg">
 							<?php \the_title(); ?>
 						</h1>
 						<?php
@@ -43,7 +43,7 @@ namespace WWOPN_Theme;
 					/*
 					default:
 						?>
-						<h1 class="stext st_blue" data-st-src="<?=\get_template_directory_uri()?>/assets/prod/images/stext/left.svg">
+						<h1 class="stext st_blue" data-st-src="<?php echo \get_template_directory_uri()?>/assets/prod/images/stext/left.svg">
 							<?php \the_title(); ?>
 						</h1>
 						<?php

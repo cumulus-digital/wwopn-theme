@@ -17,14 +17,14 @@
 			)
 		?>
 		<?php foreach($roles as $role): ?>
-			<li><?=$role->name?></li>
+			<li><?php echo $role->name?></li>
 		<?php endforeach ?>
 	</ul>
 
 	<?php if (\get_post_meta(get_the_ID(), '_wpn_teams_meta_favoritePodcast', true)): ?>
 
 		<div class="favorite_podcast">
-			Favorite Podcast: <?=\get_post_meta(get_the_ID(), '_wpn_teams_meta_favoritePodcast', true)?>
+			Favorite Podcast: <?php echo \get_post_meta(get_the_ID(), '_wpn_teams_meta_favoritePodcast', true)?>
 		</div>
 
 	<?php endif ?>

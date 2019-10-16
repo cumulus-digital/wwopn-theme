@@ -473,10 +473,10 @@ trait CustomMetaboxes {
 		$value = \get_post_meta($post->ID, $meta->key, true);
 
 		?>
-		<div class="wpn_meta_autosave <?=$type?> <?=$meta->sortable ? 'sortable' : ''?>">
+		<div class="wpn_meta_autosave <?php echo $type?> <?php echo $meta->sortable ? 'sortable' : ''?>">
 			<?php self::outputType($meta, $value) ?>
 			<?php if ($type == 'multi'): ?>
-				<?=$meta->howto?>
+				<?php echo $meta->howto?>
 			<?php endif ?>
 		</div>
 		<?php
@@ -553,18 +553,18 @@ trait CustomMetaboxes {
 	static function displayField_TEXT($meta, $value, array $options = array()) {
 		?>
 
-		<p class="<?=$options['sortable'] ? 'sortable' : ''?>">
-			<label for="meta_text_<?=$meta->key ?>"><?=esc_html($meta->title) ?></label>
-			<input type="text" name="<?=$meta->key ?>" size="30" value="<?=esc_attr($value) ?>" id="meta_text_<?=$meta->key ?>" spellcheck="<?=$meta->spellcheck ?>" autocomplete="<?=$meta->autocomplete ?>"
+		<p class="<?php echo $options['sortable'] ? 'sortable' : ''?>">
+			<label for="meta_text_<?php echo $meta->key ?>"><?php echo esc_html($meta->title) ?></label>
+			<input type="text" name="<?php echo $meta->key ?>" size="30" value="<?php echo esc_attr($value) ?>" id="meta_text_<?php echo $meta->key ?>" spellcheck="<?php echo $meta->spellcheck ?>" autocomplete="<?php echo $meta->autocomplete ?>"
 				<?php if ($meta->required): ?>
-					required="<?=esc_attr($meta->required) ?>"
+					required="<?php echo esc_attr($meta->required) ?>"
 				<?php endif ?>
 				<?php if ($meta->pattern): ?>
-					pattern="<?=esc_attr($meta->pattern) ?>"
+					pattern="<?php echo esc_attr($meta->pattern) ?>"
 				<?php endif ?>
 			>
 			<?php if ($meta->howto): ?>
-				<?=$meta->howto ?>
+				<?php echo $meta->howto ?>
 			<?php endif ?>
 		</p>
 
@@ -574,18 +574,18 @@ trait CustomMetaboxes {
 	static function displayField_TEXTAREA($meta, $value, array $options = array()) {
 		?>
 
-		<p class="<?=$options['sortable'] ? 'sortable' : ''?>">
-			<label class="screen-reader-text" for="excerpt"><?=esc_html($meta->title) ?></label>
-			<textarea class="wpn-meta-autosave" name="<?=$meta->key?>" style="display:block;width:100%;height:8em;margin:12px 0 0;"
+		<p class="<?php echo $options['sortable'] ? 'sortable' : ''?>">
+			<label class="screen-reader-text" for="excerpt"><?php echo esc_html($meta->title) ?></label>
+			<textarea class="wpn-meta-autosave" name="<?php echo $meta->key?>" style="display:block;width:100%;height:8em;margin:12px 0 0;"
 				<?php if ($meta->required): ?>
-					required="<?=esc_attr($meta->required) ?>"
+					required="<?php echo esc_attr($meta->required) ?>"
 				<?php endif ?>
 				<?php if ($meta->pattern): ?>
-					pattern="<?=esc_attr($meta->pattern) ?>"
+					pattern="<?php echo esc_attr($meta->pattern) ?>"
 				<?php endif ?>
-			><?=esc_textarea($value) ?></textarea>
+			><?php echo esc_textarea($value) ?></textarea>
 			<?php if ($meta->howto): ?>
-				<?=$meta->howto ?>
+				<?php echo $meta->howto ?>
 			<?php endif ?>
 		</p>
 
@@ -595,18 +595,18 @@ trait CustomMetaboxes {
 	static function displayField_URL($meta, $value, array $options = array()) {
 		?>
 
-		<p class="<?=$options['sortable'] ? 'sortable' : ''?>">
-			<label for="meta_text_<?=$meta->key ?>"><?=esc_html($meta->title) ?></label>
-			<input type="url" name="<?=$meta->key ?>" size="30" value="<?=esc_attr($value) ?>" id="meta_text_<?=$meta->key ?>" spellcheck="false" autocomplete="off"
+		<p class="<?php echo $options['sortable'] ? 'sortable' : ''?>">
+			<label for="meta_text_<?php echo $meta->key ?>"><?php echo esc_html($meta->title) ?></label>
+			<input type="url" name="<?php echo $meta->key ?>" size="30" value="<?php echo esc_attr($value) ?>" id="meta_text_<?php echo $meta->key ?>" spellcheck="false" autocomplete="off"
 				<?php if ($meta->required): ?>
-					required="<?=esc_attr($meta->required) ?>"
+					required="<?php echo esc_attr($meta->required) ?>"
 				<?php endif ?>
 				<?php if ($meta->pattern): ?>
-					pattern="<?=esc_attr($meta->pattern) ?>"
+					pattern="<?php echo esc_attr($meta->pattern) ?>"
 				<?php endif ?>
 			>
 			<?php if ($meta->howto): ?>
-				<?=$meta->howto ?>
+				<?php echo $meta->howto ?>
 			<?php endif ?>
 		</p>
 
@@ -615,22 +615,22 @@ trait CustomMetaboxes {
 
 	static function displayField_CHECKBOX($meta, $value, array $options = array()) {
 		?>
-		<p class="<?=$options['sortable'] ? 'sortable' : ''?>">
-			<input type="checkbox" name="<?=$meta->key ?>" value="<?=esc_attr($meta->value) ?>" id="meta_checkbox_<?=$meta->key ?>_<?=\sanitize_title_with_dashes($option_value, '', 'save') ?>" <?php
+		<p class="<?php echo $options['sortable'] ? 'sortable' : ''?>">
+			<input type="checkbox" name="<?php echo $meta->key ?>" value="<?php echo esc_attr($meta->value) ?>" id="meta_checkbox_<?php echo $meta->key ?>_<?php echo \sanitize_title_with_dashes($option_value, '', 'save') ?>" <?php
 					if ($meta->value === $value) { echo 'checked'; }
 				?>>
-			<label for="meta_checkbox_<?=$meta->key ?>_<?=\sanitize_title_with_dashes($meta->value, '', 'save') ?>"><?=esc_html($meta->title) ?></label>
+			<label for="meta_checkbox_<?php echo $meta->key ?>_<?php echo \sanitize_title_with_dashes($meta->value, '', 'save') ?>"><?php echo esc_html($meta->title) ?></label>
 		</p>
 		<?php
 	}
 
 	static function displayField_RADIO($meta, $value, array $options = array()) {
 		?>
-		<p class="<?=$options['sortable'] ? 'sortable' : ''?>">
-			<input type="radio" name="<?=$meta->key ?>" value="<?=esc_attr($meta->value) ?>" id="meta_checkbox_<?=$meta->key ?>_<?=\sanitize_title_with_dashes($option_value, '', 'save') ?>" <?php
+		<p class="<?php echo $options['sortable'] ? 'sortable' : ''?>">
+			<input type="radio" name="<?php echo $meta->key ?>" value="<?php echo esc_attr($meta->value) ?>" id="meta_checkbox_<?php echo $meta->key ?>_<?php echo \sanitize_title_with_dashes($option_value, '', 'save') ?>" <?php
 					if ($meta->value === $value) { echo 'checked'; }
 				?>>
-			<label for="meta_checkbox_<?=$meta->key ?>_<?=\sanitize_title_with_dashes($meta->value, '', 'save') ?>"><?=esc_html($meta->title) ?></label>
+			<label for="meta_checkbox_<?php echo $meta->key ?>_<?php echo \sanitize_title_with_dashes($meta->value, '', 'save') ?>"><?php echo esc_html($meta->title) ?></label>
 		</p>
 		<?php
 	}
@@ -638,13 +638,13 @@ trait CustomMetaboxes {
 	static function displayField_SELECT($meta, $value, array $options = array()) {
 		?>
 		<p>
-			<label for="meta_select_<?=$meta->key ?>"><?=esc_html($meta->label) ?></label>
-			<select name="<?=$meta->key ?>" id="meta_select_<?=$meta->key ?>">
+			<label for="meta_select_<?php echo $meta->key ?>"><?php echo esc_html($meta->label) ?></label>
+			<select name="<?php echo $meta->key ?>" id="meta_select_<?php echo $meta->key ?>">
 				<?php foreach ($meta->value as $option_value=>$option_title): ?>
-					<option value="<?=esc_attr($option_value) ?>" <?php
+					<option value="<?php echo esc_attr($option_value) ?>" <?php
 						if ($option_value === $value) { echo 'selected'; }
 					?>>
-						<?=esc_html($option_title) ?>
+						<?php echo esc_html($option_title) ?>
 					</option>
 				<?php endforeach ?>
 			</select>

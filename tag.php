@@ -9,8 +9,8 @@ namespace WWOPN_Theme;
 	<section class="row basic-blue">
 		<div class="row-container">
 
-			<h1 class="stext st_purple" data-st-src="<?=\get_template_directory_uri()?>/assets/prod/images/stext/left.svg">
-				<?=\esc_html(single_tag_title())?>
+			<h1 class="stext st_purple" data-st-src="<?php echo \get_template_directory_uri()?>/assets/prod/images/stext/left.svg">
+				<?php echo \esc_html(single_tag_title())?>
 			</h1>
 
 		</div>

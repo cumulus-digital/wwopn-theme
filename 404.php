@@ -9,7 +9,7 @@ namespace WWOPN_Theme;
 		<div class="row-container">
 
 		
-			<h1 class="stext st_blue" data-st-src="<?=\get_template_directory_uri()?>/assets/prod/images/stext/right.svg">
+			<h1 class="stext st_blue" data-st-src="<?php echo \get_template_directory_uri()?>/assets/prod/images/stext/right.svg">
 				404
 			</h1>
 

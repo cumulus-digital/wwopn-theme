@@ -9,26 +9,26 @@ namespace WWOPN_Theme;
 		<div class="row-container">
 
 			<header class="page_header">
-				<h1 class="stext st_blue" data-st-src="<?=\get_template_directory_uri()?>/assets/prod/images/stext/left.svg">
+				<h1 class="stext st_blue" data-st-src="<?php echo \get_template_directory_uri()?>/assets/prod/images/stext/left.svg">
 					<?php \the_title(); ?>
 				</h1>
 
 				<aside class="contact">
 					<h2>Media Contact</h2>
 					<?php if (\get_option('wpn_prs_mediacontact')): ?>
-						<h3><?=esc_html(\get_option('wpn_prs_mediacontact')['mc_name'])?></h3>
+						<h3><?php echo esc_html(\get_option('wpn_prs_mediacontact')['mc_name'])?></h3>
 						<ul>
 							<?php if (\get_option('wpn_prs_mediacontact')['mc_email']): ?>
 								<li class="email">
-									<a href="mailto:<?=esc_attr(\get_option('wpn_prs_mediacontact')['mc_email'])?>">
-										<?=esc_html(\get_option('wpn_prs_mediacontact')['mc_email'])?>
+									<a href="mailto:<?php echo esc_attr(\get_option('wpn_prs_mediacontact')['mc_email'])?>">
+										<?php echo esc_html(\get_option('wpn_prs_mediacontact')['mc_email'])?>
 									</a>
 								</li>
 							<?php endif ?>
 							<?php if (\get_option('wpn_prs_mediacontact')['mc_twitter']): ?>
 								<li class="twitter">
-									<a href="https://twitter.com/<?=esc_attr(\get_option('wpn_prs_mediacontact')['mc_twitter'])?>">
-										@<?=esc_html(\get_option('wpn_prs_mediacontact')['mc_twitter'])?>
+									<a href="https://twitter.com/<?php echo esc_attr(\get_option('wpn_prs_mediacontact')['mc_twitter'])?>">
+										@<?php echo esc_html(\get_option('wpn_prs_mediacontact')['mc_twitter'])?>
 									</a>
 								</li>
 							<?php endif ?>							

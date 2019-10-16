@@ -89,7 +89,7 @@ namespace WWOPN_Theme;
 								</h1>
 								<h2 itemprop="alternativeHeadline">
 								<?php if (\WWOPN_Podcast\CPT::getSubTitle()): ?>
-										<?=\WWOPN_Podcast\CPT::getSubTitle() ?>
+										<?php echo \WWOPN_Podcast\CPT::getSubTitle() ?>
 								<?php else: ?>
 								<?php endif; ?>
 								</h2>
