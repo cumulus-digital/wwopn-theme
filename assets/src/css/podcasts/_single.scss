@@ -240,7 +240,8 @@
 
 			@include tablet {
 				text-align: center;
-				margin-bottom: 1em;
+				margin-bottom: .5em;
+				font-size: 0.65em;
 			}
 
 			ul,li {
@@ -255,8 +256,7 @@
 				vertical-align: top;
 
 				@include tablet {
-					margin-left: .5em;
-					margin-right: .5em;
+					margin: 0 .5em .5em;
 				}
 			}
 
@@ -269,6 +269,10 @@
 
 				&:hover {
 					color: $colors-purple;
+				}
+
+				@include tablet {
+					padding: .5em;
 				}
 			}
 
