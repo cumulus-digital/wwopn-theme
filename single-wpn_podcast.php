@@ -27,7 +27,7 @@ namespace WWOPN_Theme;
 					<div class="header-bg-container">
 						<?php if($header_id && $header_img): ?>
 
-							<img src="<?=\wp_get_attachment_image_src($header_img->ID, 'full')[0]; ?>" alt="">
+							<img src="<?php echo \wp_get_attachment_image_src($header_img->ID, 'full')[0]; ?>" alt="">
 
 						<?php endif ?>
 					</div>
@@ -37,7 +37,7 @@ namespace WWOPN_Theme;
 							<?php if (\has_post_thumbnail()): ?>
 							<figure>
 								<a href="<?php \the_permalink() ?>" title="<?php \the_title() ?>">
-									<img itemprop="thumbnail" src="<?=\wp_get_attachment_image_src(get_post_thumbnail_id(\get_the_ID()), 'full')[0] ?>" alt="">
+									<img itemprop="thumbnail" src="<?php echo \wp_get_attachment_image_src(get_post_thumbnail_id(\get_the_ID()), 'full')[0] ?>" alt="">
 								</a>
 							</figure>
 							<?php endif ?>
@@ -46,7 +46,7 @@ namespace WWOPN_Theme;
 									<div class="genres">
 									<?php $genres = \wp_get_post_terms($post->ID, 'wpn_podcast_genre') ?>
 									<?php foreach($genres as $genre): ?>
-										<a href="<?=esc_url(\get_term_link($genre)) ?>" rel="tag" itemprop="genre"><?=esc_html($genre->name) ?></a><?=(next($genres) ? ', ' : '') ?>
+										<a href="<?php echo esc_url(\get_term_link($genre)) ?>" rel="tag" itemprop="genre"><?php echo esc_html($genre->name) ?></a><?php echo (next($genres) ? ', ' : '') ?>
 									<?php endforeach ?>
 									</div>
 									<?php
@@ -73,10 +73,10 @@ namespace WWOPN_Theme;
 										?>
 										<?php if ($popular_tags): ?>
 											<aside class="tags">
-												<ul itemprop="keywords" content="<?=implode(', ', array_column($tags, 'name')) ?>">
+												<ul itemprop="keywords" content="<?php echo implode(', ', array_column($tags, 'name')) ?>">
 													<?php foreach ($popular_tags as $tag): ?>
 														<li>
-															<?=$tag?>
+															<?php echo $tag?>
 														</li>
 													<?php endforeach ?>
 												</ul>
@@ -84,7 +84,7 @@ namespace WWOPN_Theme;
 										<?php endif; ?>
 									<?php endif; ?>
 								</div>
-								<h1 itemprop="name headline" content="<?=\get_the_title() ?>" class="stext st_blue" data-st-src="<?=\get_template_directory_uri()?>/assets/prod/images/stext/right.svg">
+								<h1 itemprop="name headline" content="<?php echo \get_the_title() ?>" class="stext st_blue" data-st-src="<?php echo \get_template_directory_uri()?>/assets/prod/images/stext/right.svg">
 									<?php \the_title() ?>
 								</h1>
 								<h2 itemprop="alternativeHeadline">
@@ -113,8 +113,8 @@ namespace WWOPN_Theme;
 							<aside class="social">
 								<ul>
 								<?php foreach(\WWOPN_Podcast\CPT::getSocialLinks() as $soc_service=>$soc_link): ?>
-									<li class="<? echo \esc_attr($soc_service) ?>">
-										<a href="<? echo \esc_url($soc_link) ?>" target="_blank" rel="noopener">
+									<li class="<?php echo \esc_attr($soc_service) ?>">
+										<a href="<?php echo \esc_url($soc_link) ?>" target="_blank" rel="noopener">
 											<?php
 												switch ($soc_service):
 													case 'website':
@@ -166,7 +166,7 @@ namespace WWOPN_Theme;
 
 						<?php if (\WWOPN_Podcast\CPT::getPlayerEmbed()): ?>
 							<div class="player_embed">
-								<?=\WWOPN_Podcast\CPT::getPlayerEmbed() ?>
+								<?php echo \WWOPN_Podcast\CPT::getPlayerEmbed() ?>
 							</div>
 						<?php endif ?>
 
@@ -175,9 +175,9 @@ namespace WWOPN_Theme;
 							<ul>
 							<?php foreach(\WWOPN_Podcast\CPT::getStoreLinks() as $store=>$storelink): ?>
 
-								<li class="<?=\esc_attr($store) ?>">
-									<a href="<?=\esc_url($storelink)?>" target="_blank" rel="noopener">
-										<img data-src="<?=\get_template_directory_uri()?>/assets/prod/images/badges/<?=\esc_attr($store) ?>.svg" alt="listen on <?=\esc_attr($store) ?>">
+								<li class="<?php echo \esc_attr($store) ?>">
+									<a href="<?php echo \esc_url($storelink)?>" target="_blank" rel="noopener">
+										<img data-src="<?php echo \get_template_directory_uri()?>/assets/prod/images/badges/<?php echo \esc_attr($store) ?>.svg" alt="listen on <?php echo \esc_attr($store) ?>">
 									</a>
 								</li>
 
