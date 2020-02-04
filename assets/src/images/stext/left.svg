@@ -118,6 +118,13 @@
         </g>
         <path class="st_face" d="M0 25.46h25.09v7.62H0z"/>
     </symbol>
+    <symbol id="st_l__x2013_" data-name="–" viewBox="0 0 50.76 76.9">
+        <path class="st_sides" d="M25.09 25.46H0v7.62l25 25h25.09v-7.62l-25-25z"/>
+        <g class="st_shadows" fill="url(#st_lg)">
+            <path d="M25 58.08l-25-25h25.09l25 25H25z"/>
+        </g>
+        <path class="st_face" d="M0 25.46h25.09v7.62H0z"/>
+    </symbol>
     <symbol id="st_l_x3A_" data-name=":" viewBox="0 0 34.66 76.9">
         <path class="st_sides" d="M33.16 66.06a5 5 0 0 1 0 7.14 5.25 5.25 0 0 1-6.66 0l-25-25A4.27 4.27 0 0 1 0 44.63a4.3 4.3 0 0 1 1.5-3.57 5.25 5.25 0 0 1 6.66 0zM26.5 53.48a5.25 5.25 0 0 0 6.66 0 4.27 4.27 0 0 0 1.5-3.57 4.3 4.3 0 0 0-1.5-3.57l-25-25a5.25 5.25 0 0 0-6.66 0A4.3 4.3 0 0 0 0 24.91a4.27 4.27 0 0 0 1.5 3.57s24.96 24.97 25 25z"/>
         <g class="st_shadows" fill="url(#st_lg)">
