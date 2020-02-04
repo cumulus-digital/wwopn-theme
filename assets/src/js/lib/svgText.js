@@ -123,6 +123,8 @@
 
 			compiled.className = me.options.compiledClass;
 
+			console.log("Words", words);
+
 			words.forEach(function(word, i) {
 				var letters = word.split(''),
 					letter_count = letters.length,
@@ -138,6 +140,8 @@
 				wordEl.className = me.options.wordClass;
 				wordEl.style.zIndex = zIndex;
 
+				console.log("Letters", letters);
+
 				letters.forEach(function(letter, i) {
 					letter = letter.toUpperCase();
 
@@ -147,6 +151,8 @@
 					if ( ! letter.match(/[A-Z0-9]/)) {
 						useLetter = '_x' + letter.charCodeAt(0).toString(16).toUpperCase() + '_';
 					}
+
+					console.log("Using letter", useLetter);
 
 					var viewBox = "0 0 100 100",
 						def = '#' + prefix + '_' + useLetter,
