@@ -140,7 +140,7 @@
 				wordEl.className = me.options.wordClass;
 				wordEl.style.zIndex = zIndex;
 
-				console.log("Letters", letters);
+				//console.log("Letters", letters);
 
 				letters.forEach(function(letter, i) {
 					letter = letter.toUpperCase();
@@ -152,7 +152,7 @@
 						useLetter = '_x' + letter.charCodeAt(0).toString(16).toUpperCase() + '_';
 					}
 
-					console.log("Using letter", useLetter);
+					//console.log("Using letter", useLetter);
 
 					var viewBox = "0 0 100 100",
 						def = '#' + prefix + '_' + useLetter,
@@ -160,11 +160,13 @@
 					if (symbol.length) {
 						viewBox = symbol.attr('viewBox');
 					} else {
+						//console.log('Could not find symbol', def, symbol);
 						return;
 					}
 					
 					var dimensions = viewBox.split(' ');
 					if (dimensions.length < 3) {
+						//console.log('Invalid viewbox on symbol', letter);
 						throw "Invalid viewbox on symbol '" + letter + "'"; 
 					}
 

@@ -138,7 +138,10 @@ svg[data-l="A"] + svg[data-l="Y"] {
 
 svg[data-l="W"] + svg[data-l="A"],
 svg[data-l="L"] + svg[data-l="V"],
-svg[data-l="L"] + svg[data-l="Y"] {
+svg[data-l="L"] + svg[data-l="Y"],
+svg[data-l="-"] + svg[data-l="V"],
+svg[data-l="-"] + svg[data-l="Y"],
+svg[data-l="-"] + svg[data-l="T"], {
 	margin-left: -.54em;
 }
 
