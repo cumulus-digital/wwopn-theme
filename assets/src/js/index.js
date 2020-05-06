@@ -15,7 +15,7 @@ $('iframe').on('load', function(){
     var b = d.getElementsByTagName('body')[0];
     var s = d.createElement("script"); 
     s.async = true; // This includes the script as async. See the "recipes" section for more information about async loading of LazyLoad.
-    s.src = "https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/12.0.0/lazyload.min.js";
+    s.src = "https://cdn.jsdelivr.net/npm/vanilla-lazyload@15.1.1/dist/lazyload.min.js";
     w.lazyLoadOptions = {
     	elements_selector: 'img[data-src]'
     };
