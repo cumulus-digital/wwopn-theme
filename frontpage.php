@@ -23,6 +23,7 @@
 		</div>
 	</section>
 
+	<!--
 	<section class="row empowher_network basic-purple" style="border-bottom: 1px dashed #3a0a44; background: -moz-linear-gradient(top, #6a2774 0%, #4a0656 100%);background: -webkit-linear-gradient(top, #6a2774 0%,#4a0656 100%);background: linear-gradient(to bottom, #6a2774 0%,#4a0656 100%);">
 		<div class="row-container" style="padding: 0 1em; text-align: left">
 			<a href="/empowerhernetwork/" style="display: block">
@@ -33,6 +34,7 @@
 			</a>
 		</div>
 	</section>
+	-->
 
 	<section class="row row-headline-left podcast_download basic-purple">
 		<div class="row-container" style="max-width: 960px">
