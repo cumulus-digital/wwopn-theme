@@ -103,7 +103,23 @@
 		</div>
 	</section>
 
-	<section class="row row-headline-left solutions_for_advertisers basic">
+	<section class="row row-headline-right how_to_listen basic">
+		<div class="row-container">
+			<h2 class="stext st_blue" data-st-src="<?php echo \get_template_directory_uri()?>/assets/prod/images/stext/right.svg">
+				How to Listen to a Flash Briefing
+			</h2>
+			<div class="row-body">
+				<h3>
+					Learn how to listen on your Smart Speaker
+				</h3>
+				<div class="buttons">
+					<a href="<?php echo \get_permalink(\get_page_by_path('/flash-briefing-how-to'))?>" class="button">Check It Out</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="row row-headline-right solutions_for_advertisers basic">
 		<div class="row-container">
 			<h2 class="stext st_purple" data-st-src="<?php echo \get_template_directory_uri()?>/assets/prod/images/stext/right.svg">
 				Solutions For Advertisers
@@ -119,6 +135,7 @@
 		</div>
 	</section>
 
+	<!--
 	<section class="row row-headline-top reach_out basic-purple">
 		<div class="row-container">
 			<h2 class="stext st_blue" data-st-src="<?php echo \get_template_directory_uri()?>/assets/prod/images/stext/left.svg">
@@ -132,5 +149,6 @@
 			</div>
 		</div>
 	</section>
+	-->
 
 </main>
