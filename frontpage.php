@@ -106,7 +106,8 @@
 	<section class="row row-headline-left how_to_listen basic">
 		<div class="row-container">
 			<h2 class="stext st_blue" data-st-src="<?php echo \get_template_directory_uri()?>/assets/prod/images/stext/right.svg">
-				How to Listen to a Flash Briefing
+				How to Listen to a<br>
+				Flash Briefing
 			</h2>
 			<div class="row-body">
 				<h3>
