@@ -176,7 +176,15 @@ namespace WWOPN_Theme;
 							<?php foreach(\WWOPN_Podcast\CPT::getStoreLinks() as $store=>$storelink): ?>
 
 								<li class="<?php echo \esc_attr($store) ?>">
-									<a href="<?php echo \esc_url($storelink)?>" target="_blank" rel="noopener">
+									<a
+										href="<?php echo \esc_url($storelink)?>"
+										target="_blank"
+										rel="noopener"
+										class="storelink"
+										data-podcast-id="<?php the_ID() ?>"
+										data-podcast-title="<?php \the_title_attribute() ?>"
+										data-store="<?php echo \esc_attr($store) ?>"
+									>
 										<img data-src="<?php echo \get_template_directory_uri()?>/assets/prod/images/badges/<?php echo \esc_attr($store) ?>.svg" alt="listen on <?php echo \esc_attr($store) ?>">
 									</a>
 								</li>
