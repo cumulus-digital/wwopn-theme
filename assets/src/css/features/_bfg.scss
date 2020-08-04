@@ -1,5 +1,5 @@
 .wpn-f-bfg {
-	overflow: hidden;
+	overflow: visible;
 
 	.wpn-f-container {
 		width: 33.333333%;
@@ -14,7 +14,7 @@
 			display: flex;
 			flex-wrap: wrap-reverse;
 			flex-direction: row-reverse;
-			
+
 			.wpn-f-big,
 			.wpn-f-cluster {
 				flex-basis: 100%;
@@ -24,7 +24,7 @@
 		@include phone {
 			width: 100%;
 			float: none;
-			
+
 			display: flex;
 			flex-wrap: no-wrap;
 
