@@ -222,14 +222,14 @@
 
 		line-height: 1.4;
 
-		margin-top: 1.25em;
+		margin-top: .75em;
 		padding: 0 1em;
 
 		@include tablet {
 			flex-wrap: wrap;
 			flex-direction: column;
 
-			margin: 1em auto 0;
+			margin: .5em auto 0;
 			padding: 0;
 		}
 
@@ -338,10 +338,11 @@
 		}
 
 		.storelinks {
-			margin: .5em 0 0 1em;
+			flex-basis: 100%;
+			margin: 0 0 .5em;
 
 			@include phone {
-				margin: .5em 0 0;
+				margin: 0 0 .25em;
 			}
 
 			ul, li {
@@ -387,9 +388,10 @@
 			}
 		}
 
+		// when storelinks are at the bottom
 		.player_embed + .storelinks {
 			flex-basis: 100%;
-			margin-left: 0;
+			margin: .5em 0 0;
 		}
 
 	}
