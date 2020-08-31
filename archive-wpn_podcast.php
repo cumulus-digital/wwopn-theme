@@ -43,7 +43,7 @@ namespace WWOPN_Theme;
 						</header>
 
 						<section>
-							<?php echo \do_shortcode('[podcasts-genre genre_id=' . $genre->term_id . ']') ?>
+							<?php echo \do_shortcode('[podcasts-genre id=' . $genre->term_id . ']') ?>
 						</section>
 					</article>
 
